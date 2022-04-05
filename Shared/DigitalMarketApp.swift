@@ -1,14 +1,14 @@
 //
-//  Digital_MarketApp.swift
+//  DigitalMarketApp.swift
 //  Shared
 //
-//  Created by Zoe Schmitt on 4/3/22.
+//  Created by Zoe Schmitt on 4/4/22.
 //
 
 import SwiftUI
 
 @main
-struct Digital_MarketApp: App {
+struct DigitalMarketApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
