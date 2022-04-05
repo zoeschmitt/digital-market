@@ -25,8 +25,6 @@
 		DD35E41C27FBC0E200181D20 /* Utils in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41127FBC0E200181D20 /* Utils */; };
 		DD35E41D27FBC0E200181D20 /* Styles in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41227FBC0E200181D20 /* Styles */; };
 		DD35E41E27FBC0E200181D20 /* Styles in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41227FBC0E200181D20 /* Styles */; };
-		DD35E41F27FBC0E200181D20 /* ViewModels in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41327FBC0E200181D20 /* ViewModels */; };
-		DD35E42027FBC0E200181D20 /* ViewModels in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41327FBC0E200181D20 /* ViewModels */; };
 		DD35E42127FBC0E200181D20 /* Views in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41427FBC0E200181D20 /* Views */; };
 		DD35E42227FBC0E200181D20 /* Views in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41427FBC0E200181D20 /* Views */; };
 		DD35E42327FBC0E200181D20 /* PreviewContent in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41527FBC0E200181D20 /* PreviewContent */; };
@@ -71,7 +69,6 @@
 		DD35E41027FBC0E200181D20 /* Services */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Services; sourceTree = "<group>"; };
 		DD35E41127FBC0E200181D20 /* Utils */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utils; sourceTree = "<group>"; };
 		DD35E41227FBC0E200181D20 /* Styles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Styles; sourceTree = "<group>"; };
-		DD35E41327FBC0E200181D20 /* ViewModels */ = {isa = PBXFileReference; lastKnownFileType = folder; path = ViewModels; sourceTree = "<group>"; };
 		DD35E41427FBC0E200181D20 /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Views; sourceTree = "<group>"; };
 		DD35E41527FBC0E200181D20 /* PreviewContent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PreviewContent; sourceTree = "<group>"; };
 		DD35E41627FBC0E200181D20 /* Navigation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Navigation; sourceTree = "<group>"; };
@@ -126,19 +123,19 @@
 		DD35E3D227FBC03200181D20 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
-				DD35E42B27FBC36C00181D20 /* Stores */,
-				DD35E42727FBC0EA00181D20 /* Components */,
-				DD35E40F27FBC0E200181D20 /* Models */,
-				DD35E41627FBC0E200181D20 /* Navigation */,
-				DD35E41527FBC0E200181D20 /* PreviewContent */,
-				DD35E41027FBC0E200181D20 /* Services */,
-				DD35E41227FBC0E200181D20 /* Styles */,
-				DD35E41127FBC0E200181D20 /* Utils */,
-				DD35E41327FBC0E200181D20 /* ViewModels */,
-				DD35E41427FBC0E200181D20 /* Views */,
 				DD35E3D327FBC03200181D20 /* DigitalMarketApp.swift */,
 				DD35E3D427FBC03200181D20 /* ContentView.swift */,
 				DD35E3D527FBC03300181D20 /* Assets.xcassets */,
+				DD35E40F27FBC0E200181D20 /* Models */,
+				DD35E41427FBC0E200181D20 /* Views */,
+				DDF7CFB227FC02CF007F8A82 /* ViewModels */,
+				DD35E42727FBC0EA00181D20 /* Components */,
+				DD35E41627FBC0E200181D20 /* Navigation */,
+				DD35E41227FBC0E200181D20 /* Styles */,
+				DD35E42B27FBC36C00181D20 /* Stores */,
+				DD35E41027FBC0E200181D20 /* Services */,
+				DD35E41127FBC0E200181D20 /* Utils */,
+				DD35E41527FBC0E200181D20 /* PreviewContent */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -185,6 +182,13 @@
 			children = (
 			);
 			path = Stores;
+			sourceTree = "<group>";
+		};
+		DDF7CFB227FC02CF007F8A82 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -319,7 +323,6 @@
 				DD35E42327FBC0E200181D20 /* PreviewContent in Resources */,
 				DD35E41B27FBC0E200181D20 /* Utils in Resources */,
 				DD35E3FF27FBC03300181D20 /* Assets.xcassets in Resources */,
-				DD35E41F27FBC0E200181D20 /* ViewModels in Resources */,
 				DD35E42827FBC0EA00181D20 /* Components in Resources */,
 				DD35E42127FBC0E200181D20 /* Views in Resources */,
 			);
@@ -336,7 +339,6 @@
 				DD35E42427FBC0E200181D20 /* PreviewContent in Resources */,
 				DD35E41C27FBC0E200181D20 /* Utils in Resources */,
 				DD35E40027FBC03300181D20 /* Assets.xcassets in Resources */,
-				DD35E42027FBC0E200181D20 /* ViewModels in Resources */,
 				DD35E42927FBC0EA00181D20 /* Components in Resources */,
 				DD35E42227FBC0E200181D20 /* Views in Resources */,
 			);
