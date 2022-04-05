@@ -76,6 +76,7 @@
 		DD35E41527FBC0E200181D20 /* PreviewContent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PreviewContent; sourceTree = "<group>"; };
 		DD35E41627FBC0E200181D20 /* Navigation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Navigation; sourceTree = "<group>"; };
 		DD35E42727FBC0EA00181D20 /* Components */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Components; sourceTree = "<group>"; };
+		DD35E42A27FBC16700181D20 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +114,7 @@
 		DD35E3CD27FBC03200181D20 = {
 			isa = PBXGroup;
 			children = (
+				DD35E42A27FBC16700181D20 /* README.md */,
 				DD35E3D227FBC03200181D20 /* Shared */,
 				DD35E3E127FBC03300181D20 /* macOS */,
 				DD35E3EA27FBC03300181D20 /* Tests iOS */,
@@ -124,6 +126,7 @@
 		DD35E3D227FBC03200181D20 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				DD35E42B27FBC36C00181D20 /* Stores */,
 				DD35E42727FBC0EA00181D20 /* Components */,
 				DD35E40F27FBC0E200181D20 /* Models */,
 				DD35E41627FBC0E200181D20 /* Navigation */,
@@ -175,6 +178,13 @@
 				DD35E3F927FBC03300181D20 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		DD35E42B27FBC36C00181D20 /* Stores */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Stores;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
