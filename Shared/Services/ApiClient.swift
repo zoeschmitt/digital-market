@@ -1,7 +1,13 @@
+//
+//  ApiClient.swift
+//  DigitalMarket
+//
+//  Created by Zoe Schmitt on 4/5/22.
+//
 
-import Foundation 
+import Foundation
 
-public protocol ApiClient {
+protocol ApiClient {
     
     func generateWallet() -> Wallet
     func getWallet(walletId: String) -> Wallet

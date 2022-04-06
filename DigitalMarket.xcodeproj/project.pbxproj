@@ -17,22 +17,36 @@
 		DD35E3FE27FBC03300181D20 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3D427FBC03200181D20 /* ContentView.swift */; };
 		DD35E3FF27FBC03300181D20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD35E3D527FBC03300181D20 /* Assets.xcassets */; };
 		DD35E40027FBC03300181D20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD35E3D527FBC03300181D20 /* Assets.xcassets */; };
-		DD35E41727FBC0E200181D20 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = DD35E40F27FBC0E200181D20 /* Models */; };
-		DD35E41827FBC0E200181D20 /* Models in Resources */ = {isa = PBXBuildFile; fileRef = DD35E40F27FBC0E200181D20 /* Models */; };
-		DD35E41927FBC0E200181D20 /* Services in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41027FBC0E200181D20 /* Services */; };
-		DD35E41A27FBC0E200181D20 /* Services in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41027FBC0E200181D20 /* Services */; };
-		DD35E41B27FBC0E200181D20 /* Utils in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41127FBC0E200181D20 /* Utils */; };
-		DD35E41C27FBC0E200181D20 /* Utils in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41127FBC0E200181D20 /* Utils */; };
-		DD35E41D27FBC0E200181D20 /* Styles in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41227FBC0E200181D20 /* Styles */; };
-		DD35E41E27FBC0E200181D20 /* Styles in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41227FBC0E200181D20 /* Styles */; };
-		DD35E42127FBC0E200181D20 /* Views in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41427FBC0E200181D20 /* Views */; };
-		DD35E42227FBC0E200181D20 /* Views in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41427FBC0E200181D20 /* Views */; };
-		DD35E42327FBC0E200181D20 /* PreviewContent in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41527FBC0E200181D20 /* PreviewContent */; };
-		DD35E42427FBC0E200181D20 /* PreviewContent in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41527FBC0E200181D20 /* PreviewContent */; };
-		DD35E42527FBC0E200181D20 /* Navigation in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41627FBC0E200181D20 /* Navigation */; };
-		DD35E42627FBC0E200181D20 /* Navigation in Resources */ = {isa = PBXBuildFile; fileRef = DD35E41627FBC0E200181D20 /* Navigation */; };
-		DD35E42827FBC0EA00181D20 /* Components in Resources */ = {isa = PBXBuildFile; fileRef = DD35E42727FBC0EA00181D20 /* Components */; };
-		DD35E42927FBC0EA00181D20 /* Components in Resources */ = {isa = PBXBuildFile; fileRef = DD35E42727FBC0EA00181D20 /* Components */; };
+		DD6580C927FD110700AAE685 /* NFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580C827FD110700AAE685 /* NFT.swift */; };
+		DD6580CA27FD110700AAE685 /* NFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580C827FD110700AAE685 /* NFT.swift */; };
+		DD6580CC27FD112F00AAE685 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580CB27FD112F00AAE685 /* Metadata.swift */; };
+		DD6580CD27FD112F00AAE685 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580CB27FD112F00AAE685 /* Metadata.swift */; };
+		DD6580CF27FD113C00AAE685 /* MetadataAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580CE27FD113C00AAE685 /* MetadataAttribute.swift */; };
+		DD6580D027FD113C00AAE685 /* MetadataAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580CE27FD113C00AAE685 /* MetadataAttribute.swift */; };
+		DD6580D227FD114700AAE685 /* MintNFTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580D127FD114700AAE685 /* MintNFTRequest.swift */; };
+		DD6580D327FD114700AAE685 /* MintNFTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580D127FD114700AAE685 /* MintNFTRequest.swift */; };
+		DD6580D527FD115100AAE685 /* Royalties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580D427FD115100AAE685 /* Royalties.swift */; };
+		DD6580D627FD115100AAE685 /* Royalties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580D427FD115100AAE685 /* Royalties.swift */; };
+		DD6580D827FD115A00AAE685 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580D727FD115A00AAE685 /* User.swift */; };
+		DD6580D927FD115A00AAE685 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580D727FD115A00AAE685 /* User.swift */; };
+		DD6580DB27FD116000AAE685 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580DA27FD116000AAE685 /* Wallet.swift */; };
+		DD6580DC27FD116000AAE685 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580DA27FD116000AAE685 /* Wallet.swift */; };
+		DD6580E127FD124D00AAE685 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580E027FD124D00AAE685 /* Colors.swift */; };
+		DD6580E227FD124D00AAE685 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580E027FD124D00AAE685 /* Colors.swift */; };
+		DD6580E727FD12B600AAE685 /* PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580E627FD12B600AAE685 /* PreviewContent.swift */; };
+		DD6580E827FD12B600AAE685 /* PreviewContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580E627FD12B600AAE685 /* PreviewContent.swift */; };
+		DD6580EA27FD12CA00AAE685 /* PreviewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD6580E927FD12CA00AAE685 /* PreviewAssets.xcassets */; };
+		DD6580EB27FD12CA00AAE685 /* PreviewAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD6580E927FD12CA00AAE685 /* PreviewAssets.xcassets */; };
+		DD6580ED27FD132700AAE685 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580EC27FD132700AAE685 /* ApiClient.swift */; };
+		DD6580EE27FD132700AAE685 /* ApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580EC27FD132700AAE685 /* ApiClient.swift */; };
+		DD6580F127FD133600AAE685 /* HttpApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580F027FD133600AAE685 /* HttpApiClient.swift */; };
+		DD6580F227FD133600AAE685 /* HttpApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580F027FD133600AAE685 /* HttpApiClient.swift */; };
+		DD6580F427FD133E00AAE685 /* MockApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580F327FD133E00AAE685 /* MockApiClient.swift */; };
+		DD6580F527FD133E00AAE685 /* MockApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580F327FD133E00AAE685 /* MockApiClient.swift */; };
+		DD6580F727FD54C000AAE685 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DD6580F627FD54C000AAE685 /* Production.xcconfig */; };
+		DD6580F827FD54C000AAE685 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DD6580F627FD54C000AAE685 /* Production.xcconfig */; };
+		DD6580FA27FD54D300AAE685 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DD6580F927FD54D300AAE685 /* Development.xcconfig */; };
+		DD6580FB27FD54D300AAE685 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DD6580F927FD54D300AAE685 /* Development.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,15 +79,22 @@
 		DD35E3F327FBC03300181D20 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD35E3F727FBC03300181D20 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		DD35E3F927FBC03300181D20 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
-		DD35E40F27FBC0E200181D20 /* Models */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Models; sourceTree = "<group>"; };
-		DD35E41027FBC0E200181D20 /* Services */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Services; sourceTree = "<group>"; };
-		DD35E41127FBC0E200181D20 /* Utils */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Utils; sourceTree = "<group>"; };
-		DD35E41227FBC0E200181D20 /* Styles */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Styles; sourceTree = "<group>"; };
-		DD35E41427FBC0E200181D20 /* Views */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Views; sourceTree = "<group>"; };
-		DD35E41527FBC0E200181D20 /* PreviewContent */ = {isa = PBXFileReference; lastKnownFileType = folder; path = PreviewContent; sourceTree = "<group>"; };
-		DD35E41627FBC0E200181D20 /* Navigation */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Navigation; sourceTree = "<group>"; };
-		DD35E42727FBC0EA00181D20 /* Components */ = {isa = PBXFileReference; lastKnownFileType = folder; path = Components; sourceTree = "<group>"; };
 		DD35E42A27FBC16700181D20 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
+		DD6580C827FD110700AAE685 /* NFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFT.swift; sourceTree = "<group>"; };
+		DD6580CB27FD112F00AAE685 /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
+		DD6580CE27FD113C00AAE685 /* MetadataAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataAttribute.swift; sourceTree = "<group>"; };
+		DD6580D127FD114700AAE685 /* MintNFTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintNFTRequest.swift; sourceTree = "<group>"; };
+		DD6580D427FD115100AAE685 /* Royalties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Royalties.swift; sourceTree = "<group>"; };
+		DD6580D727FD115A00AAE685 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		DD6580DA27FD116000AAE685 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
+		DD6580E027FD124D00AAE685 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		DD6580E627FD12B600AAE685 /* PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContent.swift; sourceTree = "<group>"; };
+		DD6580E927FD12CA00AAE685 /* PreviewAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = PreviewAssets.xcassets; sourceTree = "<group>"; };
+		DD6580EC27FD132700AAE685 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
+		DD6580F027FD133600AAE685 /* HttpApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpApiClient.swift; sourceTree = "<group>"; };
+		DD6580F327FD133E00AAE685 /* MockApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiClient.swift; sourceTree = "<group>"; };
+		DD6580F627FD54C000AAE685 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		DD6580F927FD54D300AAE685 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,6 +132,8 @@
 		DD35E3CD27FBC03200181D20 = {
 			isa = PBXGroup;
 			children = (
+				DD6580F927FD54D300AAE685 /* Development.xcconfig */,
+				DD6580F627FD54C000AAE685 /* Production.xcconfig */,
 				DD35E42A27FBC16700181D20 /* README.md */,
 				DD35E3D227FBC03200181D20 /* Shared */,
 				DD35E3E127FBC03300181D20 /* macOS */,
@@ -124,18 +147,16 @@
 			isa = PBXGroup;
 			children = (
 				DD35E3D327FBC03200181D20 /* DigitalMarketApp.swift */,
-				DD35E3D427FBC03200181D20 /* ContentView.swift */,
 				DD35E3D527FBC03300181D20 /* Assets.xcassets */,
-				DD35E40F27FBC0E200181D20 /* Models */,
-				DD35E41427FBC0E200181D20 /* Views */,
+				DD6580C727FD0F2D00AAE685 /* Models */,
+				DD6580DD27FD120200AAE685 /* Views */,
 				DDF7CFB227FC02CF007F8A82 /* ViewModels */,
-				DD35E42727FBC0EA00181D20 /* Components */,
-				DD35E41627FBC0E200181D20 /* Navigation */,
-				DD35E41227FBC0E200181D20 /* Styles */,
+				DD6580DE27FD121F00AAE685 /* Components */,
+				DD6580DF27FD123700AAE685 /* Styles */,
 				DD35E42B27FBC36C00181D20 /* Stores */,
-				DD35E41027FBC0E200181D20 /* Services */,
-				DD35E41127FBC0E200181D20 /* Utils */,
-				DD35E41527FBC0E200181D20 /* PreviewContent */,
+				DD6580E327FD126F00AAE685 /* Services */,
+				DD6580E427FD128900AAE685 /* Utils */,
+				DD6580E527FD12A200AAE685 /* PreviewContent */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -182,6 +203,77 @@
 			children = (
 			);
 			path = Stores;
+			sourceTree = "<group>";
+		};
+		DD6580C727FD0F2D00AAE685 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DD6580C827FD110700AAE685 /* NFT.swift */,
+				DD6580CB27FD112F00AAE685 /* Metadata.swift */,
+				DD6580CE27FD113C00AAE685 /* MetadataAttribute.swift */,
+				DD6580D127FD114700AAE685 /* MintNFTRequest.swift */,
+				DD6580D427FD115100AAE685 /* Royalties.swift */,
+				DD6580D727FD115A00AAE685 /* User.swift */,
+				DD6580DA27FD116000AAE685 /* Wallet.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		DD6580DD27FD120200AAE685 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DD35E3D427FBC03200181D20 /* ContentView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DD6580DE27FD121F00AAE685 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		DD6580DF27FD123700AAE685 /* Styles */ = {
+			isa = PBXGroup;
+			children = (
+				DD6580E027FD124D00AAE685 /* Colors.swift */,
+			);
+			path = Styles;
+			sourceTree = "<group>";
+		};
+		DD6580E327FD126F00AAE685 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				DD6580EC27FD132700AAE685 /* ApiClient.swift */,
+				DD6580EF27FD132C00AAE685 /* Clients */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		DD6580E427FD128900AAE685 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Utils;
+			sourceTree = "<group>";
+		};
+		DD6580E527FD12A200AAE685 /* PreviewContent */ = {
+			isa = PBXGroup;
+			children = (
+				DD6580E627FD12B600AAE685 /* PreviewContent.swift */,
+				DD6580E927FD12CA00AAE685 /* PreviewAssets.xcassets */,
+			);
+			path = PreviewContent;
+			sourceTree = "<group>";
+		};
+		DD6580EF27FD132C00AAE685 /* Clients */ = {
+			isa = PBXGroup;
+			children = (
+				DD6580F027FD133600AAE685 /* HttpApiClient.swift */,
+				DD6580F327FD133E00AAE685 /* MockApiClient.swift */,
+			);
+			path = Clients;
 			sourceTree = "<group>";
 		};
 		DDF7CFB227FC02CF007F8A82 /* ViewModels */ = {
@@ -272,7 +364,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1310;
-				LastUpgradeCheck = 1310;
+				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					DD35E3D927FBC03300181D20 = {
 						CreatedOnToolsVersion = 13.1;
@@ -316,15 +408,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD35E41D27FBC0E200181D20 /* Styles in Resources */,
-				DD35E41927FBC0E200181D20 /* Services in Resources */,
-				DD35E41727FBC0E200181D20 /* Models in Resources */,
-				DD35E42527FBC0E200181D20 /* Navigation in Resources */,
-				DD35E42327FBC0E200181D20 /* PreviewContent in Resources */,
-				DD35E41B27FBC0E200181D20 /* Utils in Resources */,
 				DD35E3FF27FBC03300181D20 /* Assets.xcassets in Resources */,
-				DD35E42827FBC0EA00181D20 /* Components in Resources */,
-				DD35E42127FBC0E200181D20 /* Views in Resources */,
+				DD6580EA27FD12CA00AAE685 /* PreviewAssets.xcassets in Resources */,
+				DD6580FA27FD54D300AAE685 /* Development.xcconfig in Resources */,
+				DD6580F727FD54C000AAE685 /* Production.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -332,15 +419,10 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD35E41E27FBC0E200181D20 /* Styles in Resources */,
-				DD35E41A27FBC0E200181D20 /* Services in Resources */,
-				DD35E41827FBC0E200181D20 /* Models in Resources */,
-				DD35E42627FBC0E200181D20 /* Navigation in Resources */,
-				DD35E42427FBC0E200181D20 /* PreviewContent in Resources */,
-				DD35E41C27FBC0E200181D20 /* Utils in Resources */,
 				DD35E40027FBC03300181D20 /* Assets.xcassets in Resources */,
-				DD35E42927FBC0EA00181D20 /* Components in Resources */,
-				DD35E42227FBC0E200181D20 /* Views in Resources */,
+				DD6580EB27FD12CA00AAE685 /* PreviewAssets.xcassets in Resources */,
+				DD6580FB27FD54D300AAE685 /* Development.xcconfig in Resources */,
+				DD6580F827FD54C000AAE685 /* Production.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,8 +447,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6580D227FD114700AAE685 /* MintNFTRequest.swift in Sources */,
+				DD6580E127FD124D00AAE685 /* Colors.swift in Sources */,
+				DD6580D527FD115100AAE685 /* Royalties.swift in Sources */,
+				DD6580E727FD12B600AAE685 /* PreviewContent.swift in Sources */,
 				DD35E3FD27FBC03300181D20 /* ContentView.swift in Sources */,
+				DD6580CF27FD113C00AAE685 /* MetadataAttribute.swift in Sources */,
+				DD6580D827FD115A00AAE685 /* User.swift in Sources */,
 				DD35E3FB27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
+				DD6580F127FD133600AAE685 /* HttpApiClient.swift in Sources */,
+				DD6580DB27FD116000AAE685 /* Wallet.swift in Sources */,
+				DD6580CC27FD112F00AAE685 /* Metadata.swift in Sources */,
+				DD6580C927FD110700AAE685 /* NFT.swift in Sources */,
+				DD6580ED27FD132700AAE685 /* ApiClient.swift in Sources */,
+				DD6580F427FD133E00AAE685 /* MockApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -374,8 +468,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DD6580D327FD114700AAE685 /* MintNFTRequest.swift in Sources */,
+				DD6580E227FD124D00AAE685 /* Colors.swift in Sources */,
+				DD6580D627FD115100AAE685 /* Royalties.swift in Sources */,
+				DD6580E827FD12B600AAE685 /* PreviewContent.swift in Sources */,
 				DD35E3FE27FBC03300181D20 /* ContentView.swift in Sources */,
+				DD6580D027FD113C00AAE685 /* MetadataAttribute.swift in Sources */,
+				DD6580D927FD115A00AAE685 /* User.swift in Sources */,
 				DD35E3FC27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
+				DD6580F227FD133600AAE685 /* HttpApiClient.swift in Sources */,
+				DD6580DC27FD116000AAE685 /* Wallet.swift in Sources */,
+				DD6580CD27FD112F00AAE685 /* Metadata.swift in Sources */,
+				DD6580CA27FD110700AAE685 /* NFT.swift in Sources */,
+				DD6580EE27FD132700AAE685 /* ApiClient.swift in Sources */,
+				DD6580F527FD133E00AAE685 /* MockApiClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -591,6 +697,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
@@ -619,6 +726,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
