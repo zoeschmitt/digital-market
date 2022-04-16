@@ -43,10 +43,6 @@
 		DD6580F227FD133600AAE685 /* HttpApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580F027FD133600AAE685 /* HttpApiClient.swift */; };
 		DD6580F427FD133E00AAE685 /* MockApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580F327FD133E00AAE685 /* MockApiClient.swift */; };
 		DD6580F527FD133E00AAE685 /* MockApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580F327FD133E00AAE685 /* MockApiClient.swift */; };
-		DD6580F727FD54C000AAE685 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DD6580F627FD54C000AAE685 /* Production.xcconfig */; };
-		DD6580F827FD54C000AAE685 /* Production.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DD6580F627FD54C000AAE685 /* Production.xcconfig */; };
-		DD6580FA27FD54D300AAE685 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DD6580F927FD54D300AAE685 /* Development.xcconfig */; };
-		DD6580FB27FD54D300AAE685 /* Development.xcconfig in Resources */ = {isa = PBXBuildFile; fileRef = DD6580F927FD54D300AAE685 /* Development.xcconfig */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -70,7 +66,7 @@
 		DD35E3D327FBC03200181D20 /* DigitalMarketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalMarketApp.swift; sourceTree = "<group>"; };
 		DD35E3D427FBC03200181D20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DD35E3D527FBC03300181D20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DD35E3DA27FBC03300181D20 /* DigitalMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD35E3DA27FBC03300181D20 /* Digital Market - Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digital Market - Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD35E3E027FBC03300181D20 /* DigitalMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD35E3E227FBC03300181D20 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		DD35E3E727FBC03300181D20 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,8 +89,9 @@
 		DD6580EC27FD132700AAE685 /* ApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ApiClient.swift; sourceTree = "<group>"; };
 		DD6580F027FD133600AAE685 /* HttpApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HttpApiClient.swift; sourceTree = "<group>"; };
 		DD6580F327FD133E00AAE685 /* MockApiClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockApiClient.swift; sourceTree = "<group>"; };
-		DD6580F627FD54C000AAE685 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
-		DD6580F927FD54D300AAE685 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		DD658107280B60E800AAE685 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
+		DD658108280B60F400AAE685 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
+		DD658109280B6F0B00AAE685 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -132,8 +129,9 @@
 		DD35E3CD27FBC03200181D20 = {
 			isa = PBXGroup;
 			children = (
-				DD6580F927FD54D300AAE685 /* Development.xcconfig */,
-				DD6580F627FD54C000AAE685 /* Production.xcconfig */,
+				DD658109280B6F0B00AAE685 /* Base.xcconfig */,
+				DD658108280B60F400AAE685 /* Development.xcconfig */,
+				DD658107280B60E800AAE685 /* Production.xcconfig */,
 				DD35E42A27FBC16700181D20 /* README.md */,
 				DD35E3D227FBC03200181D20 /* Shared */,
 				DD35E3E127FBC03300181D20 /* macOS */,
@@ -154,7 +152,7 @@
 				DD6580DE27FD121F00AAE685 /* Components */,
 				DD6580DF27FD123700AAE685 /* Styles */,
 				DD35E42B27FBC36C00181D20 /* Stores */,
-				DD6580E327FD126F00AAE685 /* Services */,
+				DD6580E327FD126F00AAE685 /* Network */,
 				DD6580E427FD128900AAE685 /* Utils */,
 				DD6580E527FD12A200AAE685 /* PreviewContent */,
 			);
@@ -164,7 +162,7 @@
 		DD35E3DB27FBC03300181D20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD35E3DA27FBC03300181D20 /* DigitalMarket.app */,
+				DD35E3DA27FBC03300181D20 /* Digital Market - Dev.app */,
 				DD35E3E027FBC03300181D20 /* DigitalMarket.app */,
 				DD35E3E727FBC03300181D20 /* Tests iOS.xctest */,
 				DD35E3F327FBC03300181D20 /* Tests macOS.xctest */,
@@ -242,13 +240,13 @@
 			path = Styles;
 			sourceTree = "<group>";
 		};
-		DD6580E327FD126F00AAE685 /* Services */ = {
+		DD6580E327FD126F00AAE685 /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				DD6580EC27FD132700AAE685 /* ApiClient.swift */,
 				DD6580EF27FD132C00AAE685 /* Clients */,
 			);
-			path = Services;
+			path = Network;
 			sourceTree = "<group>";
 		};
 		DD6580E427FD128900AAE685 /* Utils */ = {
@@ -300,7 +298,7 @@
 			);
 			name = "DigitalMarket (iOS)";
 			productName = "DigitalMarket (iOS)";
-			productReference = DD35E3DA27FBC03300181D20 /* DigitalMarket.app */;
+			productReference = DD35E3DA27FBC03300181D20 /* Digital Market - Dev.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DD35E3DF27FBC03300181D20 /* DigitalMarket (macOS) */ = {
@@ -410,8 +408,6 @@
 			files = (
 				DD35E3FF27FBC03300181D20 /* Assets.xcassets in Resources */,
 				DD6580EA27FD12CA00AAE685 /* PreviewAssets.xcassets in Resources */,
-				DD6580FA27FD54D300AAE685 /* Development.xcconfig in Resources */,
-				DD6580F727FD54C000AAE685 /* Production.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -421,8 +417,6 @@
 			files = (
 				DD35E40027FBC03300181D20 /* Assets.xcassets in Resources */,
 				DD6580EB27FD12CA00AAE685 /* PreviewAssets.xcassets in Resources */,
-				DD6580FB27FD54D300AAE685 /* Development.xcconfig in Resources */,
-				DD6580F827FD54C000AAE685 /* Production.xcconfig in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -519,8 +513,9 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		DD35E40127FBC03300181D20 /* Debug */ = {
+		DD35E40127FBC03300181D20 /* Debug Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD658109280B6F0B00AAE685 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -576,10 +571,11 @@
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
-			name = Debug;
+			name = "Debug Development";
 		};
-		DD35E40227FBC03300181D20 /* Release */ = {
+		DD35E40227FBC03300181D20 /* Release Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD658109280B6F0B00AAE685 /* Base.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_NONNULL = YES;
@@ -628,10 +624,11 @@
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 			};
-			name = Release;
+			name = "Release Development";
 		};
-		DD35E40427FBC03300181D20 /* Debug */ = {
+		DD35E40427FBC03300181D20 /* Debug Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD658108280B60F400AAE685 /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -651,17 +648,18 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.DigitalMarket;
-				PRODUCT_NAME = DigitalMarket;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.dam.debug.dev;
+				PRODUCT_NAME = "Digital Market - Dev";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
-			name = Debug;
+			name = "Debug Development";
 		};
-		DD35E40527FBC03300181D20 /* Release */ = {
+		DD35E40527FBC03300181D20 /* Release Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD658108280B60F400AAE685 /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -681,18 +679,19 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.DigitalMarket;
-				PRODUCT_NAME = DigitalMarket;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.dam.release.dev;
+				PRODUCT_NAME = "Digital Market Dev";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Release Development";
 		};
-		DD35E40727FBC03300181D20 /* Debug */ = {
+		DD35E40727FBC03300181D20 /* Debug Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD658108280B60F400AAE685 /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -718,10 +717,11 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
-			name = Debug;
+			name = "Debug Development";
 		};
-		DD35E40827FBC03300181D20 /* Release */ = {
+		DD35E40827FBC03300181D20 /* Release Development */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD658108280B60F400AAE685 /* Development.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -747,9 +747,9 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 			};
-			name = Release;
+			name = "Release Development";
 		};
-		DD35E40A27FBC03300181D20 /* Debug */ = {
+		DD35E40A27FBC03300181D20 /* Debug Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -772,9 +772,9 @@
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "DigitalMarket (iOS)";
 			};
-			name = Debug;
+			name = "Debug Development";
 		};
-		DD35E40B27FBC03300181D20 /* Release */ = {
+		DD35E40B27FBC03300181D20 /* Release Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -798,9 +798,9 @@
 				TEST_TARGET_NAME = "DigitalMarket (iOS)";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = Release;
+			name = "Release Development";
 		};
-		DD35E40D27FBC03300181D20 /* Debug */ = {
+		DD35E40D27FBC03300181D20 /* Debug Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -823,9 +823,9 @@
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "DigitalMarket (macOS)";
 			};
-			name = Debug;
+			name = "Debug Development";
 		};
-		DD35E40E27FBC03300181D20 /* Release */ = {
+		DD35E40E27FBC03300181D20 /* Release Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
@@ -848,7 +848,344 @@
 				SWIFT_VERSION = 5.0;
 				TEST_TARGET_NAME = "DigitalMarket (macOS)";
 			};
-			name = Release;
+			name = "Release Development";
+		};
+		DD6580FD280B552400AAE685 /* Debug Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD658109280B6F0B00AAE685 /* Base.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = "Debug Production";
+		};
+		DD6580FE280B552400AAE685 /* Debug Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD658107280B60E800AAE685 /* Production.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WU2A259UNF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.dam.debug.prod;
+				PRODUCT_NAME = "Digital Market - Prod";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = "Debug Production";
+		};
+		DD6580FF280B552400AAE685 /* Debug Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD658107280B60E800AAE685 /* Production.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WU2A259UNF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.DigitalMarket;
+				PRODUCT_NAME = DigitalMarket;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = "Debug Production";
+		};
+		DD658100280B552400AAE685 /* Debug Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WU2A259UNF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zoe.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DigitalMarket (iOS)";
+			};
+			name = "Debug Production";
+		};
+		DD658101280B552400AAE685 /* Debug Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WU2A259UNF;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zoe.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "DigitalMarket (macOS)";
+			};
+			name = "Debug Production";
+		};
+		DD658102280B552900AAE685 /* Release Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD658109280B6F0B00AAE685 /* Base.xcconfig */;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = "Release Production";
+		};
+		DD658103280B552900AAE685 /* Release Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD658107280B60E800AAE685 /* Production.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WU2A259UNF;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.dam.release.prod;
+				PRODUCT_NAME = "Digital Market";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Production";
+		};
+		DD658104280B552900AAE685 /* Release Production */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DD658107280B60E800AAE685 /* Production.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = macOS/macOS.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WU2A259UNF;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.DigitalMarket;
+				PRODUCT_NAME = DigitalMarket;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = "Release Production";
+		};
+		DD658105280B552900AAE685 /* Release Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WU2A259UNF;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zoe.Tests-iOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DigitalMarket (iOS)";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = "Release Production";
+		};
+		DD658106280B552900AAE685 /* Release Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = WU2A259UNF;
+				GENERATE_INFOPLIST_FILE = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.zoe.Tests-macOS";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TEST_TARGET_NAME = "DigitalMarket (macOS)";
+			};
+			name = "Release Production";
 		};
 /* End XCBuildConfiguration section */
 
@@ -856,47 +1193,57 @@
 		DD35E3D127FBC03200181D20 /* Build configuration list for PBXProject "DigitalMarket" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD35E40127FBC03300181D20 /* Debug */,
-				DD35E40227FBC03300181D20 /* Release */,
+				DD35E40127FBC03300181D20 /* Debug Development */,
+				DD6580FD280B552400AAE685 /* Debug Production */,
+				DD35E40227FBC03300181D20 /* Release Development */,
+				DD658102280B552900AAE685 /* Release Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Development";
 		};
 		DD35E40327FBC03300181D20 /* Build configuration list for PBXNativeTarget "DigitalMarket (iOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD35E40427FBC03300181D20 /* Debug */,
-				DD35E40527FBC03300181D20 /* Release */,
+				DD35E40427FBC03300181D20 /* Debug Development */,
+				DD6580FE280B552400AAE685 /* Debug Production */,
+				DD35E40527FBC03300181D20 /* Release Development */,
+				DD658103280B552900AAE685 /* Release Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Development";
 		};
 		DD35E40627FBC03300181D20 /* Build configuration list for PBXNativeTarget "DigitalMarket (macOS)" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD35E40727FBC03300181D20 /* Debug */,
-				DD35E40827FBC03300181D20 /* Release */,
+				DD35E40727FBC03300181D20 /* Debug Development */,
+				DD6580FF280B552400AAE685 /* Debug Production */,
+				DD35E40827FBC03300181D20 /* Release Development */,
+				DD658104280B552900AAE685 /* Release Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Development";
 		};
 		DD35E40927FBC03300181D20 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD35E40A27FBC03300181D20 /* Debug */,
-				DD35E40B27FBC03300181D20 /* Release */,
+				DD35E40A27FBC03300181D20 /* Debug Development */,
+				DD658100280B552400AAE685 /* Debug Production */,
+				DD35E40B27FBC03300181D20 /* Release Development */,
+				DD658105280B552900AAE685 /* Release Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Development";
 		};
 		DD35E40C27FBC03300181D20 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD35E40D27FBC03300181D20 /* Debug */,
-				DD35E40E27FBC03300181D20 /* Release */,
+				DD35E40D27FBC03300181D20 /* Debug Development */,
+				DD658101280B552400AAE685 /* Debug Production */,
+				DD35E40E27FBC03300181D20 /* Release Development */,
+				DD658106280B552900AAE685 /* Release Production */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = "Release Development";
 		};
 /* End XCConfigurationList section */
 	};
