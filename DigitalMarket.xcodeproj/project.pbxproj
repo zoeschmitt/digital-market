@@ -43,6 +43,28 @@
 		DD6580F227FD133600AAE685 /* HttpApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580F027FD133600AAE685 /* HttpApiClient.swift */; };
 		DD6580F427FD133E00AAE685 /* MockApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580F327FD133E00AAE685 /* MockApiClient.swift */; };
 		DD6580F527FD133E00AAE685 /* MockApiClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580F327FD133E00AAE685 /* MockApiClient.swift */; };
+		DD658120280CF28200AAE685 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65811F280CF28200AAE685 /* TabBar.swift */; };
+		DD658121280CF28200AAE685 /* TabBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65811F280CF28200AAE685 /* TabBar.swift */; };
+		DD658132280CF9E000AAE685 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658131280CF9E000AAE685 /* HomeViewModel.swift */; };
+		DD658133280CF9E000AAE685 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658131280CF9E000AAE685 /* HomeViewModel.swift */; };
+		DD658135280CF9EF00AAE685 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658134280CF9EF00AAE685 /* SearchViewModel.swift */; };
+		DD658136280CF9EF00AAE685 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658134280CF9EF00AAE685 /* SearchViewModel.swift */; };
+		DD658138280CF9FF00AAE685 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658137280CF9FF00AAE685 /* HomeView.swift */; };
+		DD658139280CF9FF00AAE685 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658137280CF9FF00AAE685 /* HomeView.swift */; };
+		DD65813B280CFA0C00AAE685 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65813A280CFA0C00AAE685 /* SearchView.swift */; };
+		DD65813C280CFA0C00AAE685 /* SearchView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65813A280CFA0C00AAE685 /* SearchView.swift */; };
+		DD65813E280CFA1300AAE685 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65813D280CFA1300AAE685 /* AccountView.swift */; };
+		DD65813F280CFA1300AAE685 /* AccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65813D280CFA1300AAE685 /* AccountView.swift */; };
+		DD658141280CFA2300AAE685 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658140280CFA2300AAE685 /* SettingsView.swift */; };
+		DD658142280CFA2300AAE685 /* SettingsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658140280CFA2300AAE685 /* SettingsView.swift */; };
+		DD658144280CFA3100AAE685 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658143280CFA3100AAE685 /* AccountViewModel.swift */; };
+		DD658145280CFA3100AAE685 /* AccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658143280CFA3100AAE685 /* AccountViewModel.swift */; };
+		DD658147280CFA4000AAE685 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658146280CFA4000AAE685 /* SettingsViewModel.swift */; };
+		DD658148280CFA4000AAE685 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658146280CFA4000AAE685 /* SettingsViewModel.swift */; };
+		DD65814F2813B2B200AAE685 /* NFTCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65814E2813B2B200AAE685 /* NFTCard.swift */; };
+		DD6581502813B2B200AAE685 /* NFTCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65814E2813B2B200AAE685 /* NFTCard.swift */; };
+		DD658152281466CD00AAE685 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658151281466CD00AAE685 /* Configuration.swift */; };
+		DD658153281466CD00AAE685 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658151281466CD00AAE685 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,7 +88,7 @@
 		DD35E3D327FBC03200181D20 /* DigitalMarketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalMarketApp.swift; sourceTree = "<group>"; };
 		DD35E3D427FBC03200181D20 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		DD35E3D527FBC03300181D20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		DD35E3DA27FBC03300181D20 /* Digital Market - Dev.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Digital Market - Dev.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		DD35E3DA27FBC03300181D20 /* DigitalMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD35E3E027FBC03300181D20 /* DigitalMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD35E3E227FBC03300181D20 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
 		DD35E3E727FBC03300181D20 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -92,6 +114,18 @@
 		DD658107280B60E800AAE685 /* Production.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Production.xcconfig; sourceTree = "<group>"; };
 		DD658108280B60F400AAE685 /* Development.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Development.xcconfig; sourceTree = "<group>"; };
 		DD658109280B6F0B00AAE685 /* Base.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = Base.xcconfig; sourceTree = "<group>"; };
+		DD65811F280CF28200AAE685 /* TabBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBar.swift; sourceTree = "<group>"; };
+		DD658131280CF9E000AAE685 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
+		DD658134280CF9EF00AAE685 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		DD658137280CF9FF00AAE685 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
+		DD65813A280CFA0C00AAE685 /* SearchView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchView.swift; sourceTree = "<group>"; };
+		DD65813D280CFA1300AAE685 /* AccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountView.swift; sourceTree = "<group>"; };
+		DD658140280CFA2300AAE685 /* SettingsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsView.swift; sourceTree = "<group>"; };
+		DD658143280CFA3100AAE685 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
+		DD658146280CFA4000AAE685 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
+		DD65814E2813B2B200AAE685 /* NFTCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTCard.swift; sourceTree = "<group>"; };
+		DD658151281466CD00AAE685 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		DD6581582815C9B400AAE685 /* DigitalMarket--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DigitalMarket--iOS--Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +163,7 @@
 		DD35E3CD27FBC03200181D20 = {
 			isa = PBXGroup;
 			children = (
+				DD6581582815C9B400AAE685 /* DigitalMarket--iOS--Info.plist */,
 				DD658109280B6F0B00AAE685 /* Base.xcconfig */,
 				DD658108280B60F400AAE685 /* Development.xcconfig */,
 				DD658107280B60E800AAE685 /* Production.xcconfig */,
@@ -149,12 +184,13 @@
 				DD6580C727FD0F2D00AAE685 /* Models */,
 				DD6580DD27FD120200AAE685 /* Views */,
 				DDF7CFB227FC02CF007F8A82 /* ViewModels */,
+				DD65811B280CEEEF00AAE685 /* Navigation */,
 				DD6580DE27FD121F00AAE685 /* Components */,
-				DD6580DF27FD123700AAE685 /* Styles */,
-				DD35E42B27FBC36C00181D20 /* Stores */,
 				DD6580E327FD126F00AAE685 /* Network */,
+				DD6580DF27FD123700AAE685 /* Styles */,
 				DD6580E427FD128900AAE685 /* Utils */,
 				DD6580E527FD12A200AAE685 /* PreviewContent */,
+				DD658151281466CD00AAE685 /* Configuration.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -162,7 +198,7 @@
 		DD35E3DB27FBC03300181D20 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DD35E3DA27FBC03300181D20 /* Digital Market - Dev.app */,
+				DD35E3DA27FBC03300181D20 /* DigitalMarket.app */,
 				DD35E3E027FBC03300181D20 /* DigitalMarket.app */,
 				DD35E3E727FBC03300181D20 /* Tests iOS.xctest */,
 				DD35E3F327FBC03300181D20 /* Tests macOS.xctest */,
@@ -196,13 +232,6 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
-		DD35E42B27FBC36C00181D20 /* Stores */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Stores;
-			sourceTree = "<group>";
-		};
 		DD6580C727FD0F2D00AAE685 /* Models */ = {
 			isa = PBXGroup;
 			children = (
@@ -220,7 +249,10 @@
 		DD6580DD27FD120200AAE685 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				DD35E3D427FBC03200181D20 /* ContentView.swift */,
+				DD658137280CF9FF00AAE685 /* HomeView.swift */,
+				DD65813A280CFA0C00AAE685 /* SearchView.swift */,
+				DD65813D280CFA1300AAE685 /* AccountView.swift */,
+				DD658140280CFA2300AAE685 /* SettingsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -228,6 +260,7 @@
 		DD6580DE27FD121F00AAE685 /* Components */ = {
 			isa = PBXGroup;
 			children = (
+				DD65814E2813B2B200AAE685 /* NFTCard.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -274,9 +307,22 @@
 			path = Clients;
 			sourceTree = "<group>";
 		};
+		DD65811B280CEEEF00AAE685 /* Navigation */ = {
+			isa = PBXGroup;
+			children = (
+				DD35E3D427FBC03200181D20 /* ContentView.swift */,
+				DD65811F280CF28200AAE685 /* TabBar.swift */,
+			);
+			path = Navigation;
+			sourceTree = "<group>";
+		};
 		DDF7CFB227FC02CF007F8A82 /* ViewModels */ = {
 			isa = PBXGroup;
 			children = (
+				DD658131280CF9E000AAE685 /* HomeViewModel.swift */,
+				DD658134280CF9EF00AAE685 /* SearchViewModel.swift */,
+				DD658143280CFA3100AAE685 /* AccountViewModel.swift */,
+				DD658146280CFA4000AAE685 /* SettingsViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -298,7 +344,7 @@
 			);
 			name = "DigitalMarket (iOS)";
 			productName = "DigitalMarket (iOS)";
-			productReference = DD35E3DA27FBC03300181D20 /* Digital Market - Dev.app */;
+			productReference = DD35E3DA27FBC03300181D20 /* DigitalMarket.app */;
 			productType = "com.apple.product-type.application";
 		};
 		DD35E3DF27FBC03300181D20 /* DigitalMarket (macOS) */ = {
@@ -442,19 +488,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD6580D227FD114700AAE685 /* MintNFTRequest.swift in Sources */,
+				DD658141280CFA2300AAE685 /* SettingsView.swift in Sources */,
+				DD65814F2813B2B200AAE685 /* NFTCard.swift in Sources */,
+				DD658132280CF9E000AAE685 /* HomeViewModel.swift in Sources */,
 				DD6580E127FD124D00AAE685 /* Colors.swift in Sources */,
 				DD6580D527FD115100AAE685 /* Royalties.swift in Sources */,
+				DD65813E280CFA1300AAE685 /* AccountView.swift in Sources */,
 				DD6580E727FD12B600AAE685 /* PreviewContent.swift in Sources */,
 				DD35E3FD27FBC03300181D20 /* ContentView.swift in Sources */,
 				DD6580CF27FD113C00AAE685 /* MetadataAttribute.swift in Sources */,
 				DD6580D827FD115A00AAE685 /* User.swift in Sources */,
+				DD658152281466CD00AAE685 /* Configuration.swift in Sources */,
+				DD658147280CFA4000AAE685 /* SettingsViewModel.swift in Sources */,
+				DD658144280CFA3100AAE685 /* AccountViewModel.swift in Sources */,
 				DD35E3FB27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
 				DD6580F127FD133600AAE685 /* HttpApiClient.swift in Sources */,
+				DD65813B280CFA0C00AAE685 /* SearchView.swift in Sources */,
 				DD6580DB27FD116000AAE685 /* Wallet.swift in Sources */,
 				DD6580CC27FD112F00AAE685 /* Metadata.swift in Sources */,
+				DD658135280CF9EF00AAE685 /* SearchViewModel.swift in Sources */,
+				DD658138280CF9FF00AAE685 /* HomeView.swift in Sources */,
 				DD6580C927FD110700AAE685 /* NFT.swift in Sources */,
 				DD6580ED27FD132700AAE685 /* ApiClient.swift in Sources */,
 				DD6580F427FD133E00AAE685 /* MockApiClient.swift in Sources */,
+				DD658120280CF28200AAE685 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,19 +520,30 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD6580D327FD114700AAE685 /* MintNFTRequest.swift in Sources */,
+				DD658142280CFA2300AAE685 /* SettingsView.swift in Sources */,
+				DD6581502813B2B200AAE685 /* NFTCard.swift in Sources */,
+				DD658133280CF9E000AAE685 /* HomeViewModel.swift in Sources */,
 				DD6580E227FD124D00AAE685 /* Colors.swift in Sources */,
 				DD6580D627FD115100AAE685 /* Royalties.swift in Sources */,
+				DD65813F280CFA1300AAE685 /* AccountView.swift in Sources */,
 				DD6580E827FD12B600AAE685 /* PreviewContent.swift in Sources */,
 				DD35E3FE27FBC03300181D20 /* ContentView.swift in Sources */,
 				DD6580D027FD113C00AAE685 /* MetadataAttribute.swift in Sources */,
 				DD6580D927FD115A00AAE685 /* User.swift in Sources */,
+				DD658153281466CD00AAE685 /* Configuration.swift in Sources */,
+				DD658148280CFA4000AAE685 /* SettingsViewModel.swift in Sources */,
+				DD658145280CFA3100AAE685 /* AccountViewModel.swift in Sources */,
 				DD35E3FC27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
 				DD6580F227FD133600AAE685 /* HttpApiClient.swift in Sources */,
+				DD65813C280CFA0C00AAE685 /* SearchView.swift in Sources */,
 				DD6580DC27FD116000AAE685 /* Wallet.swift in Sources */,
 				DD6580CD27FD112F00AAE685 /* Metadata.swift in Sources */,
+				DD658136280CF9EF00AAE685 /* SearchViewModel.swift in Sources */,
+				DD658139280CF9FF00AAE685 /* HomeView.swift in Sources */,
 				DD6580CA27FD110700AAE685 /* NFT.swift in Sources */,
 				DD6580EE27FD132700AAE685 /* ApiClient.swift in Sources */,
 				DD6580F527FD133E00AAE685 /* MockApiClient.swift in Sources */,
+				DD658121280CF28200AAE685 /* TabBar.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -637,6 +705,7 @@
 				DEVELOPMENT_TEAM = WU2A259UNF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DigitalMarket--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -649,7 +718,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.dam.debug.dev;
-				PRODUCT_NAME = "Digital Market - Dev";
+				PRODUCT_NAME = DigitalMarket;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -668,6 +737,7 @@
 				DEVELOPMENT_TEAM = WU2A259UNF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DigitalMarket--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -680,7 +750,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.dam.release.dev;
-				PRODUCT_NAME = "Digital Market Dev";
+				PRODUCT_NAME = DigitalMarket;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -921,6 +991,7 @@
 				DEVELOPMENT_TEAM = WU2A259UNF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DigitalMarket--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -933,7 +1004,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.dam.debug.prod;
-				PRODUCT_NAME = "Digital Market - Prod";
+				PRODUCT_NAME = DigitalMarket;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1085,6 +1156,7 @@
 				DEVELOPMENT_TEAM = WU2A259UNF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DigitalMarket--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1097,7 +1169,7 @@
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.dam.release.prod;
-				PRODUCT_NAME = "Digital Market";
+				PRODUCT_NAME = DigitalMarket;
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

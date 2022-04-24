@@ -9,35 +9,35 @@ import Foundation
 
 class HttpApiClient: ApiClient {
     func generateWallet() -> Wallet {
-        <#code#>
+        return mockWallet
     }
     
     func getWallet(walletId: String) -> Wallet {
-        <#code#>
+        return mockWallet
     }
     
     func mintNFT(user: User, mintNFTRequest: MintNFTRequest) -> NFT {
-        <#code#>
+        return mockNFT
     }
     
     func getAllNFTs() -> [NFT] {
-        <#code#>
+        return [mockNFT]
     }
     
     func getNFT(nftId: String) -> NFT {
-        <#code#>
+        return mockNFT
     }
     
     func getUserNFTs(walletId: String) -> [NFT] {
-        <#code#>
+        return [mockNFT]
     }
     
     func listNFT(nftId: String, listPrice: Double) -> NFT {
-        <#code#>
+        return mockNFT
     }
     
     func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) -> NFT {
-        <#code#>
+        return mockNFT
     }
     
 }
