@@ -11,7 +11,7 @@ class HomeViewModel: ObservableObject {
     private let apiClient: ApiClient
     @Published private(set) var nftFeed: [NFT] = []
 
-    init(apiClient: ApiClient) {
+    init(apiClient: ApiClient = HttpApiClient()) {
         self.apiClient = apiClient
         getNFTFeed()
     }

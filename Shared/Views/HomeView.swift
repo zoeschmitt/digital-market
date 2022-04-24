@@ -8,26 +8,29 @@
 import SwiftUI
 
 struct HomeView: View {
-    @EnvironmentObject var homeViewModel: HomeViewModel
+    @ObservedObject var viewModel: HomeViewModel
 
     var body: some View {
         VStack {
-            HStack {
+            HStack(alignment: .top) {
                 Text("Marketplace")
                     .font(.title)
                 Spacer()
             }
+            .background(.green)
+            .padding(20)
             ScrollView (.vertical) {
                 NFTCard()
                 
             }
         }
-        .padding(20)
+        .background(.red)
+        .background(.orange)
     }
 }
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView()
+        HomeView(viewModel: .init(apiClient: MockApiClient()))
     }
 }
