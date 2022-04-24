@@ -63,6 +63,8 @@
 		DD658148280CFA4000AAE685 /* SettingsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658146280CFA4000AAE685 /* SettingsViewModel.swift */; };
 		DD65814F2813B2B200AAE685 /* NFTCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65814E2813B2B200AAE685 /* NFTCard.swift */; };
 		DD6581502813B2B200AAE685 /* NFTCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD65814E2813B2B200AAE685 /* NFTCard.swift */; };
+		DD658152281466CD00AAE685 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658151281466CD00AAE685 /* Configuration.swift */; };
+		DD658153281466CD00AAE685 /* Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD658151281466CD00AAE685 /* Configuration.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -122,6 +124,8 @@
 		DD658143280CFA3100AAE685 /* AccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewModel.swift; sourceTree = "<group>"; };
 		DD658146280CFA4000AAE685 /* SettingsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewModel.swift; sourceTree = "<group>"; };
 		DD65814E2813B2B200AAE685 /* NFTCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTCard.swift; sourceTree = "<group>"; };
+		DD658151281466CD00AAE685 /* Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Configuration.swift; sourceTree = "<group>"; };
+		DD6581582815C9B400AAE685 /* DigitalMarket--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "DigitalMarket--iOS--Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -159,6 +163,7 @@
 		DD35E3CD27FBC03200181D20 = {
 			isa = PBXGroup;
 			children = (
+				DD6581582815C9B400AAE685 /* DigitalMarket--iOS--Info.plist */,
 				DD658109280B6F0B00AAE685 /* Base.xcconfig */,
 				DD658108280B60F400AAE685 /* Development.xcconfig */,
 				DD658107280B60E800AAE685 /* Production.xcconfig */,
@@ -181,10 +186,11 @@
 				DDF7CFB227FC02CF007F8A82 /* ViewModels */,
 				DD65811B280CEEEF00AAE685 /* Navigation */,
 				DD6580DE27FD121F00AAE685 /* Components */,
-				DD6580DF27FD123700AAE685 /* Styles */,
 				DD6580E327FD126F00AAE685 /* Network */,
+				DD6580DF27FD123700AAE685 /* Styles */,
 				DD6580E427FD128900AAE685 /* Utils */,
 				DD6580E527FD12A200AAE685 /* PreviewContent */,
+				DD658151281466CD00AAE685 /* Configuration.swift */,
 			);
 			path = Shared;
 			sourceTree = "<group>";
@@ -492,6 +498,7 @@
 				DD35E3FD27FBC03300181D20 /* ContentView.swift in Sources */,
 				DD6580CF27FD113C00AAE685 /* MetadataAttribute.swift in Sources */,
 				DD6580D827FD115A00AAE685 /* User.swift in Sources */,
+				DD658152281466CD00AAE685 /* Configuration.swift in Sources */,
 				DD658147280CFA4000AAE685 /* SettingsViewModel.swift in Sources */,
 				DD658144280CFA3100AAE685 /* AccountViewModel.swift in Sources */,
 				DD35E3FB27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
@@ -523,6 +530,7 @@
 				DD35E3FE27FBC03300181D20 /* ContentView.swift in Sources */,
 				DD6580D027FD113C00AAE685 /* MetadataAttribute.swift in Sources */,
 				DD6580D927FD115A00AAE685 /* User.swift in Sources */,
+				DD658153281466CD00AAE685 /* Configuration.swift in Sources */,
 				DD658148280CFA4000AAE685 /* SettingsViewModel.swift in Sources */,
 				DD658145280CFA3100AAE685 /* AccountViewModel.swift in Sources */,
 				DD35E3FC27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
@@ -697,6 +705,7 @@
 				DEVELOPMENT_TEAM = WU2A259UNF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DigitalMarket--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -728,6 +737,7 @@
 				DEVELOPMENT_TEAM = WU2A259UNF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DigitalMarket--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -981,6 +991,7 @@
 				DEVELOPMENT_TEAM = WU2A259UNF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DigitalMarket--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1145,6 +1156,7 @@
 				DEVELOPMENT_TEAM = WU2A259UNF;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "DigitalMarket--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
