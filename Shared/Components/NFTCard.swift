@@ -8,47 +8,28 @@
 import SwiftUI
 
 struct NFTCard: View {
+    let nft: NFT
+    
     var body: some View {
         ZStack {
-            VStack {
-                Spacer()
-                HStack {
-                    VStack {
-                        // profile image
-                    }
-                    .frame(width: 20, height: 20)
-                    .background(.green)
-                    
-                    VStack (alignment: .leading) {
-                        Text("Zoe Schmitt")
-                            .font(.headline)
-                        Text("@zoe")
-                            .font(.subheadline)
-                    }
-                    
-                    Spacer()
-                    
-                    Text("1 ETH")
-                        .font(.subheadline)
-                    Image(systemName: "chevron.right")
-                        .foregroundColor(.blue)
-                }
-                .padding()
-                .background(.red)
-            }
-            .padding(5)
+            RoundedRectangle(cornerRadius: 25, style: .continuous)
             VStack {
                 // image
             }
+            VStack {
+                Spacer()
+                UserInfoCard(nft: nft)
+            }
+            .padding(5)
         }
         .frame(maxWidth: .infinity)
         .frame(height: 300)
-        .background(.blue)
     }
 }
 
 struct NFTCard_Previews: PreviewProvider {
     static var previews: some View {
-        NFTCard()
+        NFTCard(nft: NFT.mockData[0])
+            .padding(20)
     }
 }

@@ -1,13 +1,13 @@
 //
-//  AccountViewModel.swift
+//  UserStore.swift
 //  DigitalMarket
 //
-//  Created by Zoe Schmitt on 4/17/22.
+//  Created by Zoe Schmitt on 4/30/22.
 //
 
 import Foundation
 
-class AccountViewModel: ObservableObject {
+class UserStore: ObservableObject {
     private let apiClient: ApiClient
     @Published private(set) var wallet: Wallet?
 
@@ -24,6 +24,7 @@ class AccountViewModel: ObservableObject {
         if walletId != nil {
             //api call
         }
+        return Wallet.mockData[0]
     }
 
     func generateUserWallet() async throws -> Wallet {

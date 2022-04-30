@@ -8,36 +8,37 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var viewModel = HomeViewModel()
+    @Binding var nfts: [NFT]
 
     var body: some View {
-        VStack {
-            HStack(alignment: .top) {
-                Text("Marketplace")
-                    .font(.title)
+        ScrollView {
+            HStack(alignment: .center) {
+                ZStack {
+                    RoundedRectangle(cornerRadius: 14, style: .continuous)
+                        .fill(Color.dodgerPurple)
+                        .opacity(0.2)
+                    Image("planet")
+                }
+                .frame(width: 40, height: 40)
+                .padding(.trailing, 5)
+                Text("Digital Assets")
+                    .font(.opensans(.semibold, size: 24))
                 Spacer()
             }
-            .background(.green)
             .padding(20)
-            ScrollView (.vertical) {
-                NFTCard()
-                
+
+            ForEach($nfts) { $nft in
+                NavigationLink(destination: NFTView(nft: $nft)) {
+                    NFTCard(nft: nft)
+                }
             }
+            .padding(.horizontal, 20)
         }
-        .background(.red)
-        .background(.orange)
-        .task {
-            do {
-                try await viewModel.genWallet()
-            } catch {
-                print("error")
-            }
-        }
+        .navigationBarHidden(true)
     }
 }
-
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(viewModel: .init(apiClient: MockApiClient()))
+        HomeView(nfts: .constant(NFT.mockData))
     }
 }

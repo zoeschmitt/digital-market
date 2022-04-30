@@ -7,7 +7,14 @@
 
 import Foundation
 
-struct Royalties {
+struct Royalties: Codable {
+    var id: UUID
     var recipient: String
     var percentage: String
+
+    init(id: UUID = UUID(), recipient: String, percentage: String) {
+        self.id = id
+        self.recipient = recipient
+        self.percentage = percentage
+    }
 }

@@ -32,10 +32,16 @@ class HttpApiClient: ApiClient {
     }
     
     func getAllNFTs() async throws -> [NFT] {
+//        let urlRequest = self.getRequest(endpoint: "getAllNFTs")
+//        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+//        guard (response as? HTTPURLResponse)?.statusCode == 200 else { return NFT.mockData }
+//        let decodedWallet = try JSONDecoder().decode([NFT].self, from: data)
+//        return decodedWallet
         return NFT.mockData
     }
     
     func getNFT(nftId: String) async throws -> NFT {
+
         return NFT.mockData[0]
     }
     
