@@ -11,7 +11,7 @@ import SwiftUI
 struct DigitalMarketApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            RootView()
         }
     }
 }

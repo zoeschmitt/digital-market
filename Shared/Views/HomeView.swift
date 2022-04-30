@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct HomeView: View {
-    @ObservedObject var viewModel: HomeViewModel
+    @ObservedObject var viewModel = HomeViewModel()
 
     var body: some View {
         VStack {
@@ -26,6 +26,13 @@ struct HomeView: View {
         }
         .background(.red)
         .background(.orange)
+        .task {
+            do {
+                try await viewModel.genWallet()
+            } catch {
+                print("error")
+            }
+        }
     }
 }
 

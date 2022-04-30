@@ -8,37 +8,37 @@
 import Foundation
 
 class MockApiClient: ApiClient {
-    func generateWallet() -> Wallet {
-        return mockWallet
-    }
-    
-    func getWallet(walletId: String) -> Wallet {
-        return mockWallet
-    }
-    
-    func mintNFT(user: User, mintNFTRequest: MintNFTRequest) -> NFT {
-        return mockNFT
-    }
-    
-    func getAllNFTs() -> [NFT] {
-        return [mockNFT]
-    }
-    
-    func getNFT(nftId: String) -> NFT {
-        return mockNFT
-    }
-    
-    func getUserNFTs(walletId: String) -> [NFT] {
-        return [mockNFT]
-    }
-    
-    func listNFT(nftId: String, listPrice: Double) -> NFT {
-        return mockNFT
-    }
-    
-    func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) -> NFT {
-        return mockNFT
-    }
-    
 
+    func generateWallet() async throws -> Wallet {
+
+        return Wallet.mockData[0]
+    }
+
+    func getWallet(walletId: String) async throws -> Wallet {
+        return Wallet.mockData[0]
+    }
+
+    func mintNFT(user: User, mintNFTRequest: MintNFTRequest) async throws -> NFT {
+        return NFT.mockData[0]
+    }
+
+    func getAllNFTs() async throws -> [NFT] {
+        return NFT.mockData
+    }
+
+    func getNFT(nftId: String) async throws -> NFT {
+        return NFT.mockData[0]
+    }
+
+    func getUserNFTs(walletId: String) async throws -> [NFT] {
+        return NFT.mockData
+    }
+
+    func listNFT(nftId: String, listPrice: Double) async throws -> NFT {
+        return NFT.mockData[0]
+    }
+
+    func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) async throws -> NFT {
+        return NFT.mockData[0]
+    }
 }

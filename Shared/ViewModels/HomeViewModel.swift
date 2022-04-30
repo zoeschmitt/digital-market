@@ -9,15 +9,15 @@ import Foundation
 
 class HomeViewModel: ObservableObject {
     private let apiClient: ApiClient
-    @Published private(set) var nftFeed: [NFT] = []
+    @Published private(set) var nftFeed: [NFT]?
 
     init(apiClient: ApiClient = HttpApiClient()) {
         self.apiClient = apiClient
-        getNFTFeed()
+        //getNFTFeed()
     }
     
-    private func getNFTFeed() {
-        nftFeed = apiClient.getAllNFTs()
-    }
+//    private func getNFTFeed() {
+//        nftFeed = apiClient.getAllNFTs()
+//    }
 
 }

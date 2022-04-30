@@ -9,13 +9,13 @@ import Foundation
 
 protocol ApiClient {
     
-    func generateWallet() -> Wallet
-    func getWallet(walletId: String) -> Wallet
+    func generateWallet() async throws -> Wallet
+    func getWallet(walletId: String) async throws -> Wallet
     
-    func mintNFT(user: User, mintNFTRequest: MintNFTRequest) -> NFT
-    func getAllNFTs() -> [NFT]
-    func getNFT(nftId: String) -> NFT
-    func getUserNFTs(walletId: String) -> [NFT]
-    func listNFT(nftId: String, listPrice: Double) -> NFT
-    func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) -> NFT
+    func mintNFT(user: User, mintNFTRequest: MintNFTRequest) async throws -> NFT
+    func getAllNFTs() async throws -> [NFT]
+    func getNFT(nftId: String) async throws -> NFT
+    func getUserNFTs(walletId: String) async throws -> [NFT]
+    func listNFT(nftId: String, listPrice: Double) async throws -> NFT
+    func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) async throws -> NFT
 }
