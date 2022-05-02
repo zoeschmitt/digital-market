@@ -27,21 +27,19 @@ class HttpApiClient: ApiClient {
         return decodedWallet
     }
     
-    func mintNFT(user: User, mintNFTRequest: MintNFTRequest) async throws -> NFT {
+    func mintNFT(name: String, description: String, filename: String, image: String) async throws -> NFT {
         return NFT.mockData[0]
     }
     
     func getAllNFTs() async throws -> [NFT] {
-//        let urlRequest = self.getRequest(endpoint: "getAllNFTs")
-//        let (data, response) = try await URLSession.shared.data(for: urlRequest)
-//        guard (response as? HTTPURLResponse)?.statusCode == 200 else { return NFT.mockData }
-//        let decodedWallet = try JSONDecoder().decode([NFT].self, from: data)
-//        return decodedWallet
-        return NFT.mockData
+        let urlRequest = self.getRequest(endpoint: "getAllNFTs")
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else { return NFT.mockData }
+        let decodedWallet = try JSONDecoder().decode([NFT].self, from: data)
+        return decodedWallet
     }
     
     func getNFT(nftId: String) async throws -> NFT {
-
         return NFT.mockData[0]
     }
     

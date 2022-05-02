@@ -1,21 +1,20 @@
 //
-//  ContentView.swift
-//  Shared
+//  RootView.swift
+//  DigitalMarket
 //
-//  Created by Zoe Schmitt on 4/4/22.
+//  Created by Zoe Schmitt on 5/1/22.
 //
 
 import SwiftUI
 
 struct RootView: View {
-    
 #if os(iOS)
     @Environment(\.horizontalSizeClass) private var horizontalSizeClass
 #endif
 
     enum Tab {
         case home
-        case search
+        case mint
         case account
     }
 
@@ -44,13 +43,13 @@ struct RootView: View {
             }
             .tabItem {
                 Label {
-                    Text("Search",
-                         comment: "Search tab")
+                    Text("Mint",
+                         comment: "Mint NFT tab")
                 } icon: {
-                    Image(systemName: "magnifyingglass")
+                    Image(systemName: "plus.app")
                 }
             }
-            .tag(Tab.search)
+            .tag(Tab.mint)
 
             NavigationView {
                 AccountView()
@@ -66,17 +65,19 @@ struct RootView: View {
             .tag(Tab.account)
 
         }
+        .accentColor(Color.dodgerPurple)
         .task {
             do {
-                try await nftStore.getNFTFeed()
+                nftStore.nftFeed = try await nftStore.getNFTFeed()
             } catch {
+                print(error)
                 errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem fetching your feed.")
             }
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
+struct RootView_Previews: PreviewProvider {
     static var previews: some View {
         RootView()
     }

@@ -9,32 +9,38 @@ import SwiftUI
 
 struct HomeView: View {
     @Binding var nfts: [NFT]
+    let gradient = Gradient(colors: [Color.mineBlack.opacity(0.05), Color.white])
 
     var body: some View {
-        ScrollView {
-            HStack(alignment: .center) {
-                ZStack {
-                    RoundedRectangle(cornerRadius: 14, style: .continuous)
-                        .fill(Color.dodgerPurple)
-                        .opacity(0.2)
-                    Image("planet")
+        GeometryReader { geometry in
+            ZStack {
+                VStack() {
+                    LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom)
+                        .frame(width: geometry.size.width, height: geometry.size.height / 2)
+                    Spacer()
                 }
-                .frame(width: 40, height: 40)
-                .padding(.trailing, 5)
-                Text("Digital Assets")
-                    .font(.opensans(.semibold, size: 24))
-                Spacer()
-            }
-            .padding(20)
+                .ignoresSafeArea()
+                ScrollView {
+                    HStack(alignment: .center) {
+                        Logo()
+                        Text("Marketplace")
+                            .font(.opensans(.semibold, size: 26))
+                        Spacer()
+                        IconButton(iconName: "magnifyingglass")
+                    }
+                    .padding(20)
 
-            ForEach($nfts) { $nft in
-                NavigationLink(destination: NFTView(nft: $nft)) {
-                    NFTCard(nft: nft)
+                    ForEach($nfts) { $nft in
+                        NavigationLink(destination: NFTView(nft: nft)) {
+                            NFTCard(nft: $nft)
+                        }
+                        .padding(.bottom, 8)
+                    }
+                    .padding(.horizontal, 20)
                 }
+                .navigationBarHidden(true)
             }
-            .padding(.horizontal, 20)
         }
-        .navigationBarHidden(true)
     }
 }
 struct HomeView_Previews: PreviewProvider {

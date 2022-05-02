@@ -15,8 +15,7 @@ class NFTStore: ObservableObject {
         self.apiClient = apiClient
     }
 
-    func getNFTFeed() async throws {
-        nftFeed = try await apiClient.getAllNFTs()
-        print(nftFeed)
+    func getNFTFeed() async throws -> [NFT] {
+        return try await apiClient.getAllNFTs()
     }
 }

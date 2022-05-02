@@ -10,7 +10,6 @@ import Foundation
 class MockApiClient: ApiClient {
 
     func generateWallet() async throws -> Wallet {
-
         return Wallet.mockData[0]
     }
 
@@ -18,7 +17,7 @@ class MockApiClient: ApiClient {
         return Wallet.mockData[0]
     }
 
-    func mintNFT(user: User, mintNFTRequest: MintNFTRequest) async throws -> NFT {
+    func mintNFT(name: String, description: String, filename: String, image: String) async throws -> NFT {
         return NFT.mockData[0]
     }
 

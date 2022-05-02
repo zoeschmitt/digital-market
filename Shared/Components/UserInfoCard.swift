@@ -12,22 +12,24 @@ struct UserInfoCard: View {
 
     var body: some View {
         HStack {
-            Text("NFT")
+            Text(nft.metadata.name)
                 .font(.headline)
+                .foregroundColor(.black)
 
             Spacer()
-            if nft.listPrice != nil && nft.listPrice != 0 {
+            if nft.isListed {
                 Image("eth")
-                Text("\(String(format: "%.1f", nft.listPrice!)) ETH")
+                Text("\(String(format: "%.1f", nft.listPrice)) ETH")
                     .font(.subheadline)
                     .padding(.zero)
+                    .foregroundColor(.mineBlack)
             }
             Image(systemName: "chevron.right")
                 .foregroundColor(.blue)
         }
         .padding()
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
-
+        .overlay(RoundedRectangle(cornerRadius: 20, style: .continuous).stroke(.white, lineWidth: 1))
     }
 }
 

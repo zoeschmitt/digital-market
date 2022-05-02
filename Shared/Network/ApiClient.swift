@@ -12,7 +12,7 @@ protocol ApiClient {
     func generateWallet() async throws -> Wallet
     func getWallet(walletId: String) async throws -> Wallet
     
-    func mintNFT(user: User, mintNFTRequest: MintNFTRequest) async throws -> NFT
+    func mintNFT(name: String, description: String, filename: String, image: String) async throws -> NFT
     func getAllNFTs() async throws -> [NFT]
     func getNFT(nftId: String) async throws -> NFT
     func getUserNFTs(walletId: String) async throws -> [NFT]

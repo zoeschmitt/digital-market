@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct NFTView: View {
-    @Binding var nft: NFT
+    let nft: NFT
 
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
@@ -17,6 +17,6 @@ struct NFTView: View {
 
 struct NFTView_Previews: PreviewProvider {
     static var previews: some View {
-        NFTView(nft: .constant(NFT.mockData[0]))
+        NFTView(nft: NFT.mockData[0])
     }
 }

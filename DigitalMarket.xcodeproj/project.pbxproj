@@ -25,28 +25,22 @@
 		DD2CAB16281DD14300C6FAB3 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = DD2CAB08281DD13600C6FAB3 /* OpenSans-Regular.ttf */; };
 		DD2CAB18281DD83000C6FAB3 /* UserInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB17281DD83000C6FAB3 /* UserInfoCard.swift */; };
 		DD2CAB19281DD83000C6FAB3 /* UserInfoCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB17281DD83000C6FAB3 /* UserInfoCard.swift */; };
+		DD2CAB27281F55FB00C6FAB3 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB26281F55FB00C6FAB3 /* IconButton.swift */; };
+		DD2CAB28281F55FB00C6FAB3 /* IconButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB26281F55FB00C6FAB3 /* IconButton.swift */; };
+		DD2CAB2A281F568C00C6FAB3 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB29281F568C00C6FAB3 /* Logo.swift */; };
+		DD2CAB2B281F568C00C6FAB3 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB29281F568C00C6FAB3 /* Logo.swift */; };
+		DD2CAB2D281F750E00C6FAB3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB2C281F750E00C6FAB3 /* RootView.swift */; };
+		DD2CAB2E281F750E00C6FAB3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB2C281F750E00C6FAB3 /* RootView.swift */; };
 		DD35E3EC27FBC03300181D20 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3EB27FBC03300181D20 /* Tests_iOS.swift */; };
 		DD35E3EE27FBC03300181D20 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3ED27FBC03300181D20 /* Tests_iOSLaunchTests.swift */; };
 		DD35E3F827FBC03300181D20 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3F727FBC03300181D20 /* Tests_macOS.swift */; };
 		DD35E3FA27FBC03300181D20 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3F927FBC03300181D20 /* Tests_macOSLaunchTests.swift */; };
 		DD35E3FB27FBC03300181D20 /* DigitalMarketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3D327FBC03200181D20 /* DigitalMarketApp.swift */; };
 		DD35E3FC27FBC03300181D20 /* DigitalMarketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3D327FBC03200181D20 /* DigitalMarketApp.swift */; };
-		DD35E3FD27FBC03300181D20 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3D427FBC03200181D20 /* RootView.swift */; };
-		DD35E3FE27FBC03300181D20 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3D427FBC03200181D20 /* RootView.swift */; };
 		DD35E3FF27FBC03300181D20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD35E3D527FBC03300181D20 /* Assets.xcassets */; };
 		DD35E40027FBC03300181D20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD35E3D527FBC03300181D20 /* Assets.xcassets */; };
 		DD6580C927FD110700AAE685 /* NFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580C827FD110700AAE685 /* NFT.swift */; };
 		DD6580CA27FD110700AAE685 /* NFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580C827FD110700AAE685 /* NFT.swift */; };
-		DD6580CC27FD112F00AAE685 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580CB27FD112F00AAE685 /* Metadata.swift */; };
-		DD6580CD27FD112F00AAE685 /* Metadata.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580CB27FD112F00AAE685 /* Metadata.swift */; };
-		DD6580CF27FD113C00AAE685 /* MetadataAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580CE27FD113C00AAE685 /* MetadataAttribute.swift */; };
-		DD6580D027FD113C00AAE685 /* MetadataAttribute.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580CE27FD113C00AAE685 /* MetadataAttribute.swift */; };
-		DD6580D227FD114700AAE685 /* MintNFTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580D127FD114700AAE685 /* MintNFTRequest.swift */; };
-		DD6580D327FD114700AAE685 /* MintNFTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580D127FD114700AAE685 /* MintNFTRequest.swift */; };
-		DD6580D527FD115100AAE685 /* Royalties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580D427FD115100AAE685 /* Royalties.swift */; };
-		DD6580D627FD115100AAE685 /* Royalties.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580D427FD115100AAE685 /* Royalties.swift */; };
-		DD6580D827FD115A00AAE685 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580D727FD115A00AAE685 /* User.swift */; };
-		DD6580D927FD115A00AAE685 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580D727FD115A00AAE685 /* User.swift */; };
 		DD6580DB27FD116000AAE685 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580DA27FD116000AAE685 /* Wallet.swift */; };
 		DD6580DC27FD116000AAE685 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580DA27FD116000AAE685 /* Wallet.swift */; };
 		DD6580E127FD124D00AAE685 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580E027FD124D00AAE685 /* Colors.swift */; };
@@ -110,8 +104,10 @@
 		DD2CAB09281DD13600C6FAB3 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
 		DD2CAB0A281DD13600C6FAB3 /* OpenSans-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiBold.ttf"; sourceTree = "<group>"; };
 		DD2CAB17281DD83000C6FAB3 /* UserInfoCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoCard.swift; sourceTree = "<group>"; };
+		DD2CAB26281F55FB00C6FAB3 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
+		DD2CAB29281F568C00C6FAB3 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
+		DD2CAB2C281F750E00C6FAB3 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		DD35E3D327FBC03200181D20 /* DigitalMarketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalMarketApp.swift; sourceTree = "<group>"; };
-		DD35E3D427FBC03200181D20 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
 		DD35E3D527FBC03300181D20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD35E3DA27FBC03300181D20 /* DigitalMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD35E3E027FBC03300181D20 /* DigitalMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -124,11 +120,6 @@
 		DD35E3F927FBC03300181D20 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		DD35E42A27FBC16700181D20 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DD6580C827FD110700AAE685 /* NFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFT.swift; sourceTree = "<group>"; };
-		DD6580CB27FD112F00AAE685 /* Metadata.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Metadata.swift; sourceTree = "<group>"; };
-		DD6580CE27FD113C00AAE685 /* MetadataAttribute.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MetadataAttribute.swift; sourceTree = "<group>"; };
-		DD6580D127FD114700AAE685 /* MintNFTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintNFTRequest.swift; sourceTree = "<group>"; };
-		DD6580D427FD115100AAE685 /* Royalties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Royalties.swift; sourceTree = "<group>"; };
-		DD6580D727FD115A00AAE685 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DD6580DA27FD116000AAE685 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		DD6580E027FD124D00AAE685 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
 		DD6580E627FD12B600AAE685 /* PreviewContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PreviewContent.swift; sourceTree = "<group>"; };
@@ -272,11 +263,6 @@
 			isa = PBXGroup;
 			children = (
 				DD6580C827FD110700AAE685 /* NFT.swift */,
-				DD6580CB27FD112F00AAE685 /* Metadata.swift */,
-				DD6580CE27FD113C00AAE685 /* MetadataAttribute.swift */,
-				DD6580D127FD114700AAE685 /* MintNFTRequest.swift */,
-				DD6580D427FD115100AAE685 /* Royalties.swift */,
-				DD6580D727FD115A00AAE685 /* User.swift */,
 				DD6580DA27FD116000AAE685 /* Wallet.swift */,
 				DDA228A8281CA071000B0278 /* ErrorWrapper.swift */,
 			);
@@ -287,11 +273,11 @@
 			isa = PBXGroup;
 			children = (
 				DDA228AB281D9031000B0278 /* SubViews */,
-				DD35E3D427FBC03200181D20 /* RootView.swift */,
 				DD658137280CF9FF00AAE685 /* HomeView.swift */,
 				DD65813A280CFA0C00AAE685 /* SearchView.swift */,
 				DD65813D280CFA1300AAE685 /* AccountView.swift */,
 				DD658140280CFA2300AAE685 /* SettingsView.swift */,
+				DD2CAB2C281F750E00C6FAB3 /* RootView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -301,6 +287,8 @@
 			children = (
 				DD65814E2813B2B200AAE685 /* NFTCard.swift */,
 				DD2CAB17281DD83000C6FAB3 /* UserInfoCard.swift */,
+				DD2CAB26281F55FB00C6FAB3 /* IconButton.swift */,
+				DD2CAB29281F568C00C6FAB3 /* Logo.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -540,26 +528,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD2CAAFC281DB32D00C6FAB3 /* ErrorView.swift in Sources */,
-				DD6580D227FD114700AAE685 /* MintNFTRequest.swift in Sources */,
 				DD2CAB03281DCFEB00C6FAB3 /* Fonts.swift in Sources */,
 				DD658141280CFA2300AAE685 /* SettingsView.swift in Sources */,
 				DD65814F2813B2B200AAE685 /* NFTCard.swift in Sources */,
 				DD6580E127FD124D00AAE685 /* Colors.swift in Sources */,
-				DD6580D527FD115100AAE685 /* Royalties.swift in Sources */,
 				DD65813E280CFA1300AAE685 /* AccountView.swift in Sources */,
 				DD6580E727FD12B600AAE685 /* PreviewContent.swift in Sources */,
-				DD35E3FD27FBC03300181D20 /* RootView.swift in Sources */,
-				DD6580CF27FD113C00AAE685 /* MetadataAttribute.swift in Sources */,
-				DD6580D827FD115A00AAE685 /* User.swift in Sources */,
+				DD2CAB27281F55FB00C6FAB3 /* IconButton.swift in Sources */,
+				DD2CAB2D281F750E00C6FAB3 /* RootView.swift in Sources */,
 				DDA228B1281D91D4000B0278 /* NFTStore.swift in Sources */,
 				DD658152281466CD00AAE685 /* Configuration.swift in Sources */,
 				DD35E3FB27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
 				DDA228AD281D9040000B0278 /* NFTView.swift in Sources */,
+				DD2CAB2A281F568C00C6FAB3 /* Logo.swift in Sources */,
 				DD6580F127FD133600AAE685 /* HttpApiClient.swift in Sources */,
 				DDA228A9281CA071000B0278 /* ErrorWrapper.swift in Sources */,
 				DD65813B280CFA0C00AAE685 /* SearchView.swift in Sources */,
 				DD6580DB27FD116000AAE685 /* Wallet.swift in Sources */,
-				DD6580CC27FD112F00AAE685 /* Metadata.swift in Sources */,
 				DDA228B4281D91E0000B0278 /* UserStore.swift in Sources */,
 				DD658138280CF9FF00AAE685 /* HomeView.swift in Sources */,
 				DD6580C927FD110700AAE685 /* NFT.swift in Sources */,
@@ -574,26 +559,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				DD2CAAFD281DB32D00C6FAB3 /* ErrorView.swift in Sources */,
-				DD6580D327FD114700AAE685 /* MintNFTRequest.swift in Sources */,
 				DD2CAB04281DCFEB00C6FAB3 /* Fonts.swift in Sources */,
 				DD658142280CFA2300AAE685 /* SettingsView.swift in Sources */,
 				DD6581502813B2B200AAE685 /* NFTCard.swift in Sources */,
 				DD6580E227FD124D00AAE685 /* Colors.swift in Sources */,
-				DD6580D627FD115100AAE685 /* Royalties.swift in Sources */,
 				DD65813F280CFA1300AAE685 /* AccountView.swift in Sources */,
 				DD6580E827FD12B600AAE685 /* PreviewContent.swift in Sources */,
-				DD35E3FE27FBC03300181D20 /* RootView.swift in Sources */,
-				DD6580D027FD113C00AAE685 /* MetadataAttribute.swift in Sources */,
-				DD6580D927FD115A00AAE685 /* User.swift in Sources */,
+				DD2CAB28281F55FB00C6FAB3 /* IconButton.swift in Sources */,
+				DD2CAB2E281F750E00C6FAB3 /* RootView.swift in Sources */,
 				DDA228B2281D91D4000B0278 /* NFTStore.swift in Sources */,
 				DD658153281466CD00AAE685 /* Configuration.swift in Sources */,
 				DD35E3FC27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
 				DDA228AE281D9040000B0278 /* NFTView.swift in Sources */,
+				DD2CAB2B281F568C00C6FAB3 /* Logo.swift in Sources */,
 				DD6580F227FD133600AAE685 /* HttpApiClient.swift in Sources */,
 				DDA228AA281CA071000B0278 /* ErrorWrapper.swift in Sources */,
 				DD65813C280CFA0C00AAE685 /* SearchView.swift in Sources */,
 				DD6580DC27FD116000AAE685 /* Wallet.swift in Sources */,
-				DD6580CD27FD112F00AAE685 /* Metadata.swift in Sources */,
 				DDA228B5281D91E0000B0278 /* UserStore.swift in Sources */,
 				DD658139280CF9FF00AAE685 /* HomeView.swift in Sources */,
 				DD6580CA27FD110700AAE685 /* NFT.swift in Sources */,
