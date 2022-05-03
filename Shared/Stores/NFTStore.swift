@@ -16,6 +16,10 @@ class NFTStore: ObservableObject {
     }
 
     func getNFTFeed() async throws -> [NFT] {
-        return try await apiClient.getAllNFTs()
+        var nfts = try await apiClient.getAllNFTs()
+        nfts = nfts.sorted {
+            $0.createdAt > $1.createdAt
+        }
+        return nfts
     }
 }

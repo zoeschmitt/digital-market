@@ -72,7 +72,7 @@ struct RemoteImage: View {
         } else {
             Image(uiImage: remoteImageModel.image!)
                 .resizable()
-                .scaledToFill()
+                .scaledToFit()
         }
     }
 }
@@ -84,7 +84,6 @@ class RemoteImageModel: ObservableObject {
     var imageCache = ImageCache.getImageCache()
 
     init(urlString: String) {
-        print(urlString)
         self.urlString = urlString
         loadImage()
     }
@@ -93,6 +92,7 @@ class RemoteImageModel: ObservableObject {
         if loadImageFromCache() {
             return
         }
+        print("Not in cache")
         loadImageFromUrl()
     }
 
