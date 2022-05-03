@@ -9,31 +9,23 @@ import SwiftUI
 
 struct NFTCard: View {
     @Binding var nft: NFT
+    @Namespace var namespace
     
     var body: some View {
-        GeometryReader { geometry in
-            ZStack {
-                Color.galleryGrey
-                VStack {
-                    AsyncImage(url: URL(string: nft.metadata.image)) { image in
-                        image.resizable()
-                    } placeholder: {
-                        ProgressView()
-                    }
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-                }
-                VStack {
-                    Spacer()
-                    UserInfoCard(nft: nft)
-                }
-                .padding(5)
-            }
+        VStack {
+            RemoteImage(urlString: nft.metadata.image)
         }
-        .frame(minHeight: 300)
-        .frame(maxWidth: .infinity, maxHeight: 400)
+        .frame(minHeight: 300, idealHeight: 500, maxHeight: .infinity)
+        .frame(maxWidth: .infinity)
         .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: 25, style: .continuous).stroke(.white, lineWidth: 1))
+        .overlay(                VStack {
+            Spacer()
+            UserInfoCard(nft: nft)
+                .padding(5)
+        })
         .shadow(color: Color.mineBlack.opacity(0.1), radius: 15, x: 0, y: 5)
+
     }
 }
 

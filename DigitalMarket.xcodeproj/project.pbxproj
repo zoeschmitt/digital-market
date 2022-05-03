@@ -31,6 +31,8 @@
 		DD2CAB2B281F568C00C6FAB3 /* Logo.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB29281F568C00C6FAB3 /* Logo.swift */; };
 		DD2CAB2D281F750E00C6FAB3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB2C281F750E00C6FAB3 /* RootView.swift */; };
 		DD2CAB2E281F750E00C6FAB3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB2C281F750E00C6FAB3 /* RootView.swift */; };
+		DD2CAB3928209A8400C6FAB3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB3828209A8400C6FAB3 /* ImageCache.swift */; };
+		DD2CAB3A28209A8400C6FAB3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB3828209A8400C6FAB3 /* ImageCache.swift */; };
 		DD35E3EC27FBC03300181D20 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3EB27FBC03300181D20 /* Tests_iOS.swift */; };
 		DD35E3EE27FBC03300181D20 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3ED27FBC03300181D20 /* Tests_iOSLaunchTests.swift */; };
 		DD35E3F827FBC03300181D20 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3F727FBC03300181D20 /* Tests_macOS.swift */; };
@@ -107,6 +109,7 @@
 		DD2CAB26281F55FB00C6FAB3 /* IconButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconButton.swift; sourceTree = "<group>"; };
 		DD2CAB29281F568C00C6FAB3 /* Logo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logo.swift; sourceTree = "<group>"; };
 		DD2CAB2C281F750E00C6FAB3 /* RootView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootView.swift; sourceTree = "<group>"; };
+		DD2CAB3828209A8400C6FAB3 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
 		DD35E3D327FBC03200181D20 /* DigitalMarketApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DigitalMarketApp.swift; sourceTree = "<group>"; };
 		DD35E3D527FBC03300181D20 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		DD35E3DA27FBC03300181D20 /* DigitalMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -315,6 +318,7 @@
 		DD6580E427FD128900AAE685 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				DD2CAB3828209A8400C6FAB3 /* ImageCache.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -548,6 +552,7 @@
 				DDA228B4281D91E0000B0278 /* UserStore.swift in Sources */,
 				DD658138280CF9FF00AAE685 /* HomeView.swift in Sources */,
 				DD6580C927FD110700AAE685 /* NFT.swift in Sources */,
+				DD2CAB3928209A8400C6FAB3 /* ImageCache.swift in Sources */,
 				DD2CAB18281DD83000C6FAB3 /* UserInfoCard.swift in Sources */,
 				DD6580ED27FD132700AAE685 /* ApiClient.swift in Sources */,
 				DD6580F427FD133E00AAE685 /* MockApiClient.swift in Sources */,
@@ -579,6 +584,7 @@
 				DDA228B5281D91E0000B0278 /* UserStore.swift in Sources */,
 				DD658139280CF9FF00AAE685 /* HomeView.swift in Sources */,
 				DD6580CA27FD110700AAE685 /* NFT.swift in Sources */,
+				DD2CAB3A28209A8400C6FAB3 /* ImageCache.swift in Sources */,
 				DD2CAB19281DD83000C6FAB3 /* UserInfoCard.swift in Sources */,
 				DD6580EE27FD132700AAE685 /* ApiClient.swift in Sources */,
 				DD6580F527FD133E00AAE685 /* MockApiClient.swift in Sources */,

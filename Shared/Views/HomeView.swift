@@ -22,7 +22,7 @@ struct HomeView: View {
                 .ignoresSafeArea()
                 ScrollView {
                     HStack(alignment: .center) {
-                        Logo()
+//                        Logo()
                         Text("Marketplace")
                             .font(.opensans(.semibold, size: 26))
                         Spacer()

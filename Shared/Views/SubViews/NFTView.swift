@@ -9,9 +9,20 @@ import SwiftUI
 
 struct NFTView: View {
     let nft: NFT
+    @Namespace var namespace
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        GeometryReader { geometry in
+            VStack {
+                AsyncImage(url: URL(string: nft.metadata.image)) { image in
+                    image.resizable()
+                } placeholder: {
+                    ProgressView()
+                }
+                .frame(width: geometry.size.width, height: geometry.size.height / 1.5)
+                .matchedGeometryEffect(id: "image", in: namespace)
+            }
+        }
     }
 }
 
