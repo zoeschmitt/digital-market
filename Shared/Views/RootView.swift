@@ -26,7 +26,7 @@ struct RootView: View {
     var body: some View {
         TabView(selection: $selection) {
             NavigationView {
-                HomeView(nfts: $nftStore.nftFeed)
+                HomeView(nfts: $nftStore.nftFeed, searchResults: $nftStore.searchResults)
             }
             .tabItem {
                 let menuText = Text("Home", comment: "Home NFT feed")
@@ -37,9 +37,10 @@ struct RootView: View {
                 }.accessibility(label: menuText)
             }
             .tag(Tab.home)
+            .environmentObject(nftStore)
 
             NavigationView {
-                SearchView()
+                MintView()
             }
             .tabItem {
                 Label {
@@ -65,7 +66,7 @@ struct RootView: View {
             .tag(Tab.account)
 
         }
-        .accentColor(Color.dodgerPurple)
+        .accentColor(Color.azureBlue)
         .task {
             do {
                 nftStore.nftFeed = try await nftStore.getNFTFeed()

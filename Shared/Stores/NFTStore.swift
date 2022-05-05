@@ -10,16 +10,19 @@ import Foundation
 class NFTStore: ObservableObject {
     private let apiClient: ApiClient
     @Published var nftFeed: [NFT] = []
+    @Published var searchResults: [NFT] = []
 
     init(apiClient: ApiClient = HttpApiClient()) {
         self.apiClient = apiClient
     }
 
     func getNFTFeed() async throws -> [NFT] {
-        var nfts = try await apiClient.getAllNFTs()
-        nfts = nfts.sorted {
+        return try await apiClient.getAllNFTs().sorted {
             $0.createdAt > $1.createdAt
         }
-        return nfts
+    }
+
+    func searchNFTs(_ input: String) {
+        searchResults = nftFeed.filter { $0.metadata.name.contains(input) }
     }
 }
