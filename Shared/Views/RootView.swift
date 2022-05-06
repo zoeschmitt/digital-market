@@ -22,11 +22,27 @@ struct RootView: View {
     @StateObject private var userStore = UserStore()
     @StateObject private var nftStore = NFTStore()
     @State private var errorWrapper: ErrorWrapper?
+    @State var showNFT = false
+
+    @State var viewState = CGSize.zero
 
     var body: some View {
         TabView(selection: $selection) {
             NavigationView {
-                HomeView(nfts: $nftStore.nftFeed, searchResults: $nftStore.searchResults)
+                HomeView(nfts: $nftStore.nftFeed, searchResults: $nftStore.searchResults, showNFT: $showNFT)
+                    .gesture(DragGesture()
+                        .onChanged { value in
+                            self.viewState = value.translation
+                            print(value.translation)
+                            print(self.viewState.height)
+                        }
+                        .onEnded { value in
+                            print("onEnded \(self.viewState.height)")
+                            if self.viewState.height > 30 {
+                                self.showNFT = false
+                            }
+                            self.viewState = .zero
+                        })
             }
             .tabItem {
                 let menuText = Text("Home", comment: "Home NFT feed")

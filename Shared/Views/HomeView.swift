@@ -8,40 +8,31 @@
 import SwiftUI
 
 struct HomeView: View {
+    @Namespace var namespace
+
     @Binding var nfts: [NFT]
     @Binding var searchResults: [NFT]
+
     @State var showSearch = false
-    @State var showNFT = false
+    @Binding var showNFT: Bool
     @State var selectedNFT: NFT?
-    let gradient = Gradient(colors: [Color.mineBlack.opacity(0.05), Color.white])
-    @Namespace var namespace
     @State private var searchInput: String = ""
+    @State var fullImageHeight: Bool = false
+
+    let gradient = Gradient(colors: [Color.mineBlack.opacity(0.05), Color.white])
+    let imageBorderRadius: CGFloat = 25
 
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                VStack() {
+                VStack {
                     LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom)
-                        .frame(width: geometry.size.width, height: geometry.size.height / 2)
+                        .frame(width: geometry.size.width, height: geometry.size.height / 1.5)
                     Spacer()
                 }
                 .ignoresSafeArea()
-                if (showNFT && selectedNFT != nil) {
-                    ScrollView {
-                        VStack {
-                            RemoteImage(urlString: selectedNFT!.metadata.image)
-                                .frame(height: geometry.size.height / 2)
-                            Spacer()
-                        }
-                        .matchedGeometryEffect(id: "\(selectedNFT!.id)", in: namespace)
-                        .onTapGesture {
-                            withAnimation(.easeInOut) {
-                                showNFT.toggle()
-                            }
-                        }
-                    }
-                } else {
-                    ScrollView {
+                ScrollView {
+                    if (!showNFT) {
                         HStack(alignment: .center) {
                             if (!showNFT) {
                                 if (!showSearch) {
@@ -54,19 +45,49 @@ struct HomeView: View {
                             }
                         }
                         .padding(20)
+                    }
+                    if (showNFT && selectedNFT != nil) {
+                        ZStack {
+                            VStack {
+                                RemoteImage(urlString: selectedNFT!.metadata.image)
+                                    .scaledToFill()
+                                    .matchedGeometryEffect(id: "\(selectedNFT!.id)", in: namespace)
+                                    .frame(width: geometry.size.width)
+                                    .frame(maxHeight: fullImageHeight ? geometry.size.height / 2 : geometry.size.height)
+                                    .clipShape(RoundedRectangle(cornerRadius: imageBorderRadius, style: .continuous))
+                                    .onTapGesture {
+                                        withAnimation {
+                                            fullImageHeight.toggle()
+                                        }
+                                    }
 
+                                Spacer()
+                            }
+                            .matchedGeometryEffect(id: "vstack\(selectedNFT!.id)", in: namespace)
+
+                            HStack(alignment: .top) {
+                                Button(action: { withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                                    showNFT.toggle()
+                                } }) {
+                                    Image(systemName: "xmark")
+                                }
+                                .padding()
+                                .background(Color.galleryGrey)
+                                Spacer()
+                            }
+                        }
+                    } else {
                         ForEach(searchInput != "" ? $searchResults : $nfts) { $nft in
                             NFTCard(nft: $nft, namespace: namespace)
                                 .onTapGesture {
-                                    withAnimation(.easeInOut) {
-                                        showNFT.toggle()
+                                    withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                                         selectedNFT = nft
+                                        showNFT.toggle()
                                     }
                                 }
                         }
                         .padding(.horizontal, 20)
                     }
-
                 }
             }
         }
@@ -76,51 +97,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(nfts: .constant(NFT.mockData), searchResults: .constant(NFT.mockData))
-    }
-}
-
-struct SearchBar: View {
-    @Binding var showSearch: Bool
-    @Binding var searchInput: String
-    @EnvironmentObject var nftStore: NFTStore
-
-    var body: some View {
-        HStack {
-            Image(systemName: "magnifyingglass")
-                .resizable()
-                .frame(width: 20, height: 20)
-                .foregroundColor(Color.azureBlue)
-                .padding(.leading, showSearch ? 10 : 0)
-            if (showSearch) {
-                TextField("Search", text: $searchInput)
-                    .onChange(of: searchInput) { input in
-                        nftStore.searchNFTs(input)
-                    }
-                    .padding(.leading, 5)
-                    .font(.opensans(.medium, size: 18))
-                Image(systemName: "xmark")
-                    .frame(width: 20, height: 20)
-                    .foregroundColor(Color.azureBlue)
-                    .padding(.trailing, 10)
-                    .onTapGesture {
-                        withAnimation(.easeInOut) {
-                            showSearch.toggle()
-                            searchInput = ""
-                        }
-                    }
-            }
-        }
-        .frame(height: 45)
-        .frame(maxWidth: showSearch ? .infinity : 45)
-        .overlay(RoundedRectangle(cornerRadius: 14, style: .continuous).stroke(Color.azureBlue, lineWidth: 1))
-        .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20, style: .continuous))
-        .onTapGesture {
-            if (!showSearch) {
-                withAnimation(.easeInOut) {
-                    showSearch.toggle()
-                }
-            }
-        }
+        HomeView(nfts: .constant(NFT.mockData), searchResults: .constant(NFT.mockData), showNFT: .constant(false))
     }
 }

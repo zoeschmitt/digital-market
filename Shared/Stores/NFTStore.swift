@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import UIKit
 
 class NFTStore: ObservableObject {
     private let apiClient: ApiClient
@@ -24,5 +25,9 @@ class NFTStore: ObservableObject {
 
     func searchNFTs(_ input: String) {
         searchResults = nftFeed.filter { $0.metadata.name.contains(input) }
+    }
+
+    func mintNFT(image: UIImage, name: String, description: String) async throws {
+
     }
 }
