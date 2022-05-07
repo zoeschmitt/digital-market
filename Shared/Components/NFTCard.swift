@@ -24,7 +24,8 @@ struct NFTCard: View {
         .overlay(RoundedRectangle(cornerRadius: 25, style: .continuous).stroke(.white, lineWidth: 1))
         .overlay(                VStack {
             Spacer()
-            UserInfoCard(nft: nft)
+            UserInfoCard(nft: nft, namespace: namespace, showAll: false)
+                .matchedGeometryEffect(id: "userinfocard\(nft.id)", in: namespace)
                 .padding(5)
         })
         .shadow(color: Color.mineBlack.opacity(0.1), radius: 15, x: 0, y: 5)
@@ -41,28 +42,47 @@ struct NFTCard_Previews: PreviewProvider {
 
 struct UserInfoCard: View {
     let nft: NFT
+    let namespace: Namespace.ID
+    let showAll: Bool
 
     var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text(nft.metadata.name)
-                    .font(.headline)
-                    .foregroundColor(.black)
-                Text(nft.metadata.description)
-                    .font(.subheadline)
-                    .foregroundColor(.black)
-                    .lineLimit(2)
+        VStack {
+            HStack {
+                VStack(alignment: .leading) {
+                    Text(nft.metadata.name)
+                        .matchedGeometryEffect(id: "name\(nft.id)", in: namespace)
+                        .font(.headline)
+                        .foregroundColor(.black)
+                    Text(nft.metadata.description)
+                        .matchedGeometryEffect(id: "description\(nft.id)", in: namespace)
+                        .font(.subheadline)
+                        .foregroundColor(.black)
+                        .lineLimit(showAll ? nil : 1)
+                }
+                Spacer()
+                if nft.isListed {
+                    Image("eth")
+                        .offset(x: 5)
+                    Text("\(String(format: "%.1f", nft.listPrice)) ETH")
+                        .font(.subheadline)
+                        .padding(.zero)
+                        .foregroundColor(.mineBlack)
+                }
+                if !showAll {
+                    Image(systemName: "chevron.right")
+                        .foregroundColor(.blue)
+                }
             }
-            Spacer()
-            if nft.isListed {
-                Image("eth")
-                Text("\(String(format: "%.1f", nft.listPrice)) ETH")
-                    .font(.subheadline)
-                    .padding(.zero)
-                    .foregroundColor(.mineBlack)
+            if showAll {
+                Divider()
+                HStack {
+                    Text("Minted On")
+                        .font(.caption)
+                    Spacer()
+                    Text(nft.mintedDate)
+                        .font(.caption)
+                }
             }
-            Image(systemName: "chevron.right")
-                .foregroundColor(.blue)
         }
         .padding()
         .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: 20, style: .continuous))

@@ -12,17 +12,17 @@ struct NFT: Identifiable, Codable {
     var id: UUID
     var walletId: String
     var network: String
-    var contract: String
+    var contract: String //
     var tokenId: String
-    var transactionHash: String
+    var transactionHash: String //
     var filename: String
     var ipfsHash: String
-    var createdAt: String
-    var openseaURL: String
-    var royalties: [Royalties]
+    var createdAt: String //
+    var openseaURL: String //
+    var royalties: [Royalties] //
     var metadata: Metadata
-    var isListed: Bool
-    var listPrice: Double
+    var isListed: Bool //
+    var listPrice: Double //
 
     init(id: UUID = UUID(), walletId: String, network: String, contract: String, tokenId: String, transactionHash: String, filename: String, ipfsHash: String, createdAt: String, openseaURL: String, royalties: [Royalties], metadata: Metadata, isListed: Bool, listPrice: Double) {
         self.id = id
@@ -43,6 +43,15 @@ struct NFT: Identifiable, Codable {
 
     private enum CodingKeys: String, CodingKey {
         case id = "nftId", walletId, network, contract, tokenId, transactionHash, filename, ipfsHash, createdAt, openseaURL, royalties, metadata, isListed, listPrice
+    }
+}
+
+extension NFT {
+    var mintedDate: String {
+        let isoDateFormatter = ISO8601DateFormatter()
+        isoDateFormatter.formatOptions = [.withInternetDateTime, .withFractionalSeconds]
+        let formattedDate = isoDateFormatter.date(from: createdAt) ?? Date()
+        return formattedDate.formatted(.dateTime.month(.abbreviated).day().year())
     }
 }
 

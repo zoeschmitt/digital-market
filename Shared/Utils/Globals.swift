@@ -8,3 +8,4 @@
 import SwiftUI
 
 let horizontalPadding: CGFloat = 20
+let buttonsBorderRadius: CGFloat = 10

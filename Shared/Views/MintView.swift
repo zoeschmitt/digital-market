@@ -13,8 +13,6 @@ struct MintView: View {
     @State private var nameInput = ""
     @State private var descriptionInput = ""
 
-    let buttonsBorderRadius: CGFloat = 10
-
     var body: some View {
         GeometryReader { geo in
             VStack {
