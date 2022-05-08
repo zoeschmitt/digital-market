@@ -11,11 +11,14 @@ struct NFTView: View {
     let nft: NFT
     let namespace: Namespace.ID
     let geometry: GeometryProxy
-    let imageBorderRadius: CGFloat = 25
 
     @State var fullImageHeight: Bool = false
 
     @Binding var showNFT: Bool
+
+    let imageBorderRadius: CGFloat = 25
+    private let openSeaURL = Configuration.stringValue(forKey: "OPENSEA_URL")
+    private let polygonScanURL = Configuration.stringValue(forKey: "POLYGON_SCAN_URL")
 
     var body: some View {
         ZStack {
@@ -32,10 +35,28 @@ struct NFTView: View {
                         }
                     }
 
-                UserInfoCard(nft: nft, namespace: namespace, showAll: true)
-                    .matchedGeometryEffect(id: "userinfocard\(nft.id)", in: namespace)
-                    .padding(.horizontal, 15)
-                    .offset(y: -50)
+                VStack(alignment: .center) {
+                    UserInfoCard(nft: nft, namespace: namespace, showAll: true)
+                        .matchedGeometryEffect(id: "userinfocard\(nft.id)", in: namespace)
+                    Text("View On")
+                    HStack {
+                        Link("OpenSea", destination: URL(string: "\(openSeaURL)/\(nft.contract)/\(nft.tokenId)")!)
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.white)
+                            .padding(.vertical, 15)
+                            .background(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.opensea, lineWidth: 2).background(Color.opensea))
+                            .clipShape(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
+
+                        Link("Polygon Scan", destination: URL(string: "\(polygonScanURL)/\(nft.transactionHash)")!)
+                            .frame(maxWidth: .infinity)
+                            .foregroundColor(.white)
+                            .padding(.vertical, 15)
+                            .background(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.polygon, lineWidth: 2).background(Color.polygon))
+                            .clipShape(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
+                    }
+                }
+                .padding(.horizontal, 15)
+                .offset(y: -50)
 
                 Spacer()
             }
@@ -56,32 +77,6 @@ struct NFTView: View {
                 .padding()
                 Spacer()
             }
-
-
-
-            //            VStack(alignment: .center) {
-            //                Text("View On")
-            //                HStack {
-            //                    // https://testnets.opensea.io/assets/mumbai/<contract>/<tokenId>
-            //                    Button(action: {}) {
-            //                        Text("OpenSea")
-            //                            .frame(maxWidth: .infinity)
-            //                            .foregroundColor(.white)
-            //                            .padding(.vertical, 15)
-            //                            .background(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.opensea, lineWidth: 2).background(Color.opensea))
-            //                            .clipShape(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
-            //                    }
-            //                    // https://mumbai.polygonscan.com/tx/<transactionId>
-            //                    Button(action: {}) {
-            //                        Text("Polygon Scan")
-            //                            .frame(maxWidth: .infinity)
-            //                            .foregroundColor(.white)
-            //                            .padding(.vertical, 15)
-            //                            .background(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.polygon, lineWidth: 2).background(Color.polygon))
-            //                            .clipShape(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
-            //                    }
-            //                }
-            //            }
         }
     }
 }
