@@ -22,19 +22,23 @@ struct NFTView: View {
             VStack {
                 RemoteImage(urlString: nft.metadata.image)
                     .scaledToFill()
-                    .matchedGeometryEffect(id: "\(nft.id)", in: namespace)
                     .frame(width: geometry.size.width)
                     .frame(maxHeight: fullImageHeight ? geometry.size.height : geometry.size.height  / 2)
-                    .clipShape(RoundedRectangle(cornerRadius: imageBorderRadius, style: .continuous))
+                    .mask(RoundedRectangle(cornerRadius: imageBorderRadius, style: .continuous))
+                    .matchedGeometryEffect(id: "\(nft.id)", in: namespace)
                     .onTapGesture {
                         withAnimation {
                             fullImageHeight.toggle()
                         }
                     }
 
+                UserInfoCard(nft: nft, namespace: namespace, showAll: true)
+                    .matchedGeometryEffect(id: "userinfocard\(nft.id)", in: namespace)
+                    .padding(.horizontal, 15)
+                    .offset(y: -50)
+
                 Spacer()
             }
-            .matchedGeometryEffect(id: "vstack\(nft.id)", in: namespace)
 
             VStack {
                 HStack(alignment: .top) {
@@ -53,37 +57,31 @@ struct NFTView: View {
                 Spacer()
             }
 
-            VStack {
-                Spacer()
-                UserInfoCard(nft: nft, namespace: namespace, showAll: true)
-                    .matchedGeometryEffect(id: "userinfocard\(nft.id)", in: namespace)
-                    .padding(15)
-                    .offset(y: 90)
-            }
 
-            VStack(alignment: .center) {
-                Text("View On")
-                HStack {
-                    // https://testnets.opensea.io/assets/mumbai/<contract>/<tokenId>
-                    Button(action: {}) {
-                        Text("OpenSea")
-                            .frame(maxWidth: .infinity)
-                            .foregroundColor(.white)
-                            .padding(.vertical, 15)
-                            .background(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.opensea, lineWidth: 2).background(Color.opensea))
-                            .clipShape(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
-                    }
-                    // https://mumbai.polygonscan.com/tx/<transactionId>
-                    Button(action: {}) {
-                        Text("Polygon Scan")
-                            .frame(maxWidth: .infinity)
-                            .foregroundColor(.white)
-                            .padding(.vertical, 15)
-                            .background(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.polygon, lineWidth: 2).background(Color.polygon))
-                            .clipShape(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
-                    }
-                }
-            }
+
+            //            VStack(alignment: .center) {
+            //                Text("View On")
+            //                HStack {
+            //                    // https://testnets.opensea.io/assets/mumbai/<contract>/<tokenId>
+            //                    Button(action: {}) {
+            //                        Text("OpenSea")
+            //                            .frame(maxWidth: .infinity)
+            //                            .foregroundColor(.white)
+            //                            .padding(.vertical, 15)
+            //                            .background(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.opensea, lineWidth: 2).background(Color.opensea))
+            //                            .clipShape(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
+            //                    }
+            //                    // https://mumbai.polygonscan.com/tx/<transactionId>
+            //                    Button(action: {}) {
+            //                        Text("Polygon Scan")
+            //                            .frame(maxWidth: .infinity)
+            //                            .foregroundColor(.white)
+            //                            .padding(.vertical, 15)
+            //                            .background(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.polygon, lineWidth: 2).background(Color.polygon))
+            //                            .clipShape(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
+            //                    }
+            //                }
+            //            }
         }
     }
 }

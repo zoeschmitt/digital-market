@@ -15,20 +15,20 @@ struct NFTCard: View {
         VStack {
             RemoteImage(urlString: nft.metadata.image)
                 .scaledToFill()
+                .frame(minHeight: 200, maxHeight: 400)
+                .frame(maxWidth: .infinity)
+                .mask(RoundedRectangle(cornerRadius: 25, style: .continuous))
+                .overlay(RoundedRectangle(cornerRadius: 25, style: .continuous).stroke(.white, lineWidth: 1))
+                .overlay(                VStack {
+                    Spacer()
+                    UserInfoCard(nft: nft, namespace: namespace, showAll: false)
+                        .matchedGeometryEffect(id: "userinfocard\(nft.id)", in: namespace)
+                        .padding(5)
+                })
                 .matchedGeometryEffect(id: "\(nft.id)", in: namespace)
+                .shadow(color: Color.mineBlack.opacity(0.1), radius: 15, x: 0, y: 5)
+                .contentShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
         }
-        .matchedGeometryEffect(id: "vstack\(nft.id)", in: namespace)
-        .frame(minHeight: 200, maxHeight: 400)
-        .frame(maxWidth: .infinity)
-        .clipShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: 25, style: .continuous).stroke(.white, lineWidth: 1))
-        .overlay(                VStack {
-            Spacer()
-            UserInfoCard(nft: nft, namespace: namespace, showAll: false)
-                .matchedGeometryEffect(id: "userinfocard\(nft.id)", in: namespace)
-                .padding(5)
-        })
-        .shadow(color: Color.mineBlack.opacity(0.1), radius: 15, x: 0, y: 5)
     }
 }
 
