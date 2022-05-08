@@ -23,12 +23,14 @@ struct HomeView: View {
     var body: some View {
         GeometryReader { geometry in
             ZStack {
-                VStack {
-                    LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom)
-                        .frame(width: geometry.size.width, height: geometry.size.height / 1.5)
-                    Spacer()
+                if !showNFT {
+                    VStack {
+                        LinearGradient(gradient: gradient, startPoint: .top, endPoint: .bottom)
+                            .frame(width: geometry.size.width, height: geometry.size.height / 1.5)
+                        Spacer()
+                    }
+                    .ignoresSafeArea()
                 }
-                .ignoresSafeArea()
                 ScrollView {
                     if (!showNFT) {
                         HStack(alignment: .center) {
@@ -59,6 +61,7 @@ struct HomeView: View {
                         .padding(.horizontal, 20)
                     }
                 }
+                .background(showNFT ? Color.galleryGrey.ignoresSafeArea() : nil)
             }
         }
         .navigationBarHidden(true)
