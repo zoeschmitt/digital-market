@@ -51,17 +51,27 @@ class HttpApiClient: ApiClient {
         return NFT.mockData[0]
     }
     
-    func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) async throws -> NFT {
-        return NFT.mockData[0]
+    func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) async throws {
+        let urlRequest = self.postRequest(endpoint: "buyNFT?nftId=\(nftId)", body: ["sellerWalletId": sellerWalletId, "buyerWalletId": buyerWalletId])
+        let (_, response) = try await URLSession.shared.data(for: urlRequest)
+        guard (response as? HTTPURLResponse)?.statusCode == 200
+        else { fatalError() }
     }
 }
 
 extension HttpApiClient {
-    func postRequest(endpoint: String) -> URLRequest {
+    func postRequest(endpoint: String, body: [String: String]? = nil) -> URLRequest {
         let url = URL(string: "\(baseURL)/\(endpoint)")!
         var urlRequest = URLRequest(url: url)
         urlRequest.setValue(apiKey, forHTTPHeaderField: "X-API-KEY")
         urlRequest.httpMethod = "POST"
+        if body != nil {
+            let bodyData = try? JSONSerialization.data(
+                withJSONObject: body as Any,
+                options: []
+            )
+            urlRequest.httpBody = bodyData
+        }
         return urlRequest
     }
     func getRequest(endpoint: String) -> URLRequest {

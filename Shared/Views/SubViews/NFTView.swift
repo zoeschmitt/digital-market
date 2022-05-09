@@ -13,8 +13,13 @@ struct NFTView: View {
     let geometry: GeometryProxy
 
     @State var fullImageHeight: Bool = false
+    @State var showBuyAlert: Bool = false
+    @State private var errorWrapper: ErrorWrapper?
 
     @Binding var showNFT: Bool
+
+    @EnvironmentObject var nftStore: NFTStore
+    @EnvironmentObject var userStore: UserStore
 
     let imageBorderRadius: CGFloat = 25
     private let openSeaURL = Configuration.stringValue(forKey: "OPENSEA_URL")
@@ -35,42 +40,7 @@ struct NFTView: View {
                         }
                     }
 
-                VStack(alignment: .leading) {
-                    NFTDetails(nft: nft, namespace: namespace, showAll: true)
-                        .matchedGeometryEffect(id: "userinfocard\(nft.id)", in: namespace)
-                        .padding(.bottom, 20)
-                    Text("View On")
-                        .font(.opensans(.semibold, size: 16))
-                    StyledLink(title: "OpenSea", url: URL(string: "\(openSeaURL)/\(nft.contract)/\(nft.tokenId)")!, accentColor: Color.opensea)
-                    StyledLink(title: "Polygon Scan", url: URL(string: "\(polygonScanURL)/\(nft.transactionHash)")!, accentColor: Color.polygon)
-                    Text("Details")
-                        .font(.opensans(.semibold, size: 16))
-                        .padding(.vertical, 10)
-                    VStack {
-                        InfoRow(title: "Contract", subtitle: nft.contract, imageName: "doc.plaintext.fill")
-                        Divider()
-                            .padding(.vertical, 10)
-                        InfoRow(title: "Transaction Hash", subtitle: nft.transactionHash, imageName: "number.circle.fill")
-                    }
-                    .padding(20)
-                    .background(.ultraThinMaterial)
-                    .overlay(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
-
-                    Text("Royalties")
-                        .font(.opensans(.semibold, size: 16))
-                        .padding(.vertical, 10)
-
-                    ForEach(nft.royalties, id: \.recipient ) { royalty in
-                        InfoRow(title: royalty.recipient, subtitle: "\(royalty.percentage)", imageName: "percent")
-                            .padding(20)
-                            .background(.ultraThinMaterial)
-                            .overlay(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
-                    }
-
-
-                }
-                .padding(.horizontal, 15)
-                .offset(y: fullImageHeight ? -5 : -50)
+                details
 
                 Spacer()
             }
@@ -93,6 +63,81 @@ struct NFTView: View {
                 Spacer()
             }
         }
+        .sheet(item: $errorWrapper) { wrapper in
+            ErrorView(errorWrapper: wrapper)
+        }
+    }
+
+    var details: some View {
+        VStack(alignment: .leading) {
+            NFTDetails(nft: nft, namespace: namespace, showAll: true)
+                .matchedGeometryEffect(id: "userinfocard\(nft.id)", in: namespace)
+                .padding(.bottom, 10)
+            buyButton
+                .padding(.vertical, 10)
+            Text("View On")
+                .font(.opensans(.semibold, size: 16))
+            StyledLink(title: "OpenSea", url: URL(string: "\(openSeaURL)/\(nft.contract)/\(nft.tokenId)")!, accentColor: Color.opensea)
+            StyledLink(title: "Polygon Scan", url: URL(string: "\(polygonScanURL)/\(nft.transactionHash)")!, accentColor: Color.polygon)
+            Text("Details")
+                .font(.opensans(.semibold, size: 16))
+                .padding(.vertical, 10)
+            VStack {
+                InfoRow(title: "Contract", subtitle: nft.contract, imageName: "doc.plaintext.fill")
+                Divider()
+                    .padding(.vertical, 10)
+                InfoRow(title: "Transaction Hash", subtitle: nft.transactionHash, imageName: "number.circle.fill")
+            }
+            .padding(20)
+            .background(.ultraThinMaterial)
+            .overlay(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
+
+            Text("Royalties")
+                .font(.opensans(.semibold, size: 16))
+                .padding(.vertical, 10)
+
+            ForEach(nft.royalties, id: \.recipient ) { royalty in
+                InfoRow(title: royalty.recipient, subtitle: "\(royalty.percentage)", imageName: "percent")
+                    .padding(20)
+                    .background(.ultraThinMaterial)
+                    .overlay(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
+            }
+
+
+        }
+        .padding(.horizontal, 15)
+        .offset(y: fullImageHeight ? -5 : -50)
+    }
+
+    var buyButton: some View {
+        HStack(alignment: .top) {
+            Button(action: { withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                showBuyAlert = true
+            } }) {
+                Text("Buy")
+                    .padding(10)
+                    .font(.opensans(.semibold, size: 16))
+                    .frame(maxWidth: .infinity)
+                    .background(Color.azureBlue)
+                    .foregroundColor(.white)
+                    .mask(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
+            }
+            .alert("Buy \(nft.metadata.name) for \(String(format: "%.1f ETH", nft.listPrice))?", isPresented: $showBuyAlert) {
+                Button("Buy") {
+                    Task {
+                        do {
+                            try await nftStore.buyNFT(nft: nft, buyerWalletId: try await userStore.fetchUserWalletId()!)
+                        } catch {
+                            print(error)
+                            errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem fetching your feed.")
+                        }
+                    }
+                }
+                Button("Cancel", role: .cancel) { }
+            }
+        }
+        .frame(maxWidth: .infinity)
     }
 }
 

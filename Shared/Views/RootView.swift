@@ -39,6 +39,7 @@ struct RootView: View {
             }
             .tag(Tab.home)
             .environmentObject(nftStore)
+            .environmentObject(userStore)
 
             NavigationView {
                 MintView()
@@ -75,6 +76,12 @@ struct RootView: View {
                 print(error)
                 errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem fetching your feed.")
             }
+        }
+        .sheet(item: $errorWrapper, onDismiss: {
+            // fall back to mock data
+            nftStore.nftFeed = NFT.mockData
+        }) { wrapper in
+            ErrorView(errorWrapper: wrapper)
         }
     }
 }
