@@ -17,5 +17,5 @@ protocol ApiClient {
     func getNFT(nftId: String) async throws -> NFT
     func getUserNFTs(walletId: String) async throws -> [NFT]
     func listNFT(nftId: String, listPrice: Double) async throws -> NFT
-    func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) async throws -> NFT
+    func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) async throws
 }

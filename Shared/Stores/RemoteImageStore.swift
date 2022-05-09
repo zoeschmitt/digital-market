@@ -11,11 +11,13 @@ import SwiftUI
 struct RemoteImage: View {
     @ObservedObject var remoteImageModel: RemoteImageStore
     var placeholderImage: String
+    let namespace: Namespace.ID?
 
     init(urlString: String,
-         withPlaceholderURL placeholderURL: String = "") {
+         withPlaceholderURL placeholderURL: String = "", namespace: Namespace.ID? = nil) {
         remoteImageModel = RemoteImageStore(urlString: urlString)
         placeholderImage = placeholderURL
+        self.namespace = namespace
     }
 
     var body: some View {
@@ -27,8 +29,14 @@ struct RemoteImage: View {
                     .padding()
             }
         } else {
-            Image(uiImage: remoteImageModel.image!)
-                .resizable()
+            if namespace != nil {
+                Image(uiImage: remoteImageModel.image!)
+                    .resizable()
+                    .matchedGeometryEffect(id: remoteImageModel.urlString, in: namespace!)
+            } else {
+                Image(uiImage: remoteImageModel.image!)
+                    .resizable()
+            }
         }
     }
 }

@@ -49,6 +49,12 @@
 		DD4C8D8D28243E3900D0AB69 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C8D8B28243E3900D0AB69 /* Globals.swift */; };
 		DD4C8D8F28243EB200D0AB69 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C8D8E28243EB200D0AB69 /* SearchBar.swift */; };
 		DD4C8D9028243EB200D0AB69 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4C8D8E28243EB200D0AB69 /* SearchBar.swift */; };
+		DD4DB62D282862F5007A2EF0 /* NFTDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DB62C282862F5007A2EF0 /* NFTDetails.swift */; };
+		DD4DB62E282862F5007A2EF0 /* NFTDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DB62C282862F5007A2EF0 /* NFTDetails.swift */; };
+		DD4DB63028286351007A2EF0 /* StyledLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DB62F28286351007A2EF0 /* StyledLink.swift */; };
+		DD4DB63128286351007A2EF0 /* StyledLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DB62F28286351007A2EF0 /* StyledLink.swift */; };
+		DD4DB63328287A2C007A2EF0 /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DB63228287A2C007A2EF0 /* InfoRow.swift */; };
+		DD4DB63428287A2C007A2EF0 /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DB63228287A2C007A2EF0 /* InfoRow.swift */; };
 		DD6580C927FD110700AAE685 /* NFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580C827FD110700AAE685 /* NFT.swift */; };
 		DD6580CA27FD110700AAE685 /* NFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580C827FD110700AAE685 /* NFT.swift */; };
 		DD6580DB27FD116000AAE685 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580DA27FD116000AAE685 /* Wallet.swift */; };
@@ -132,6 +138,9 @@
 		DD4C8D802823593A00D0AB69 /* RemoteImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageStore.swift; sourceTree = "<group>"; };
 		DD4C8D8B28243E3900D0AB69 /* Globals.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Globals.swift; sourceTree = "<group>"; };
 		DD4C8D8E28243EB200D0AB69 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		DD4DB62C282862F5007A2EF0 /* NFTDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTDetails.swift; sourceTree = "<group>"; };
+		DD4DB62F28286351007A2EF0 /* StyledLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledLink.swift; sourceTree = "<group>"; };
+		DD4DB63228287A2C007A2EF0 /* InfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRow.swift; sourceTree = "<group>"; };
 		DD6580C827FD110700AAE685 /* NFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFT.swift; sourceTree = "<group>"; };
 		DD6580DA27FD116000AAE685 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		DD6580E027FD124D00AAE685 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -318,6 +327,9 @@
 				DD2CAB29281F568C00C6FAB3 /* Logo.swift */,
 				DD4C8D7D282358ED00D0AB69 /* ImagePicker.swift */,
 				DD4C8D8E28243EB200D0AB69 /* SearchBar.swift */,
+				DD4DB62C282862F5007A2EF0 /* NFTDetails.swift */,
+				DD4DB62F28286351007A2EF0 /* StyledLink.swift */,
+				DD4DB63228287A2C007A2EF0 /* InfoRow.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -568,11 +580,14 @@
 				DD6580E727FD12B600AAE685 /* PreviewContent.swift in Sources */,
 				DD789EAE28263E850035306A /* NFTView.swift in Sources */,
 				DD2CAB27281F55FB00C6FAB3 /* IconButton.swift in Sources */,
+				DD4DB62D282862F5007A2EF0 /* NFTDetails.swift in Sources */,
 				DD4C8D812823593A00D0AB69 /* RemoteImageStore.swift in Sources */,
 				DD2CAB2D281F750E00C6FAB3 /* RootView.swift in Sources */,
 				DDA228B1281D91D4000B0278 /* NFTStore.swift in Sources */,
 				DD658152281466CD00AAE685 /* Configuration.swift in Sources */,
+				DD4DB63028286351007A2EF0 /* StyledLink.swift in Sources */,
 				DD4C8D8C28243E3900D0AB69 /* Globals.swift in Sources */,
+				DD4DB63328287A2C007A2EF0 /* InfoRow.swift in Sources */,
 				DD35E3FB27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
 				DD4C8D7E282358ED00D0AB69 /* ImagePicker.swift in Sources */,
 				DD2CAB2A281F568C00C6FAB3 /* Logo.swift in Sources */,
@@ -603,11 +618,14 @@
 				DD6580E827FD12B600AAE685 /* PreviewContent.swift in Sources */,
 				DD789EAF28263E850035306A /* NFTView.swift in Sources */,
 				DD2CAB28281F55FB00C6FAB3 /* IconButton.swift in Sources */,
+				DD4DB62E282862F5007A2EF0 /* NFTDetails.swift in Sources */,
 				DD4C8D822823593A00D0AB69 /* RemoteImageStore.swift in Sources */,
 				DD2CAB2E281F750E00C6FAB3 /* RootView.swift in Sources */,
 				DDA228B2281D91D4000B0278 /* NFTStore.swift in Sources */,
 				DD658153281466CD00AAE685 /* Configuration.swift in Sources */,
+				DD4DB63128286351007A2EF0 /* StyledLink.swift in Sources */,
 				DD4C8D8D28243E3900D0AB69 /* Globals.swift in Sources */,
+				DD4DB63428287A2C007A2EF0 /* InfoRow.swift in Sources */,
 				DD35E3FC27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
 				DD4C8D7F282358ED00D0AB69 /* ImagePicker.swift in Sources */,
 				DD2CAB2B281F568C00C6FAB3 /* Logo.swift in Sources */,
@@ -789,6 +807,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -821,6 +840,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1075,6 +1095,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1240,6 +1261,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

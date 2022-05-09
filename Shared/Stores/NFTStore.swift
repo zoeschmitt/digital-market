@@ -30,4 +30,8 @@ class NFTStore: ObservableObject {
     func mintNFT(image: UIImage, name: String, description: String) async throws {
 
     }
+
+    func buyNFT(nft: NFT, buyerWalletId: String) async throws {
+
+    }
 }
