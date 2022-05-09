@@ -37,6 +37,6 @@ class MockApiClient: ApiClient {
         return NFT.mockData[0]
     }
 
-    func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) async throws -> Bool {
+    func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) async throws {
     }
 }

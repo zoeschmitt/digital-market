@@ -9,9 +9,28 @@ import Foundation
 
 class UserStore: ObservableObject {
     private let apiClient: ApiClient
+    @Published private(set) var walletId: String = ""
 
     init(apiClient: ApiClient = HttpApiClient()) {
         self.apiClient = apiClient
+        Task {
+            await checkForExistingWallet()
+        }
+    }
+
+    private func checkForExistingWallet() async {
+        do {
+            var walletId = try await fetchUserWalletId()
+            if walletId == nil {
+                let wallet = try await generateUserWallet()
+                storeUserWalletId("\(wallet.id)")
+                walletId = "\(wallet.id)"
+            }
+            self.walletId = walletId!
+        } catch {
+            print(error)
+            // log
+        }
     }
 
     func fetchUserWallet() async throws -> Wallet? {
@@ -32,7 +51,7 @@ class UserStore: ObservableObject {
         return UserDefaults.standard.string(forKey: "walletId")
     }
 
-    func storeUserWalletId(_ id: String) {
+    private func storeUserWalletId(_ id: String) {
         UserDefaults.standard.set(id, forKey: "walletId")
     }
 }
