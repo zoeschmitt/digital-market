@@ -34,4 +34,8 @@ class NFTStore: ObservableObject {
     func buyNFT(nft: NFT, buyerWalletId: String) async throws {
 
     }
+
+    func listNFT(nftId: String, listPrice: Double) async throws {
+        
+    }
 }
