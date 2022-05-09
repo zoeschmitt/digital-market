@@ -71,6 +71,18 @@ struct RootView: View {
         .accentColor(Color.azureBlue)
         .task {
             do {
+                let walletId = try await userStore.fetchUserWalletId()
+                if walletId == nil {
+                    let wallet = try await userStore.generateUserWallet()
+                    userStore.storeUserWalletId("\(wallet.id)")
+                }
+            } catch {
+                print(error)
+                errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem generating your wallet.")
+            }
+        }
+        .task {
+            do {
                 nftStore.nftFeed = try await nftStore.getNFTFeed()
             } catch {
                 print(error)

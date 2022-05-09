@@ -14,10 +14,6 @@ class UserStore: ObservableObject {
         self.apiClient = apiClient
     }
 
-    private func getUserWalletId(walletId: String) {
-
-    }
-
     func fetchUserWallet() async throws -> Wallet? {
         let walletId = try await fetchUserWalletId()
         if walletId != nil {
@@ -36,7 +32,7 @@ class UserStore: ObservableObject {
         return UserDefaults.standard.string(forKey: "walletId")
     }
 
-    private func storeUserWalletId(_ id: String) {
+    func storeUserWalletId(_ id: String) {
         UserDefaults.standard.set(id, forKey: "walletId")
     }
 }
