@@ -13,6 +13,11 @@ struct MintView: View {
     @State private var nameInput = ""
     @State private var descriptionInput = ""
 
+    @EnvironmentObject var nftStore: NFTStore
+    @EnvironmentObject var userStore: UserStore
+
+    @State private var errorWrapper: ErrorWrapper?
+
     var body: some View {
         GeometryReader { geo in
             VStack {
@@ -25,7 +30,11 @@ struct MintView: View {
                         .padding(.bottom, 30)
                     Spacer()
                     HStack {
-                        Button(action: { image = nil }) {
+                        Button(action: {
+                            image = nil
+                            nameInput = ""
+                            descriptionInput = ""
+                        }) {
                             HStack {
                                 Spacer()
                                 Text("Cancel")
@@ -36,7 +45,16 @@ struct MintView: View {
                             .overlay(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.azureBlue, lineWidth: 2))
                         }
                         Spacer()
-                        Button(action: {}) {
+                        Button(action: {
+                            Task {
+                                do {
+                                    try await nftStore.mintNFT(image: image!, name: nameInput, description: descriptionInput)
+                                } catch {
+                                    print(error)
+                                    errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem minting your NFT.")
+                                }
+                            }
+                        }) {
                             HStack {
                                 Spacer()
                                 Text("Mint!")
@@ -54,6 +72,9 @@ struct MintView: View {
             }
             .sheet(isPresented: $showSheet) {
                 ImagePicker(selectedImage: self.$image)
+            }
+            .sheet(item: $errorWrapper) { wrapper in
+                ErrorView(errorWrapper: wrapper)
             }
             .padding(.horizontal, horizontalPadding)
             .padding(.top, 50)
