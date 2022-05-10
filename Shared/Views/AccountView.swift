@@ -8,14 +8,25 @@
 import SwiftUI
 
 struct AccountView: View {
+    @State var wallet: Wallet
 
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack(alignment: .center) {
+            Text("Address")
+//            Text(wallet.address)
+        }
+        .task {
+            do {
+
+            } catch {
+                
+            }
+        }
     }
 }
 
 struct AccountView_Previews: PreviewProvider {
     static var previews: some View {
-        AccountView()
+        AccountView(wallet: Wallet.mockData[0])
     }
 }

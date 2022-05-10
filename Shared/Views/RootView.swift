@@ -53,6 +53,8 @@ struct RootView: View {
                 }
             }
             .tag(Tab.mint)
+            .environmentObject(nftStore)
+            .environmentObject(userStore)
 
             NavigationView {
                 AccountView()
@@ -66,6 +68,7 @@ struct RootView: View {
                 }
             }
             .tag(Tab.account)
+            .environmentObject(userStore)
 
         }
         .accentColor(Color.azureBlue)

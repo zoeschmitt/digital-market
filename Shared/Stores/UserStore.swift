@@ -31,6 +31,7 @@ class UserStore: ObservableObject {
             print(error)
             // log
         }
+        print(walletId)
     }
 
     func fetchUserWallet() async throws -> Wallet? {

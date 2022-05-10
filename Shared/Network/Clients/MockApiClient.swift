@@ -9,6 +9,10 @@ import Foundation
 
 class MockApiClient: ApiClient {
 
+    func getBalance(walletId: String) async throws -> Wallet.Balance {
+        return Wallet.mockBalance
+    }
+
     func generateWallet() async throws -> Wallet {
         return Wallet.mockData[0]
     }
@@ -17,8 +21,8 @@ class MockApiClient: ApiClient {
         return Wallet.mockData[0]
     }
 
-    func mintNFT(name: String, description: String, filename: String, image: String) async throws -> NFT {
-        return NFT.mockData[0]
+    func mintNFT(walletId: String, name: String, description: String, filename: String, image: String) async throws {
+
     }
 
     func getAllNFTs() async throws -> [NFT] {
@@ -33,8 +37,8 @@ class MockApiClient: ApiClient {
         return NFT.mockData
     }
 
-    func listNFT(nftId: String, listPrice: Double) async throws -> NFT {
-        return NFT.mockData[0]
+    func listNFT(nftId: String, listPrice: Double) async throws {
+
     }
 
     func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) async throws {

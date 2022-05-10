@@ -91,6 +91,8 @@
 		DDA228B2281D91D4000B0278 /* NFTStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA228B0281D91D4000B0278 /* NFTStore.swift */; };
 		DDA228B4281D91E0000B0278 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA228B3281D91E0000B0278 /* UserStore.swift */; };
 		DDA228B5281D91E0000B0278 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA228B3281D91E0000B0278 /* UserStore.swift */; };
+		DDEFCCF1282A02B400023791 /* UIImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF0282A02B400023791 /* UIImage+Base64.swift */; };
+		DDEFCCF2282A02B400023791 /* UIImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF0282A02B400023791 /* UIImage+Base64.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +167,7 @@
 		DDA228A8281CA071000B0278 /* ErrorWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ErrorWrapper.swift; sourceTree = "<group>"; };
 		DDA228B0281D91D4000B0278 /* NFTStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTStore.swift; sourceTree = "<group>"; };
 		DDA228B3281D91E0000B0278 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
+		DDEFCCF0282A02B400023791 /* UIImage+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Base64.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -283,25 +286,9 @@
 			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
-		DD4C8D8328237E5200D0AB69 /* Requests */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Requests;
-			sourceTree = "<group>";
-		};
-		DD4C8D8428237E5B00D0AB69 /* Responses */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Responses;
-			sourceTree = "<group>";
-		};
 		DD6580C727FD0F2D00AAE685 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				DD4C8D8428237E5B00D0AB69 /* Responses */,
-				DD4C8D8328237E5200D0AB69 /* Requests */,
 				DD6580C827FD110700AAE685 /* NFT.swift */,
 				DD6580DA27FD116000AAE685 /* Wallet.swift */,
 				DDA228A8281CA071000B0278 /* ErrorWrapper.swift */,
@@ -362,6 +349,7 @@
 			children = (
 				DD2CAB3828209A8400C6FAB3 /* ImageCache.swift */,
 				DD4C8D8B28243E3900D0AB69 /* Globals.swift */,
+				DDEFCCF0282A02B400023791 /* UIImage+Base64.swift */,
 			);
 			path = Utils;
 			sourceTree = "<group>";
@@ -586,6 +574,7 @@
 				DD2CAB27281F55FB00C6FAB3 /* IconButton.swift in Sources */,
 				DD4DB62D282862F5007A2EF0 /* NFTDetails.swift in Sources */,
 				DD4C8D812823593A00D0AB69 /* RemoteImageStore.swift in Sources */,
+				DDEFCCF1282A02B400023791 /* UIImage+Base64.swift in Sources */,
 				DD2CAB2D281F750E00C6FAB3 /* RootView.swift in Sources */,
 				DDA228B1281D91D4000B0278 /* NFTStore.swift in Sources */,
 				DD658152281466CD00AAE685 /* Configuration.swift in Sources */,
@@ -625,6 +614,7 @@
 				DD2CAB28281F55FB00C6FAB3 /* IconButton.swift in Sources */,
 				DD4DB62E282862F5007A2EF0 /* NFTDetails.swift in Sources */,
 				DD4C8D822823593A00D0AB69 /* RemoteImageStore.swift in Sources */,
+				DDEFCCF2282A02B400023791 /* UIImage+Base64.swift in Sources */,
 				DD2CAB2E281F750E00C6FAB3 /* RootView.swift in Sources */,
 				DDA228B2281D91D4000B0278 /* NFTStore.swift in Sources */,
 				DD658153281466CD00AAE685 /* Configuration.swift in Sources */,

@@ -27,8 +27,9 @@ class NFTStore: ObservableObject {
         searchResults = nftFeed.filter { $0.metadata.name.contains(input) }
     }
 
-    func mintNFT(image: UIImage, name: String, description: String) async throws {
-
+    func mintNFT(walletId: String, image: UIImage, name: String, description: String) async throws {
+        let base64EncodedImg: String = image.base64!
+//        try await apiClient.mintNFT(walletId: walletId, name: name, description: description, filename: <#T##String#>, image: base64EncodedImg)
     }
 
     func buyNFT(nft: NFT, buyerWalletId: String) async throws {
