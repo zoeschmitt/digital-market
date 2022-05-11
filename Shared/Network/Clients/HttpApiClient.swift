@@ -28,7 +28,7 @@ class HttpApiClient: ApiClient {
         return decodedWallet
     }
     
-    func getWallet(walletId: String) async throws -> Wallet {
+    func getWallet(_ walletId: String) async throws -> Wallet {
         let urlRequest = self.getRequest(endpoint: "getWallet?walletId=\(walletId)")
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         guard (response as? HTTPURLResponse)?.statusCode == 200 else { return Wallet.mockData[0] }
@@ -36,8 +36,8 @@ class HttpApiClient: ApiClient {
         return decodedWallet
     }
     
-    func mintNFT(walletId: String, name: String, description: String, filename: String, image: String) async throws {
-        let urlRequest = self.postRequest(endpoint: "mintNFT?walletId=\(walletId)", body: ["metadata": ["name": name, "description": description], "filename": filename, "image": image])
+    func mintNFT(walletId: String, name: String, description: String, image: String) async throws {
+        let urlRequest = self.postRequest(endpoint: "mintNFT?walletId=\(walletId)", body: ["metadata": ["name": name, "description": description], "filename": "nft.jpeg", "image": image])
         let (_, response) = try await URLSession.shared.data(for: urlRequest)
         guard (response as? HTTPURLResponse)?.statusCode == 200
         else { fatalError() }
@@ -51,7 +51,7 @@ class HttpApiClient: ApiClient {
         return decodedWallet
     }
     
-    func getNFT(nftId: String) async throws -> NFT {
+    func getNFT(_ nftId: String) async throws -> NFT {
         let urlRequest = self.getRequest(endpoint: "getNFT?nftId=\(nftId)")
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         guard (response as? HTTPURLResponse)?.statusCode == 200 else { return NFT.mockData[0] }
@@ -59,12 +59,13 @@ class HttpApiClient: ApiClient {
         return decodedNFT
     }
     
-    func getUserNFTs(walletId: String) async throws -> [NFT] {
-        let urlRequest = self.getRequest(endpoint: "getNFT?walletId=\(walletId)")
-        let (data, response) = try await URLSession.shared.data(for: urlRequest)
-        guard (response as? HTTPURLResponse)?.statusCode == 200 else { return NFT.mockData }
-        let decodedNFTs = try JSONDecoder().decode([NFT].self, from: data)
-        return decodedNFTs
+    func getUserNFTs(_ walletId: String) async throws -> [NFT] {
+//        let urlRequest = self.getRequest(endpoint: "getNFT?walletId=\(walletId)")
+//        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+//        guard (response as? HTTPURLResponse)?.statusCode == 200 else { return NFT.mockData }
+//        let decodedNFTs = try JSONDecoder().decode([NFT].self, from: data)
+//        return decodedNFTs
+        return NFT.mockData
     }
     
     func listNFT(nftId: String, listPrice: Double) async throws {

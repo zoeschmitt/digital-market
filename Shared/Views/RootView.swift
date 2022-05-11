@@ -22,12 +22,11 @@ struct RootView: View {
     @StateObject private var userStore = UserStore()
     @StateObject private var nftStore = NFTStore()
     @State private var errorWrapper: ErrorWrapper?
-    @State var showNFT = false
 
     var body: some View {
         TabView(selection: $selection) {
             NavigationView {
-                HomeView(nfts: $nftStore.nftFeed, searchResults: $nftStore.searchResults, showNFT: $showNFT)
+                HomeView(nfts: $nftStore.nftFeed, searchResults: $nftStore.searchResults)
             }
             .tabItem {
                 let menuText = Text("Home", comment: "Home NFT feed")
@@ -69,6 +68,7 @@ struct RootView: View {
             }
             .tag(Tab.account)
             .environmentObject(userStore)
+            .environmentObject(nftStore)
 
         }
         .accentColor(Color.azureBlue)

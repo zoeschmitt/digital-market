@@ -17,7 +17,7 @@ struct PrimaryButton: View {
             .background(Color.azureBlue)
             .foregroundColor(.white)
             .mask(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
-            .overlay(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
+            .overlay(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.azureBlue, lineWidth: 1))
     }
 }
 

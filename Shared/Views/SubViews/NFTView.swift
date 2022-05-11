@@ -35,7 +35,7 @@ struct NFTView: View {
                     .scaledToFill()
                     .frame(width: geometry.size.width)
                     .frame(maxHeight: fullImageHeight ? geometry.size.height : geometry.size.height  / 2)
-                    .mask(RoundedRectangle(cornerRadius: imageBorderRadius, style: .continuous))
+                    .mask(RoundedRectangle(cornerRadius: imageBorderRadius, style: .continuous).matchedGeometryEffect(id: "mask\(nft.id)", in: namespace))
                     .onTapGesture {
                         withAnimation {
                             fullImageHeight.toggle()
@@ -75,11 +75,11 @@ struct NFTView: View {
             NFTDetails(nft: nft, namespace: namespace, showAll: true)
                 .matchedGeometryEffect(id: "userinfocard\(nft.id)", in: namespace)
                 .padding(.bottom, 10)
-            if userStore.walletId != nft.walletId {
-                buyButton
-                    .padding(.vertical, 10)
-            } else {
+            if userStore.walletId == nft.walletId && !nft.isListed {
                 listButton
+                    .padding(.vertical, 10)
+            } else if nft.isListed && userStore.walletId != nft.walletId {
+                buyButton
                     .padding(.vertical, 10)
             }
             Text("View On")
@@ -97,6 +97,7 @@ struct NFTView: View {
             }
             .padding(20)
             .background(.ultraThinMaterial)
+            .mask(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
 
             Text("Royalties")
@@ -107,6 +108,7 @@ struct NFTView: View {
                 InfoRow(title: royalty.recipient, subtitle: "\(royalty.percentage)", imageName: "percent")
                     .padding(20)
                     .background(.ultraThinMaterial)
+                    .mask(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous))
                     .overlay(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
             }
 

@@ -17,30 +17,25 @@ class MockApiClient: ApiClient {
         return Wallet.mockData[0]
     }
 
-    func getWallet(walletId: String) async throws -> Wallet {
+    func getWallet(_ walletId: String) async throws -> Wallet {
         return Wallet.mockData[0]
     }
 
-    func mintNFT(walletId: String, name: String, description: String, filename: String, image: String) async throws {
-
-    }
+    func mintNFT(walletId: String, name: String, description: String, image: String) async throws {}
 
     func getAllNFTs() async throws -> [NFT] {
         return NFT.mockData
     }
 
-    func getNFT(nftId: String) async throws -> NFT {
+    func getNFT(_ nftId: String) async throws -> NFT {
         return NFT.mockData[0]
     }
 
-    func getUserNFTs(walletId: String) async throws -> [NFT] {
+    func getUserNFTs(_ walletId: String) async throws -> [NFT] {
         return NFT.mockData
     }
 
-    func listNFT(nftId: String, listPrice: Double) async throws {
+    func listNFT(nftId: String, listPrice: Double) async throws {}
 
-    }
-
-    func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) async throws {
-    }
+    func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) async throws {}
 }

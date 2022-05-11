@@ -48,7 +48,7 @@ struct MintView: View {
                         Button(action: {
                             Task {
                                 do {
-                                    try await nftStore.mintNFT(image: image!, name: nameInput, description: descriptionInput)
+                                    try await nftStore.mintNFT(walletId: userStore.walletId, image: image!, name: nameInput, description: descriptionInput)
                                 } catch {
                                     print(error)
                                     errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem minting your NFT.")

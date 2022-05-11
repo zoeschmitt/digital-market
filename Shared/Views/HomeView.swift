@@ -14,7 +14,7 @@ struct HomeView: View {
     @Binding var searchResults: [NFT]
 
     @State var showSearch = false
-    @Binding var showNFT: Bool
+    @State var showNFT: Bool = false
     @State var selectedNFT: NFT?
     @State private var searchInput: String = ""
 
@@ -70,6 +70,6 @@ struct HomeView: View {
 
 struct HomeView_Previews: PreviewProvider {
     static var previews: some View {
-        HomeView(nfts: .constant(NFT.mockData), searchResults: .constant(NFT.mockData), showNFT: .constant(true))
+        HomeView(nfts: .constant(NFT.mockData), searchResults: .constant(NFT.mockData))
     }
 }

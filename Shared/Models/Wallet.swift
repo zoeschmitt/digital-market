@@ -9,11 +9,11 @@ import Foundation
 
 struct Wallet: Identifiable, Codable {
     var id: UUID
-    var address: String?
-    var privateKey: String?
-    var mnemonic: String?
+    var address: String
+    var privateKey: String
+    var mnemonic: String
 
-    init(id: UUID = UUID(), address: String?, privateKey: String?, mnemonic: String?) {
+    init(id: UUID = UUID(), address: String, privateKey: String, mnemonic: String) {
         self.id = id
         self.address = address
         self.privateKey = privateKey

@@ -29,17 +29,12 @@ class UserStore: ObservableObject {
             self.walletId = walletId!
         } catch {
             print(error)
-            // log
         }
         print(walletId)
     }
 
-    func fetchUserWallet() async throws -> Wallet? {
-        let walletId = try await fetchUserWalletId()
-        if walletId != nil {
-            //api call
-        }
-        return Wallet.mockData[0]
+    func fetchUserWallet(_ walletId: String) async throws -> Wallet? {
+        return try await apiClient.getWallet(walletId)
     }
 
     func generateUserWallet() async throws -> Wallet {
@@ -54,5 +49,9 @@ class UserStore: ObservableObject {
 
     private func storeUserWalletId(_ id: String) {
         UserDefaults.standard.set(id, forKey: "walletId")
+    }
+
+    func getBalance() async throws -> Wallet.Balance {
+        return try await apiClient.getBalance(walletId: walletId)
     }
 }
