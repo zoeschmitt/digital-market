@@ -12,6 +12,8 @@ struct MintView: View {
     @State private var showSheet = false
     @State private var nameInput = ""
     @State private var descriptionInput = ""
+    @State private var inputValidationFailed = false
+    @State private var loading = false
 
     @EnvironmentObject var nftStore: NFTStore
     @EnvironmentObject var userStore: UserStore
@@ -46,6 +48,10 @@ struct MintView: View {
                         }
                         Spacer()
                         Button(action: {
+                            if nameInput.isEmpty || descriptionInput.isEmpty {
+                                inputValidationFailed = true
+                                return
+                            }
                             Task {
                                 do {
                                     try await nftStore.mintNFT(walletId: userStore.walletId, image: image!, name: nameInput, description: descriptionInput)
@@ -80,6 +86,9 @@ struct MintView: View {
             .padding(.top, 50)
             .ignoresSafeArea(edges: .top)
             .frame(width: geo.size.width)
+            .alert("Make sure to enter both a name and description for your NFT", isPresented: $inputValidationFailed) {
+                Button("Okay", role: .cancel) { }
+            }
         }
     }
 }
@@ -128,7 +137,7 @@ struct MintInfo: View {
                     .resizable()
                     .scaledToFill()
                     .frame(width: geometry.size.width - (horizontalPadding * 2))
-                    .frame(maxHeight: .infinity)
+                    .frame(maxHeight: 300)
                     .clipShape(RoundedRectangle(cornerRadius: imageBorderRadius, style: .continuous))
                     .overlay(RoundedRectangle(cornerRadius: imageBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
                     .padding(.bottom, 30)

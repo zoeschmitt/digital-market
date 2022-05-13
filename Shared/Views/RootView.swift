@@ -80,6 +80,14 @@ struct RootView: View {
                 errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem fetching your feed.")
             }
         }
+        .task {
+            do {
+                userStore.walletId = try await userStore.checkForExistingWallet() ?? ""
+            } catch {
+                print(error)
+                errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem fetching your wallet.")
+            }
+        }
         .sheet(item: $errorWrapper, onDismiss: {
             // fall back to mock data
             nftStore.nftFeed = NFT.mockData

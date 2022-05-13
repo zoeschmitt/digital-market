@@ -13,8 +13,8 @@ class MockApiClient: ApiClient {
         return Wallet.mockBalance
     }
 
-    func generateWallet() async throws -> Wallet {
-        return Wallet.mockData[0]
+    func generateWallet() async throws -> String {
+        return "\(Wallet.mockData[0].id)"
     }
 
     func getWallet(_ walletId: String) async throws -> Wallet {

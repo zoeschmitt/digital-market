@@ -111,8 +111,17 @@ struct AccountView: View {
                             Text("You dont have any NFTs yet!")
                         }
                     } else {
-                        ProgressView()
-                            .padding()
+                        HStack() {
+                            Spacer()
+                            VStack {
+                                Spacer()
+                                ProgressView()
+                                    .padding()
+                                Spacer()
+                            }
+                            Spacer()
+                        }
+
                     }
                 }
                 .padding(20)

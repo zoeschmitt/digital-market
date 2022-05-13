@@ -91,6 +91,8 @@
 		DDA228B5281D91E0000B0278 /* UserStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDA228B3281D91E0000B0278 /* UserStore.swift */; };
 		DDEFCCF1282A02B400023791 /* UIImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF0282A02B400023791 /* UIImage+Base64.swift */; };
 		DDEFCCF2282A02B400023791 /* UIImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF0282A02B400023791 /* UIImage+Base64.swift */; };
+		DDEFCCF5282B430E00023791 /* MintNFTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF4282B430E00023791 /* MintNFTRequest.swift */; };
+		DDEFCCF6282B430E00023791 /* MintNFTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF4282B430E00023791 /* MintNFTRequest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -165,6 +167,7 @@
 		DDA228B0281D91D4000B0278 /* NFTStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTStore.swift; sourceTree = "<group>"; };
 		DDA228B3281D91E0000B0278 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		DDEFCCF0282A02B400023791 /* UIImage+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Base64.swift"; sourceTree = "<group>"; };
+		DDEFCCF4282B430E00023791 /* MintNFTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintNFTRequest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -286,6 +289,7 @@
 		DD6580C727FD0F2D00AAE685 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DDEFCCF3282B430200023791 /* Requests */,
 				DD6580C827FD110700AAE685 /* NFT.swift */,
 				DD6580DA27FD116000AAE685 /* Wallet.swift */,
 				DDA228A8281CA071000B0278 /* ErrorWrapper.swift */,
@@ -385,6 +389,14 @@
 				DD4C8D802823593A00D0AB69 /* RemoteImageStore.swift */,
 			);
 			path = Stores;
+			sourceTree = "<group>";
+		};
+		DDEFCCF3282B430200023791 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				DDEFCCF4282B430E00023791 /* MintNFTRequest.swift */,
+			);
+			path = Requests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -583,6 +595,7 @@
 				DD6580F127FD133600AAE685 /* HttpApiClient.swift in Sources */,
 				DD4C8D8F28243EB200D0AB69 /* SearchBar.swift in Sources */,
 				DDA228A9281CA071000B0278 /* ErrorWrapper.swift in Sources */,
+				DDEFCCF5282B430E00023791 /* MintNFTRequest.swift in Sources */,
 				DD6580DB27FD116000AAE685 /* Wallet.swift in Sources */,
 				DDA228B4281D91E0000B0278 /* UserStore.swift in Sources */,
 				DD658138280CF9FF00AAE685 /* HomeView.swift in Sources */,
@@ -622,6 +635,7 @@
 				DD6580F227FD133600AAE685 /* HttpApiClient.swift in Sources */,
 				DD4C8D9028243EB200D0AB69 /* SearchBar.swift in Sources */,
 				DDA228AA281CA071000B0278 /* ErrorWrapper.swift in Sources */,
+				DDEFCCF6282B430E00023791 /* MintNFTRequest.swift in Sources */,
 				DD6580DC27FD116000AAE685 /* Wallet.swift in Sources */,
 				DDA228B5281D91E0000B0278 /* UserStore.swift in Sources */,
 				DD658139280CF9FF00AAE685 /* HomeView.swift in Sources */,

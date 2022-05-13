@@ -9,7 +9,7 @@ import Foundation
 
 protocol ApiClient {
     
-    func generateWallet() async throws -> Wallet
+    func generateWallet() async throws -> String
     func getWallet(_ walletId: String) async throws -> Wallet
     func getBalance(walletId: String) async throws -> Wallet.Balance
     

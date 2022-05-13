@@ -9,37 +9,29 @@ import Foundation
 
 class UserStore: ObservableObject {
     private let apiClient: ApiClient
-    @Published private(set) var walletId: String = ""
+    @Published var walletId: String = ""
 
     init(apiClient: ApiClient = HttpApiClient()) {
         self.apiClient = apiClient
-        Task {
-            await checkForExistingWallet()
-        }
     }
 
-    private func checkForExistingWallet() async {
-        do {
-            var walletId = try await fetchUserWalletId()
-            if walletId == nil {
-                let wallet = try await generateUserWallet()
-                storeUserWalletId("\(wallet.id)")
-                walletId = "\(wallet.id)"
-            }
-            self.walletId = walletId!
-        } catch {
-            print(error)
+    func checkForExistingWallet() async throws -> String? {
+        var walletId = try await fetchUserWalletId()
+        if walletId == nil {
+            let wallet = try await generateUserWallet()
+            storeUserWalletId(wallet)
+            walletId = wallet
         }
-        print(walletId)
+        return walletId
     }
 
     func fetchUserWallet(_ walletId: String) async throws -> Wallet? {
         return try await apiClient.getWallet(walletId)
     }
 
-    func generateUserWallet() async throws -> Wallet {
+    func generateUserWallet() async throws -> String {
         let wallet = try await apiClient.generateWallet()
-        storeUserWalletId("\(wallet.id)")
+        storeUserWalletId(wallet)
         return wallet
     }
 
