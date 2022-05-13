@@ -10,6 +10,7 @@ import SwiftUI
 struct NFTCard: View {
     @Binding var nft: NFT
     let namespace: Namespace.ID
+    let borderRadius: CGFloat = 25
 
     var body: some View {
         VStack {
@@ -17,8 +18,8 @@ struct NFTCard: View {
                 .scaledToFill()
                 .frame(minHeight: 200, maxHeight: 400)
                 .frame(maxWidth: .infinity)
-                .mask(RoundedRectangle(cornerRadius: 25, style: .continuous))
-                .overlay(RoundedRectangle(cornerRadius: 25, style: .continuous).stroke(.white, lineWidth: 1))
+                .mask(RoundedRectangle(cornerRadius: borderRadius, style: .continuous).matchedGeometryEffect(id: "mask\(nft.id)", in: namespace))
+                .overlay(RoundedRectangle(cornerRadius: borderRadius, style: .continuous).stroke(.white, lineWidth: 1))
                 .overlay(                VStack {
                     Spacer()
                     NFTDetails(nft: nft, namespace: namespace, showAll: false)
@@ -26,7 +27,7 @@ struct NFTCard: View {
                         .padding(5)
                 })
                 .shadow(color: Color.mineBlack.opacity(0.1), radius: 15, x: 0, y: 5)
-                .contentShape(RoundedRectangle(cornerRadius: 25, style: .continuous))
+                .contentShape(RoundedRectangle(cornerRadius: borderRadius, style: .continuous))
         }
     }
 }

@@ -22,12 +22,11 @@ struct RootView: View {
     @StateObject private var userStore = UserStore()
     @StateObject private var nftStore = NFTStore()
     @State private var errorWrapper: ErrorWrapper?
-    @State var showNFT = false
 
     var body: some View {
         TabView(selection: $selection) {
             NavigationView {
-                HomeView(nfts: $nftStore.nftFeed, searchResults: $nftStore.searchResults, showNFT: $showNFT)
+                HomeView(nfts: $nftStore.nftFeed, searchResults: $nftStore.searchResults)
             }
             .tabItem {
                 let menuText = Text("Home", comment: "Home NFT feed")
@@ -53,6 +52,8 @@ struct RootView: View {
                 }
             }
             .tag(Tab.mint)
+            .environmentObject(nftStore)
+            .environmentObject(userStore)
 
             NavigationView {
                 AccountView()
@@ -66,27 +67,25 @@ struct RootView: View {
                 }
             }
             .tag(Tab.account)
+            .environmentObject(userStore)
+            .environmentObject(nftStore)
 
         }
         .accentColor(Color.azureBlue)
-        .task {
-            do {
-                let walletId = try await userStore.fetchUserWalletId()
-                if walletId == nil {
-                    let wallet = try await userStore.generateUserWallet()
-                    userStore.storeUserWalletId("\(wallet.id)")
-                }
-            } catch {
-                print(error)
-                errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem generating your wallet.")
-            }
-        }
         .task {
             do {
                 nftStore.nftFeed = try await nftStore.getNFTFeed()
             } catch {
                 print(error)
                 errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem fetching your feed.")
+            }
+        }
+        .task {
+            do {
+                userStore.walletId = try await userStore.checkForExistingWallet() ?? ""
+            } catch {
+                print(error)
+                errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem fetching your wallet.")
             }
         }
         .sheet(item: $errorWrapper, onDismiss: {

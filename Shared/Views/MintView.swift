@@ -12,6 +12,13 @@ struct MintView: View {
     @State private var showSheet = false
     @State private var nameInput = ""
     @State private var descriptionInput = ""
+    @State private var inputValidationFailed = false
+    @State private var loading = false
+
+    @EnvironmentObject var nftStore: NFTStore
+    @EnvironmentObject var userStore: UserStore
+
+    @State private var errorWrapper: ErrorWrapper?
 
     var body: some View {
         GeometryReader { geo in
@@ -22,21 +29,43 @@ struct MintView: View {
                     Spacer()
                 } else {
                     MintInfo(image: $image, nameInput: $nameInput, descriptionInput: $descriptionInput, geometry: geo)
+                        .padding(.bottom, 30)
                     Spacer()
                     HStack {
-                        Button(action: { image = nil }) {
+                        Button(action: {
+                            image = nil
+                            nameInput = ""
+                            descriptionInput = ""
+                        }) {
                             HStack {
                                 Spacer()
                                 Text("Cancel")
+                                    .font(.opensans(.semibold, size: 16))
                                 Spacer()
                             }
                             .padding(.vertical, 10)
                             .overlay(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.azureBlue, lineWidth: 2))
                         }
                         Spacer()
-                        Button(action: {}) {
+                        Button(action: {
+                            if nameInput.isEmpty || descriptionInput.isEmpty {
+                                inputValidationFailed = true
+                                return
+                            }
+                            Task {
+                                do {
+                                    try await nftStore.mintNFT(walletId: userStore.walletId, image: image!, name: nameInput, description: descriptionInput)
+                                } catch {
+                                    print(error)
+                                    errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem minting your NFT.")
+                                }
+                            }
+                        }) {
                             HStack {
+                                Spacer()
                                 Text("Mint!")
+                                    .font(.opensans(.semibold, size: 16))
+                                Spacer()
                             }
                             .foregroundColor(.white)
                             .padding(.vertical, 10)
@@ -45,13 +74,21 @@ struct MintView: View {
                         }
                     }
                     .padding(.bottom, 40)
-                    .padding(.horizontal, horizontalPadding)
                 }
             }
             .sheet(isPresented: $showSheet) {
                 ImagePicker(selectedImage: self.$image)
             }
+            .sheet(item: $errorWrapper) { wrapper in
+                ErrorView(errorWrapper: wrapper)
+            }
+            .padding(.horizontal, horizontalPadding)
+            .padding(.top, 50)
+            .ignoresSafeArea(edges: .top)
             .frame(width: geo.size.width)
+            .alert("Make sure to enter both a name and description for your NFT", isPresented: $inputValidationFailed) {
+                Button("Okay", role: .cancel) { }
+            }
         }
     }
 }
@@ -69,15 +106,17 @@ struct SelectImage: View {
     var body: some View {
         VStack {
             Button(action: { showSheet = true }) {
-                Image(systemName: "square.and.arrow.up")
-                    .resizable()
-                    .scaledToFit()
-                    .frame(width: 35)
+                VStack {
+                    Image(systemName: "square.and.arrow.up")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 35)
+                }
+                .frame(width: 150, height: 150)
+                .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: uploadImageBorderRadius, style: .continuous))
+                .clipShape(RoundedRectangle(cornerRadius: uploadImageBorderRadius, style: .continuous))
+                .overlay(RoundedRectangle(cornerRadius: uploadImageBorderRadius, style: .continuous).stroke(Color.azureBlue, style: StrokeStyle(lineWidth: 2, dash: [10])))
             }
-            .frame(width: 150, height: 150)
-            .background(.ultraThinMaterial, in: RoundedRectangle(cornerRadius: uploadImageBorderRadius, style: .continuous))
-            .clipShape(RoundedRectangle(cornerRadius: uploadImageBorderRadius, style: .continuous))
-            .overlay(RoundedRectangle(cornerRadius: uploadImageBorderRadius, style: .continuous).stroke(Color.azureBlue, style: StrokeStyle(lineWidth: 2, dash: [10])))
             Text("Select Image")
                 .font(.opensans(.semibold, size: 22))
         }
@@ -92,18 +131,33 @@ struct MintInfo: View {
     let imageBorderRadius: CGFloat = 25
 
     var body: some View {
-        VStack {
-            Image(uiImage: image!)
-                .resizable()
-                .scaledToFill()
-                .frame(width: geometry.size.width - (horizontalPadding * 2), height: geometry.size.height / 1.5)
-                .clipShape(RoundedRectangle(cornerRadius: imageBorderRadius, style: .continuous))
-                .overlay(RoundedRectangle(cornerRadius: imageBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
-                .padding(.horizontal, horizontalPadding)
-            TextField("Name", text: $nameInput)
-                .font(.opensans(.medium, size: 18))
-            TextField("Description", text: $descriptionInput)
-                .font(.opensans(.medium, size: 18))
+        if image != nil {
+            VStack {
+                Image(uiImage: image!)
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geometry.size.width - (horizontalPadding * 2))
+                    .frame(maxHeight: 300)
+                    .clipShape(RoundedRectangle(cornerRadius: imageBorderRadius, style: .continuous))
+                    .overlay(RoundedRectangle(cornerRadius: imageBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
+                    .padding(.bottom, 30)
+                TextField("Name", text: $nameInput)
+                    .font(.opensans(.medium, size: 18))
+                    .padding(12)
+                    .background(.ultraThinMaterial)
+                    .frame(maxWidth: .infinity)
+                    .mask(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
+
+                TextField("Description", text: $descriptionInput)
+                    .font(.opensans(.medium, size: 18))
+                    .padding(12)
+                    .background(.ultraThinMaterial)
+                    .frame(maxWidth: .infinity)
+                    .mask(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
+            }
+        } else {
+            Text("No Image Chosen")
+                .font(.opensans(.semibold, size: 22))
         }
     }
 }

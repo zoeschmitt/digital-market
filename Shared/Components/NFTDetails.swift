@@ -29,8 +29,7 @@ struct NFTDetails: View {
                 }
                 Spacer()
                 if nft.isListed {
-                    Image("eth")
-                        .offset(x: 5)
+                    Image("matic")
                     Text("\(String(format: "%.1f", nft.listPrice)) ETH")
                         .font(.subheadline)
                         .padding(.zero)

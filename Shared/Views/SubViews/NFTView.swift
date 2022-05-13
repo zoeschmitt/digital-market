@@ -14,7 +14,9 @@ struct NFTView: View {
 
     @State var fullImageHeight: Bool = false
     @State var showBuyAlert: Bool = false
+    @State var showListAlert: Bool = false
     @State private var errorWrapper: ErrorWrapper?
+    @State var listPrice: String = "0.0"
 
     @Binding var showNFT: Bool
 
@@ -33,7 +35,7 @@ struct NFTView: View {
                     .scaledToFill()
                     .frame(width: geometry.size.width)
                     .frame(maxHeight: fullImageHeight ? geometry.size.height : geometry.size.height  / 2)
-                    .mask(RoundedRectangle(cornerRadius: imageBorderRadius, style: .continuous))
+                    .mask(RoundedRectangle(cornerRadius: imageBorderRadius, style: .continuous).matchedGeometryEffect(id: "mask\(nft.id)", in: namespace))
                     .onTapGesture {
                         withAnimation {
                             fullImageHeight.toggle()
@@ -73,8 +75,13 @@ struct NFTView: View {
             NFTDetails(nft: nft, namespace: namespace, showAll: true)
                 .matchedGeometryEffect(id: "userinfocard\(nft.id)", in: namespace)
                 .padding(.bottom, 10)
-            buyButton
-                .padding(.vertical, 10)
+            if userStore.walletId == nft.walletId && !nft.isListed {
+                listButton
+                    .padding(.vertical, 10)
+            } else if nft.isListed && userStore.walletId != nft.walletId {
+                buyButton
+                    .padding(.vertical, 10)
+            }
             Text("View On")
                 .font(.opensans(.semibold, size: 16))
             StyledLink(title: "OpenSea", url: URL(string: "\(openSeaURL)/\(nft.contract)/\(nft.tokenId)")!, accentColor: Color.opensea)
@@ -90,6 +97,7 @@ struct NFTView: View {
             }
             .padding(20)
             .background(.ultraThinMaterial)
+            .mask(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
 
             Text("Royalties")
@@ -100,6 +108,7 @@ struct NFTView: View {
                 InfoRow(title: royalty.recipient, subtitle: "\(royalty.percentage)", imageName: "percent")
                     .padding(20)
                     .background(.ultraThinMaterial)
+                    .mask(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous))
                     .overlay(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
             }
 
@@ -114,14 +123,7 @@ struct NFTView: View {
             Button(action: { withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                 showBuyAlert = true
             } }) {
-                Text("Buy")
-                    .padding(10)
-                    .font(.opensans(.semibold, size: 16))
-                    .frame(maxWidth: .infinity)
-                    .background(Color.azureBlue)
-                    .foregroundColor(.white)
-                    .mask(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
-                    .overlay(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
+                PrimaryButton(title: "Buy")
             }
             .alert("Buy \(nft.metadata.name) for \(String(format: "%.1f ETH", nft.listPrice))?", isPresented: $showBuyAlert) {
                 Button("Buy") {
@@ -131,6 +133,31 @@ struct NFTView: View {
                         } catch {
                             print(error)
                             errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem fetching your feed.")
+                        }
+                    }
+                }
+                Button("Cancel", role: .cancel) { }
+            }
+        }
+        .frame(maxWidth: .infinity)
+    }
+
+    var listButton: some View {
+        HStack(alignment: .top) {
+            Button(action: { withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+                showListAlert = true
+            } }) {
+                PrimaryButton(title: "List")
+            }
+            .alert("List \(nft.metadata.name)", isPresented: $showBuyAlert) {
+                TextField("List Price", text: $listPrice)
+                Button("List") {
+                    Task {
+                        do {
+                            try await nftStore.listNFT(nftId: "\(nft.id)", listPrice: Double(listPrice)!)
+                        } catch {
+                            print(error)
+                            errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem listing your nft.")
                         }
                     }
                 }

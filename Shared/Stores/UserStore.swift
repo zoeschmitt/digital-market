@@ -9,22 +9,29 @@ import Foundation
 
 class UserStore: ObservableObject {
     private let apiClient: ApiClient
+    @Published var walletId: String = ""
 
     init(apiClient: ApiClient = HttpApiClient()) {
         self.apiClient = apiClient
     }
 
-    func fetchUserWallet() async throws -> Wallet? {
-        let walletId = try await fetchUserWalletId()
-        if walletId != nil {
-            //api call
+    func checkForExistingWallet() async throws -> String? {
+        var walletId = try await fetchUserWalletId()
+        if walletId == nil {
+            let wallet = try await generateUserWallet()
+            storeUserWalletId(wallet)
+            walletId = wallet
         }
-        return Wallet.mockData[0]
+        return walletId
     }
 
-    func generateUserWallet() async throws -> Wallet {
+    func fetchUserWallet(_ walletId: String) async throws -> Wallet? {
+        return try await apiClient.getWallet(walletId)
+    }
+
+    func generateUserWallet() async throws -> String {
         let wallet = try await apiClient.generateWallet()
-        storeUserWalletId("\(wallet.id)")
+        storeUserWalletId(wallet)
         return wallet
     }
 
@@ -32,7 +39,11 @@ class UserStore: ObservableObject {
         return UserDefaults.standard.string(forKey: "walletId")
     }
 
-    func storeUserWalletId(_ id: String) {
+    private func storeUserWalletId(_ id: String) {
         UserDefaults.standard.set(id, forKey: "walletId")
+    }
+
+    func getBalance() async throws -> Wallet.Balance {
+        return try await apiClient.getBalance(walletId: walletId)
     }
 }

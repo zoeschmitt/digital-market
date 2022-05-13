@@ -23,15 +23,28 @@ class NFTStore: ObservableObject {
         }
     }
 
+    func getUserNFTs(walletId: String) async throws -> [NFT] {
+        return try await apiClient.getUserNFTs(walletId)
+    }
+
+    func getNFT(nftId: String) async throws -> NFT {
+        return try await apiClient.getNFT(nftId)
+    }
+
     func searchNFTs(_ input: String) {
         searchResults = nftFeed.filter { $0.metadata.name.contains(input) }
     }
 
-    func mintNFT(image: UIImage, name: String, description: String) async throws {
-
+    func mintNFT(walletId: String, image: UIImage, name: String, description: String) async throws {
+        let base64EncodedImg: String = image.base64!
+        try await apiClient.mintNFT(walletId: walletId, name: name, description: description, image: base64EncodedImg)
     }
 
     func buyNFT(nft: NFT, buyerWalletId: String) async throws {
+        try await apiClient.buyNFT(nftId: "\(nft.id)", sellerWalletId: nft.walletId, buyerWalletId: buyerWalletId)
+    }
 
+    func listNFT(nftId: String, listPrice: Double) async throws {
+        try await apiClient.listNFT(nftId: nftId, listPrice: listPrice)
     }
 }
