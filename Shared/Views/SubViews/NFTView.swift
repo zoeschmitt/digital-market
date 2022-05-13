@@ -89,7 +89,7 @@ struct NFTView: View {
             Text("Details")
                 .font(.opensans(.semibold, size: 16))
                 .padding(.vertical, 10)
-            VStack {
+            VStack(alignment: .leading) {
                 InfoRow(title: "Contract", subtitle: nft.contract, imageName: "doc.plaintext.fill")
                 Divider()
                     .padding(.vertical, 10)

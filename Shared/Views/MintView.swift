@@ -14,6 +14,7 @@ struct MintView: View {
     @State private var descriptionInput = ""
     @State private var inputValidationFailed = false
     @State private var loading = false
+    @State private var success = false
 
     @EnvironmentObject var nftStore: NFTStore
     @EnvironmentObject var userStore: UserStore
@@ -22,58 +23,70 @@ struct MintView: View {
 
     var body: some View {
         GeometryReader { geo in
-            VStack {
-                if image == nil {
-                    Spacer()
-                    SelectImage(showSheet: $showSheet)
-                    Spacer()
-                } else {
-                    MintInfo(image: $image, nameInput: $nameInput, descriptionInput: $descriptionInput, geometry: geo)
-                        .padding(.bottom, 30)
-                    Spacer()
-                    HStack {
-                        Button(action: {
-                            image = nil
-                            nameInput = ""
-                            descriptionInput = ""
-                        }) {
-                            HStack {
-                                Spacer()
-                                Text("Cancel")
-                                    .font(.opensans(.semibold, size: 16))
-                                Spacer()
-                            }
-                            .padding(.vertical, 10)
-                            .overlay(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.azureBlue, lineWidth: 2))
-                        }
+            ZStack {
+                VStack {
+                    if image == nil {
                         Spacer()
-                        Button(action: {
-                            if nameInput.isEmpty || descriptionInput.isEmpty {
-                                inputValidationFailed = true
-                                return
-                            }
-                            Task {
-                                do {
-                                    try await nftStore.mintNFT(walletId: userStore.walletId, image: image!, name: nameInput, description: descriptionInput)
-                                } catch {
-                                    print(error)
-                                    errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem minting your NFT.")
+                        SelectImage(showSheet: $showSheet)
+                        Spacer()
+                    } else {
+                        MintInfo(image: $image, nameInput: $nameInput, descriptionInput: $descriptionInput, geometry: geo)
+                            .padding(.bottom, 30)
+                        Spacer()
+                        HStack {
+                            Button(action: {
+                                image = nil
+                                nameInput = ""
+                                descriptionInput = ""
+                            }) {
+                                HStack {
+                                    Spacer()
+                                    Text("Cancel")
+                                        .font(.opensans(.semibold, size: 16))
+                                    Spacer()
                                 }
+                                .padding(.vertical, 10)
+                                .overlay(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.azureBlue, lineWidth: 2))
                             }
-                        }) {
-                            HStack {
-                                Spacer()
-                                Text("Mint!")
-                                    .font(.opensans(.semibold, size: 16))
-                                Spacer()
+                            Spacer()
+                            Button(action: {
+                                if nameInput.isEmpty || descriptionInput.isEmpty {
+                                    inputValidationFailed = true
+                                    return
+                                }
+                                Task {
+                                    loading = true
+                                    do {
+                                        try await nftStore.mintNFT(walletId: userStore.walletId, image: image!, name: nameInput, description: descriptionInput)
+                                    } catch {
+                                        print(error)
+                                        errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem minting your NFT.")
+                                    }
+                                    image = nil
+                                    nameInput = ""
+                                    descriptionInput = ""
+                                    success = true
+                                    loading = false
+                                }
+                            }) {
+                                HStack {
+                                    Spacer()
+                                    Text("Mint!")
+                                        .font(.opensans(.semibold, size: 16))
+                                    Spacer()
+                                }
+                                .foregroundColor(.white)
+                                .padding(.vertical, 10)
+                                .background(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.azureBlue, lineWidth: 2).background(Color.azureBlue))
+                                .clipShape(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
                             }
-                            .foregroundColor(.white)
-                            .padding(.vertical, 10)
-                            .background(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.azureBlue, lineWidth: 2).background(Color.azureBlue))
-                            .clipShape(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
                         }
+                        .padding(.bottom, 40)
                     }
-                    .padding(.bottom, 40)
+                }
+                if loading {
+                    ProgressView()
+                        .padding()
                 }
             }
             .sheet(isPresented: $showSheet) {
@@ -88,6 +101,9 @@ struct MintView: View {
             .frame(width: geo.size.width)
             .alert("Make sure to enter both a name and description for your NFT", isPresented: $inputValidationFailed) {
                 Button("Okay", role: .cancel) { }
+            }
+            .alert("Successfully minted!", isPresented: $success) {
+                Button("Done", role: .cancel) { }
             }
         }
     }
