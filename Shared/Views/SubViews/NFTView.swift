@@ -72,7 +72,7 @@ struct NFTView: View {
         .sheet(isPresented: $showListSheet) {
             ListView(nft: nft)
         }
-        .alert("Purchased \(nft.metadata.name) for \(String(format: "%.1f", nft.listPrice)) ETH", isPresented: $successfulPurchase) {
+        .alert("Purchased \(nft.metadata.name) for \(String(format: "%.1f", nft.listPrice)) MATIC", isPresented: $successfulPurchase) {
             Button("Done", role: .cancel) { }
         }
     }
@@ -132,7 +132,7 @@ struct NFTView: View {
             } }) {
                 PrimaryButton(title: "Buy")
             }
-            .alert("Buy \(nft.metadata.name) for \(String(format: "%.1f ETH", nft.listPrice))?", isPresented: $showBuyAlert) {
+            .alert("Buy \(nft.metadata.name) for \(String(format: "%.1f MATIC", nft.listPrice))?", isPresented: $showBuyAlert) {
                 Button("Buy") {
                     loading = true
                     Task {
