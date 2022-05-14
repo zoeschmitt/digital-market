@@ -10,3 +10,4 @@ import SwiftUI
 let horizontalPadding: CGFloat = 20
 let buttonsBorderRadius: CGFloat = 12
 let generalBorderRadius: CGFloat = 20
+let imageBorderRadius: CGFloat = 25

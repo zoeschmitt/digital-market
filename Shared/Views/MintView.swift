@@ -58,14 +58,17 @@ struct MintView: View {
                                     loading = true
                                     do {
                                         try await nftStore.mintNFT(walletId: userStore.walletId, image: image!, name: nameInput, description: descriptionInput)
+                                        image = nil
+                                        nameInput = ""
+                                        descriptionInput = ""
+                                        success = true
+                                        nftStore.nftFeed = try await nftStore.getNFTFeed()
+                                    } catch NFT.NFTError.tooLarge {
+                                        errorWrapper = ErrorWrapper(guidance: "Your photo is too large.")
                                     } catch {
                                         print(error)
                                         errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem minting your NFT.")
                                     }
-                                    image = nil
-                                    nameInput = ""
-                                    descriptionInput = ""
-                                    success = true
                                     loading = false
                                 }
                             }) {

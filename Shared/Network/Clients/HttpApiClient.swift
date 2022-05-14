@@ -46,6 +46,9 @@ class HttpApiClient: ApiClient {
         let urlRequest = self.postRequest(endpoint: "createNFT?walletId=\(walletId)", encodedBody: requestData)
         let (data, response) = try await URLSession.shared.data(for: urlRequest)
         guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+            if (response as? HTTPURLResponse)?.statusCode == 413 {
+                throw NFT.NFTError.tooLarge
+            }
             let error = try JSONDecoder().decode(Dictionary<String, String>.self, from: data)
             print(error)
             return
@@ -77,17 +80,23 @@ class HttpApiClient: ApiClient {
     }
     
     func listNFT(nftId: String, listPrice: Double) async throws {
-        let urlRequest = self.postRequest(endpoint: "listNFT?nftId=\(nftId)", body: ["listPrice": "\(String(format: "%.1f ETH", listPrice))"])
-        let (_, response) = try await URLSession.shared.data(for: urlRequest)
-        guard (response as? HTTPURLResponse)?.statusCode == 200
-        else { fatalError() }
+        let urlRequest = self.postRequest(endpoint: "listNFT?nftId=\(nftId)", body: ["listPrice": listPrice])
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+            let error = try JSONDecoder().decode(Dictionary<String, String>.self, from: data)
+            print(error)
+            return
+        }
     }
     
     func buyNFT(nftId: String, sellerWalletId: String, buyerWalletId: String) async throws {
         let urlRequest = self.postRequest(endpoint: "buyNFT?nftId=\(nftId)", body: ["sellerWalletId": sellerWalletId, "buyerWalletId": buyerWalletId])
-        let (_, response) = try await URLSession.shared.data(for: urlRequest)
-        guard (response as? HTTPURLResponse)?.statusCode == 200
-        else { fatalError() }
+        let (data, response) = try await URLSession.shared.data(for: urlRequest)
+        guard (response as? HTTPURLResponse)?.statusCode == 200 else {
+            let error = try JSONDecoder().decode(Dictionary<String, String>.self, from: data)
+            print(error)
+            return
+        }
         print(response)
     }
 }

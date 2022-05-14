@@ -31,24 +31,27 @@ struct HomeView: View {
                     }
                     .ignoresSafeArea()
                 }
-                ScrollView {
-                    if (!showNFT) {
-                        HStack(alignment: .center) {
-                            if (!showNFT) {
-                                if (!showSearch) {
-                                    Text("Marketplace")
-                                        .font(.opensans(.semibold, size: 26))
-                                    Spacer()
-                                }
-                                SearchBar(showSearch: $showSearch, searchInput: $searchInput)
-                                    .matchedGeometryEffect(id: "search", in: namespace)
-                            }
-                        }
-                        .padding(20)
-                    }
-                    if (showNFT && selectedNFT != nil) {
+                if (showNFT && selectedNFT != nil) {
+                    ScrollView {
                         NFTView(nft: selectedNFT!, namespace: namespace, geometry: geometry, showNFT: $showNFT)
-                    } else {
+                    }
+                    .background(Color.galleryGrey.ignoresSafeArea())
+                } else {
+                    ScrollView {
+                        if (!showNFT) {
+                            HStack(alignment: .center) {
+                                if (!showNFT) {
+                                    if (!showSearch) {
+                                        Text("Marketplace")
+                                            .font(.opensans(.semibold, size: 26))
+                                        Spacer()
+                                    }
+                                    SearchBar(showSearch: $showSearch, searchInput: $searchInput)
+                                        .matchedGeometryEffect(id: "search", in: namespace)
+                                }
+                            }
+                            .padding(20)
+                        }
                         ForEach(searchInput != "" ? $searchResults : $nfts) { $nft in
                             NFTCard(nft: $nft, namespace: namespace)
                                 .onTapGesture {
@@ -61,7 +64,7 @@ struct HomeView: View {
                         .padding(.horizontal, 20)
                     }
                 }
-                .background(showNFT ? Color.galleryGrey.ignoresSafeArea() : nil)
+
             }
         }
         .navigationBarHidden(true)
