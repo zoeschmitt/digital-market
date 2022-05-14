@@ -153,23 +153,3 @@ struct AccountView_Previews: PreviewProvider {
         AccountView(wallet: Wallet.mockData[0])
     }
 }
-
-struct ObfuscatedField: View {
-    @Binding var show: Bool
-    let hiddenText: String
-    let text: String
-
-    var body: some View {
-        HStack(alignment: .top) {
-            Image(systemName: show ? "eye.fill" : "eye")
-            Text(show ? hiddenText : text)
-            Spacer()
-        }
-        .font(.caption)
-        .foregroundColor(.secondary)
-        .padding(15)
-        .background(.ultraThinMaterial)
-        .mask(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous))
-        .overlay(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
-    }
-}
