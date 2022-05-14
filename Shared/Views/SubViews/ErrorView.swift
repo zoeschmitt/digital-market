@@ -17,16 +17,16 @@ struct ErrorView: View {
                 Text("An error has occurred!")
                     .font(.title)
                     .padding(.bottom)
-                Text(errorWrapper.error.localizedDescription)
+                Text(errorWrapper.error != nil ? errorWrapper.error!.localizedDescription : errorWrapper.guidance)
                     .font(.headline)
-                Text(errorWrapper.guidance)
-                    .font(.caption)
-                    .padding(.top)
+                if (errorWrapper.error != nil ) {
+                    Text(errorWrapper.guidance)
+                        .font(.caption)
+                        .padding(.top)
+                }
                 Spacer()
             }
             .padding()
-            .background(.ultraThinMaterial)
-            .cornerRadius(16)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar {
                 ToolbarItem(placement: .navigationBarTrailing) {
@@ -36,7 +36,6 @@ struct ErrorView: View {
                 }
             }
         }
-
     }
 }
 

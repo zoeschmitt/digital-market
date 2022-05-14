@@ -22,7 +22,7 @@ class UserStore: ObservableObject {
             storeUserWalletId(wallet)
             walletId = wallet
         }
-        return walletId
+        return walletId?.lowercased()
     }
 
     func fetchUserWallet(_ walletId: String) async throws -> Wallet? {

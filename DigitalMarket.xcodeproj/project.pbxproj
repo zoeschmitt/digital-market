@@ -93,6 +93,8 @@
 		DDEFCCF2282A02B400023791 /* UIImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF0282A02B400023791 /* UIImage+Base64.swift */; };
 		DDEFCCF5282B430E00023791 /* MintNFTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF4282B430E00023791 /* MintNFTRequest.swift */; };
 		DDEFCCF6282B430E00023791 /* MintNFTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF4282B430E00023791 /* MintNFTRequest.swift */; };
+		DDEFCCF8282F0F8C00023791 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF7282F0F8C00023791 /* ListView.swift */; };
+		DDEFCCF9282F0F8C00023791 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF7282F0F8C00023791 /* ListView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -168,6 +170,7 @@
 		DDA228B3281D91E0000B0278 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		DDEFCCF0282A02B400023791 /* UIImage+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Base64.swift"; sourceTree = "<group>"; };
 		DDEFCCF4282B430E00023791 /* MintNFTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintNFTRequest.swift; sourceTree = "<group>"; };
+		DDEFCCF7282F0F8C00023791 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -377,6 +380,7 @@
 			children = (
 				DD2CAAFB281DB32D00C6FAB3 /* ErrorView.swift */,
 				DD789EAD28263E850035306A /* NFTView.swift */,
+				DDEFCCF7282F0F8C00023791 /* ListView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -591,6 +595,7 @@
 				DD4DB63328287A2C007A2EF0 /* InfoRow.swift in Sources */,
 				DD35E3FB27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
 				DD4C8D7E282358ED00D0AB69 /* ImagePicker.swift in Sources */,
+				DDEFCCF8282F0F8C00023791 /* ListView.swift in Sources */,
 				DD2CAB2A281F568C00C6FAB3 /* Logo.swift in Sources */,
 				DD6580F127FD133600AAE685 /* HttpApiClient.swift in Sources */,
 				DD4C8D8F28243EB200D0AB69 /* SearchBar.swift in Sources */,
@@ -631,6 +636,7 @@
 				DD4DB63428287A2C007A2EF0 /* InfoRow.swift in Sources */,
 				DD35E3FC27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
 				DD4C8D7F282358ED00D0AB69 /* ImagePicker.swift in Sources */,
+				DDEFCCF9282F0F8C00023791 /* ListView.swift in Sources */,
 				DD2CAB2B281F568C00C6FAB3 /* Logo.swift in Sources */,
 				DD6580F227FD133600AAE685 /* HttpApiClient.swift in Sources */,
 				DD4C8D9028243EB200D0AB69 /* SearchBar.swift in Sources */,

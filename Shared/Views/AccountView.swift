@@ -25,74 +25,72 @@ struct AccountView: View {
 
     var body: some View {
         GeometryReader { geometry in
-            if (showNFT && selectedNFT != nil) {
-                ScrollView {
+            ScrollView {
+                if (showNFT && selectedNFT != nil) {
                     NFTView(nft: selectedNFT!, namespace: namespace, geometry: geometry, showNFT: $showNFT)
-                }
-            } else {
-                VStack(alignment: .center) {
-                    if balance != nil {
-                        Text("Address")
-                            .font(.opensans(.semibold, size: 20))
-                        Text(balance!.address)
-                            .font(.opensans(.light, size: 18))
-                            .foregroundColor(.gray)
-                            .frame(width: showWalletAddress ? nil : geometry.size.width / 2)
-                            .lineLimit(showWalletAddress ? 2 : 1)
-                            .multilineTextAlignment(.center)
-                            .onTapGesture {
-                                withAnimation {
-                                    showWalletAddress.toggle()
-                                }
-                            }
-                        HStack {
-                            Image("matic")
-                            Text(balance!.balance)
+                } else {
+                    VStack(alignment: .center) {
+                        if balance != nil {
+                            Text("Address")
+                                .font(.opensans(.semibold, size: 20))
+                            Text(balance!.address)
                                 .font(.opensans(.light, size: 18))
-                        }
-
-                        if wallet == nil {
-                            PrimaryButton(title: "Get Private Key")
+                                .foregroundColor(.gray)
+                                .frame(width: showWalletAddress ? nil : geometry.size.width / 2)
+                                .lineLimit(showWalletAddress ? 2 : 1)
+                                .multilineTextAlignment(.center)
                                 .onTapGesture {
-                                    Task {
-                                        do {
-                                            wallet = try await userStore.fetchUserWallet(userStore.walletId)
-                                        } catch {
-                                            print(error)
-                                            errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem fetching your wallet.")
+                                    withAnimation {
+                                        showWalletAddress.toggle()
+                                    }
+                                }
+                            HStack {
+                                Image("matic")
+                                Text(balance!.balance)
+                                    .font(.opensans(.light, size: 18))
+                            }
+
+                            if wallet == nil {
+                                PrimaryButton(title: "Get Private Key")
+                                    .onTapGesture {
+                                        Task {
+                                            do {
+                                                wallet = try await userStore.fetchUserWallet(userStore.walletId)
+                                            } catch {
+                                                print(error)
+                                                errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem fetching your wallet.")
+                                            }
                                         }
                                     }
-                                }
-                                .padding(30)
-                        }
+                                    .padding(30)
+                            }
 
-                        if wallet != nil {
-                            ObfuscatedField(show: $showPrivateKey, hiddenText: wallet!.privateKey, text: "Private Key")
-                                .onTapGesture {
-                                    withAnimation {
-                                        showPrivateKey.toggle()
+                            if wallet != nil {
+                                ObfuscatedField(show: $showPrivateKey, hiddenText: wallet!.privateKey, text: "Private Key")
+                                    .onTapGesture {
+                                        withAnimation {
+                                            showPrivateKey.toggle()
+                                        }
                                     }
-                                }
-                            ObfuscatedField(show: $showMnemonic, hiddenText: wallet!.mnemonic, text: "Mnemonic")
-                                .onTapGesture {
-                                    withAnimation {
-                                        showMnemonic.toggle()
+                                ObfuscatedField(show: $showMnemonic, hiddenText: wallet!.mnemonic, text: "Mnemonic")
+                                    .onTapGesture {
+                                        withAnimation {
+                                            showMnemonic.toggle()
+                                        }
                                     }
-                                }
-                        }
+                            }
 
-                        Divider()
-                            .padding(.vertical, 20)
-                        Text("Your NFTs")
-                            .font(.opensans(.semibold, size: 20))
-                        if userNFTs.count > 0 {
-                            ScrollView {
+                            Divider()
+                                .padding(.vertical, 20)
+                            Text("Your NFTs")
+                                .font(.opensans(.semibold, size: 20))
+                            if userNFTs.count > 0 {
                                 LazyVGrid(columns: [GridItem(),GridItem(),GridItem()], spacing: 10) {
                                     ForEach($userNFTs) { $nft in
                                         VStack {
                                             RemoteImage(urlString: nft.metadata.image, namespace: namespace)
                                                 .scaledToFill()
-                                                .frame(width: 100, height: 100)
+                                                .frame(width: 120, height: 150)
                                                 .mask(RoundedRectangle(cornerRadius: 10, style: .continuous).matchedGeometryEffect(id: "mask\(nft.id)", in: namespace))
                                                 .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(.white, lineWidth: 1))
                                                 .shadow(color: Color.mineBlack.opacity(0.1), radius: 15, x: 0, y: 5)
@@ -106,25 +104,25 @@ struct AccountView: View {
                                         }
                                     }
                                 }
+                            } else {
+                                Text("You dont have any NFTs yet!")
                             }
-                        } else {
-                            Text("You dont have any NFTs yet!")
-                        }
-                    } else {
-                        HStack() {
-                            Spacer()
-                            VStack {
-                                Spacer()
-                                ProgressView()
-                                    .padding()
-                                Spacer()
-                            }
-                            Spacer()
-                        }
 
+                        } else {
+                            HStack() {
+                                Spacer()
+                                VStack {
+                                    Spacer()
+                                    ProgressView()
+                                        .padding()
+                                    Spacer()
+                                }
+                                Spacer()
+                            }
+                        }
                     }
+                    .padding(20)
                 }
-                .padding(20)
             }
         }
         .task {

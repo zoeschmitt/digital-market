@@ -14,16 +14,17 @@ struct NFTView: View {
 
     @State var fullImageHeight: Bool = false
     @State var showBuyAlert: Bool = false
-    @State var showListAlert: Bool = false
+    @State var showListSheet: Bool = false
     @State private var errorWrapper: ErrorWrapper?
     @State var listPrice: String = "0.0"
+    @State var loading: Bool = false
+    @State var successfulPurchase: Bool = false
 
     @Binding var showNFT: Bool
 
     @EnvironmentObject var nftStore: NFTStore
     @EnvironmentObject var userStore: UserStore
 
-    let imageBorderRadius: CGFloat = 25
     private let openSeaURL = Configuration.stringValue(forKey: "OPENSEA_URL")
     private let polygonScanURL = Configuration.stringValue(forKey: "POLYGON_SCAN_URL")
     let gradient = Gradient(colors: [Color.mineBlack.opacity(0.05), Color.white])
@@ -68,6 +69,12 @@ struct NFTView: View {
         .sheet(item: $errorWrapper) { wrapper in
             ErrorView(errorWrapper: wrapper)
         }
+        .sheet(isPresented: $showListSheet) {
+            ListView(nft: nft)
+        }
+        .alert("Purchased \(nft.metadata.name) for \(String(format: "%.1f", nft.listPrice)) ETH", isPresented: $successfulPurchase) {
+            Button("Done", role: .cancel) { }
+        }
     }
 
     var details: some View {
@@ -89,7 +96,7 @@ struct NFTView: View {
             Text("Details")
                 .font(.opensans(.semibold, size: 16))
                 .padding(.vertical, 10)
-            VStack {
+            VStack(alignment: .leading) {
                 InfoRow(title: "Contract", subtitle: nft.contract, imageName: "doc.plaintext.fill")
                 Divider()
                     .padding(.vertical, 10)
@@ -127,14 +134,18 @@ struct NFTView: View {
             }
             .alert("Buy \(nft.metadata.name) for \(String(format: "%.1f ETH", nft.listPrice))?", isPresented: $showBuyAlert) {
                 Button("Buy") {
+                    loading = true
                     Task {
                         do {
                             try await nftStore.buyNFT(nft: nft, buyerWalletId: try await userStore.fetchUserWalletId()!)
+                            successfulPurchase = true
+                            nftStore.nftFeed = try await nftStore.getNFTFeed()
                         } catch {
                             print(error)
                             errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem fetching your feed.")
                         }
                     }
+                    loading = false
                 }
                 Button("Cancel", role: .cancel) { }
             }
@@ -145,23 +156,9 @@ struct NFTView: View {
     var listButton: some View {
         HStack(alignment: .top) {
             Button(action: { withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
-                showListAlert = true
+                showListSheet = true
             } }) {
                 PrimaryButton(title: "List")
-            }
-            .alert("List \(nft.metadata.name)", isPresented: $showBuyAlert) {
-                TextField("List Price", text: $listPrice)
-                Button("List") {
-                    Task {
-                        do {
-                            try await nftStore.listNFT(nftId: "\(nft.id)", listPrice: Double(listPrice)!)
-                        } catch {
-                            print(error)
-                            errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem listing your nft.")
-                        }
-                    }
-                }
-                Button("Cancel", role: .cancel) { }
             }
         }
         .frame(maxWidth: .infinity)
