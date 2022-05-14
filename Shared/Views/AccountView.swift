@@ -90,7 +90,7 @@ struct AccountView: View {
                                         VStack {
                                             RemoteImage(urlString: nft.metadata.image, namespace: namespace)
                                                 .scaledToFill()
-                                                .frame(width: 120, height: 150)
+                                                .frame(width: 110, height: 150)
                                                 .mask(RoundedRectangle(cornerRadius: 10, style: .continuous).matchedGeometryEffect(id: "mask\(nft.id)", in: namespace))
                                                 .overlay(RoundedRectangle(cornerRadius: 10, style: .continuous).stroke(.white, lineWidth: 1))
                                                 .shadow(color: Color.mineBlack.opacity(0.1), radius: 15, x: 0, y: 5)
