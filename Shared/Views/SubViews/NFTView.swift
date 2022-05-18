@@ -70,7 +70,7 @@ struct NFTView: View {
             ErrorView(errorWrapper: wrapper)
         }
         .sheet(isPresented: $showListSheet) {
-            ListView(nft: nft)
+            ListNFTView(nft: nft)
         }
         .alert("Purchased \(nft.metadata.name) for \(String(format: "%.1f", nft.listPrice)) MATIC", isPresented: $successfulPurchase) {
             Button("Done", role: .cancel) { }
@@ -127,11 +127,10 @@ struct NFTView: View {
 
     var buyButton: some View {
         HStack(alignment: .top) {
-            Button(action: { withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+            Button("Buy", action: { withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                 showBuyAlert = true
-            } }) {
-                PrimaryButton(title: "Buy")
-            }
+            } })
+            .modifier(PrimaryButtonStyle())
             .alert("Buy \(nft.metadata.name) for \(String(format: "%.1f MATIC", nft.listPrice))?", isPresented: $showBuyAlert) {
                 Button("Buy") {
                     loading = true
@@ -155,11 +154,10 @@ struct NFTView: View {
 
     var listButton: some View {
         HStack(alignment: .top) {
-            Button(action: { withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
+            Button("List", action: { withAnimation(.spring(response: 0.6, dampingFraction: 0.8)) {
                 showListSheet = true
-            } }) {
-                PrimaryButton(title: "List")
-            }
+            } })
+            .modifier(PrimaryButtonStyle())
         }
         .frame(maxWidth: .infinity)
     }

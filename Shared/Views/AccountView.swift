@@ -51,18 +51,16 @@ struct AccountView: View {
                             }
 
                             if wallet == nil {
-                                PrimaryButton(title: "Get Private Key")
-                                    .onTapGesture {
-                                        Task {
-                                            do {
-                                                wallet = try await userStore.fetchUserWallet(userStore.walletId)
-                                            } catch {
-                                                print(error)
-                                                errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem fetching your wallet.")
-                                            }
-                                        }
+                                Button("Get Private Key", action: { Task {
+                                    do {
+                                        wallet = try await userStore.fetchUserWallet(userStore.walletId)
+                                    } catch {
+                                        print(error)
+                                        errorWrapper = ErrorWrapper(error: error, guidance: "There was a problem fetching your wallet.")
                                     }
-                                    .padding(30)
+                                } })
+                                .modifier(PrimaryButtonStyle())
+
                             }
 
                             if wallet != nil {
