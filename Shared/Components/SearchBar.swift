@@ -36,6 +36,7 @@ struct SearchBar: View {
                             searchInput = ""
                         }
                     }
+                    .accessibilityLabel("Close Search")
             }
         }
         .frame(height: 45)
@@ -49,6 +50,7 @@ struct SearchBar: View {
                 }
             }
         }
+        .accessibilityLabel("Search")
     }
 }
 
