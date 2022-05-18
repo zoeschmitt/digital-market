@@ -19,11 +19,14 @@ struct SearchBar: View {
                 .frame(width: 20, height: 20)
                 .foregroundColor(Color.azureBlue)
                 .padding(.leading, showSearch ? 10 : 0)
+                .accessibilityAddTraits(.isButton)
+                .accessibilityIdentifier("searchButton")
             if (showSearch) {
                 TextField("Search", text: $searchInput)
                     .onChange(of: searchInput) { input in
                         nftStore.searchNFTs(input)
                     }
+                    .accessibilityAddTraits(.isSearchField)
                     .padding(.leading, 5)
                     .font(.opensans(.medium, size: 18))
                 Image(systemName: "xmark")
@@ -36,6 +39,9 @@ struct SearchBar: View {
                             searchInput = ""
                         }
                     }
+                    .accessibilityAddTraits(.isButton)
+                    .accessibilityLabel("Close Search")
+                    .accessibilityIdentifier("closeSearchButton")
             }
         }
         .frame(height: 45)
@@ -49,6 +55,7 @@ struct SearchBar: View {
                 }
             }
         }
+        .accessibilityLabel("Search")
     }
 }
 

@@ -36,6 +36,7 @@ struct HomeView: View {
                         NFTView(nft: selectedNFT!, namespace: namespace, geometry: geometry, showNFT: $showNFT)
                     }
                     .background(Color.galleryGrey.ignoresSafeArea())
+                    .accessibilityIdentifier("NFTView")
                 } else {
                     ScrollView {
                         if (!showNFT) {
@@ -60,9 +61,14 @@ struct HomeView: View {
                                         showNFT.toggle()
                                     }
                                 }
+                                .accessibilityAddTraits(.isButton)
+                                .accessibilityLabel("NFT")
+                                .accessibilityIdentifier("nftCard")
                         }
                         .padding(.horizontal, 20)
+                        .accessibilityLabel("List of NFTs")
                     }
+                    .accessibilityIdentifier("NFTList")
                 }
 
             }

@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ListView: View {
+struct ListNFTView: View {
     let nft: NFT
 
     @Environment(\.dismiss) private var dismiss
@@ -46,7 +46,7 @@ struct ListView: View {
                             .foregroundColor(.red)
                     }
                     Spacer()
-                    Button(action: {
+                    Button("List", action: {
                         Task {
                             loading = true
                             err = ""
@@ -60,9 +60,8 @@ struct ListView: View {
                             }
                             loading = false
                         }
-                    }) {
-                        PrimaryButton(title: "List")
-                    }
+                    })
+                    .modifier(PrimaryButtonStyle())
                     .padding()
                 }
                 .frame(width: geometry.size.width, height: geometry.size.height)
@@ -86,6 +85,6 @@ struct ListView: View {
 
 struct ListView_Previews: PreviewProvider {
     static var previews: some View {
-        ListView(nft: NFT.mockData[0])
+        ListNFTView(nft: NFT.mockData[0])
     }
 }

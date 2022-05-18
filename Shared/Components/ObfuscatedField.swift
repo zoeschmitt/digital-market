@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ObfuscatedField: View {
-    @Binding var show: Bool
+    @State var show: Bool = false
     let hiddenText: String
     let text: String
 
@@ -24,11 +24,18 @@ struct ObfuscatedField: View {
         .background(.ultraThinMaterial)
         .mask(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous))
         .overlay(RoundedRectangle(cornerRadius: generalBorderRadius, style: .continuous).stroke(.white, lineWidth: 1))
+        .onTapGesture {
+            withAnimation {
+                show.toggle()
+            }
+        }
+        .accessibilityLabel("Tap to show \(text)")
+        .accessibilityIdentifier("\(text)-shown-\(show)")
     }
 }
 
 struct ObfuscatedField_Previews: PreviewProvider {
     static var previews: some View {
-        ObfuscatedField(show: .constant(false), hiddenText: "hidden", text: "hidden")
+        ObfuscatedField(hiddenText: "hidden", text: "hidden")
     }
 }
