@@ -13,8 +13,8 @@ struct StyledLink: View {
     let accentColor: Color
 
     var body: some View {
-        HStack {
-            Link(title, destination: url)
+        Link(destination: url) {
+            Text(title)
                 .font(.opensans(.semibold, size: 16))
             Spacer()
             Image(systemName: "arrow.up.forward.square.fill")
