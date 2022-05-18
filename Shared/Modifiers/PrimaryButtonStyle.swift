@@ -1,16 +1,15 @@
 //
-//  PrimaryButton.swift
-//  DigitalMarket
+//  PrimaryButtonStyle.swift
+//  DigitalMarket (iOS)
 //
-//  Created by Zoe Schmitt on 5/8/22.
+//  Created by Zoe Schmitt on 5/17/22.
 //
 
 import SwiftUI
 
-struct PrimaryButton: View {
-    let title: String
-    var body: some View {
-        Text(title)
+struct PrimaryButtonStyle: ViewModifier {
+    func body(content: Content) -> some View {
+        return content
             .padding(10)
             .font(.opensans(.semibold, size: 16))
             .frame(maxWidth: .infinity)
@@ -18,11 +17,5 @@ struct PrimaryButton: View {
             .foregroundColor(.white)
             .mask(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
             .overlay(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.azureBlue, lineWidth: 1))
-    }
-}
-
-struct PrimaryButton_Previews: PreviewProvider {
-    static var previews: some View {
-        PrimaryButton(title: "NFT")
     }
 }
