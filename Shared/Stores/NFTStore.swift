@@ -5,7 +5,6 @@
 //  Created by Zoe Schmitt on 4/30/22.
 //
 
-import Foundation
 import UIKit
 
 class NFTStore: ObservableObject {
@@ -13,8 +12,12 @@ class NFTStore: ObservableObject {
     @Published var nftFeed: [NFT] = []
     @Published var searchResults: [NFT] = []
 
-    init(apiClient: ApiClient = HttpApiClient()) {
-        self.apiClient = apiClient
+    init(apiClient: ApiClient = MockApiClient()) {
+#if DEBUG
+        self.apiClient = MockApiClient()
+#else
+        self.apiClient = HttpApiClient()
+#endif
     }
 
     func getNFTFeed() async throws -> [NFT] {

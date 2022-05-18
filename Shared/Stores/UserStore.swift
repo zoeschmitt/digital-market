@@ -11,8 +11,12 @@ class UserStore: ObservableObject {
     private let apiClient: ApiClient
     @Published var walletId: String = ""
 
-    init(apiClient: ApiClient = HttpApiClient()) {
-        self.apiClient = apiClient
+    init(apiClient: ApiClient = MockApiClient()) {
+#if DEBUG
+        self.apiClient = MockApiClient()
+#else
+        self.apiClient = HttpApiClient()
+#endif
     }
 
     func checkForExistingWallet() async throws -> String? {

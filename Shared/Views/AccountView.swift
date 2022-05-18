@@ -15,8 +15,6 @@ struct AccountView: View {
     @State var selectedNFT: NFT?
     @State var showNFT: Bool = false
     @State var showWalletAddress: Bool = false
-    @State var showPrivateKey: Bool = false
-    @State var showMnemonic: Bool = false
 
     @Namespace var namespace
 
@@ -44,10 +42,14 @@ struct AccountView: View {
                                         showWalletAddress.toggle()
                                     }
                                 }
+                                .accessibilityLabel("Blockchain wallet address")
+                                .accessibilityIdentifier("walletAddress")
                             HStack {
                                 Image("matic")
                                 Text(balance!.balance)
                                     .font(.opensans(.light, size: 18))
+                                    .accessibilityLabel("Blockchain wallet balance")
+                                    .accessibilityIdentifier("walletBalance")
                             }
 
                             if wallet == nil {
@@ -64,18 +66,8 @@ struct AccountView: View {
                             }
 
                             if wallet != nil {
-                                ObfuscatedField(show: $showPrivateKey, hiddenText: wallet!.privateKey, text: "Private Key")
-                                    .onTapGesture {
-                                        withAnimation {
-                                            showPrivateKey.toggle()
-                                        }
-                                    }
-                                ObfuscatedField(show: $showMnemonic, hiddenText: wallet!.mnemonic, text: "Mnemonic")
-                                    .onTapGesture {
-                                        withAnimation {
-                                            showMnemonic.toggle()
-                                        }
-                                    }
+                                ObfuscatedField(hiddenText: wallet!.privateKey, text: "Private Key")
+                                ObfuscatedField(hiddenText: wallet!.mnemonic, text: "Mnemonic")
                             }
 
                             Divider()
@@ -102,6 +94,8 @@ struct AccountView: View {
                                         }
                                     }
                                 }
+                                .accessibilityLabel("Your NFTs")
+                                .accessibilityIdentifier("userNFTList")
                             } else {
                                 Text("You dont have any NFTs yet!")
                             }

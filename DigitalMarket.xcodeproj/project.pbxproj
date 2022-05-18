@@ -31,10 +31,6 @@
 		DD2CAB2E281F750E00C6FAB3 /* RootView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB2C281F750E00C6FAB3 /* RootView.swift */; };
 		DD2CAB3928209A8400C6FAB3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB3828209A8400C6FAB3 /* ImageCache.swift */; };
 		DD2CAB3A28209A8400C6FAB3 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD2CAB3828209A8400C6FAB3 /* ImageCache.swift */; };
-		DD35E3EC27FBC03300181D20 /* Tests_iOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3EB27FBC03300181D20 /* Tests_iOS.swift */; };
-		DD35E3EE27FBC03300181D20 /* Tests_iOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3ED27FBC03300181D20 /* Tests_iOSLaunchTests.swift */; };
-		DD35E3F827FBC03300181D20 /* Tests_macOS.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3F727FBC03300181D20 /* Tests_macOS.swift */; };
-		DD35E3FA27FBC03300181D20 /* Tests_macOSLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3F927FBC03300181D20 /* Tests_macOSLaunchTests.swift */; };
 		DD35E3FB27FBC03300181D20 /* DigitalMarketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3D327FBC03200181D20 /* DigitalMarketApp.swift */; };
 		DD35E3FC27FBC03300181D20 /* DigitalMarketApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD35E3D327FBC03200181D20 /* DigitalMarketApp.swift */; };
 		DD35E3FF27FBC03300181D20 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = DD35E3D527FBC03300181D20 /* Assets.xcassets */; };
@@ -57,8 +53,6 @@
 		DD4DB63128286351007A2EF0 /* StyledLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DB62F28286351007A2EF0 /* StyledLink.swift */; };
 		DD4DB63328287A2C007A2EF0 /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DB63228287A2C007A2EF0 /* InfoRow.swift */; };
 		DD4DB63428287A2C007A2EF0 /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DB63228287A2C007A2EF0 /* InfoRow.swift */; };
-		DD4DB6362828C744007A2EF0 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DB6352828C744007A2EF0 /* PrimaryButton.swift */; };
-		DD4DB6372828C744007A2EF0 /* PrimaryButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD4DB6352828C744007A2EF0 /* PrimaryButton.swift */; };
 		DD6580C927FD110700AAE685 /* NFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580C827FD110700AAE685 /* NFT.swift */; };
 		DD6580CA27FD110700AAE685 /* NFT.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580C827FD110700AAE685 /* NFT.swift */; };
 		DD6580DB27FD116000AAE685 /* Wallet.swift in Sources */ = {isa = PBXBuildFile; fileRef = DD6580DA27FD116000AAE685 /* Wallet.swift */; };
@@ -95,24 +89,29 @@
 		DDEFCCF2282A02B400023791 /* UIImage+Base64.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF0282A02B400023791 /* UIImage+Base64.swift */; };
 		DDEFCCF5282B430E00023791 /* MintNFTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF4282B430E00023791 /* MintNFTRequest.swift */; };
 		DDEFCCF6282B430E00023791 /* MintNFTRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF4282B430E00023791 /* MintNFTRequest.swift */; };
-		DDEFCCF8282F0F8C00023791 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF7282F0F8C00023791 /* ListView.swift */; };
-		DDEFCCF9282F0F8C00023791 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF7282F0F8C00023791 /* ListView.swift */; };
+		DDEFCCF8282F0F8C00023791 /* ListNFTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF7282F0F8C00023791 /* ListNFTView.swift */; };
+		DDEFCCF9282F0F8C00023791 /* ListNFTView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDEFCCF7282F0F8C00023791 /* ListNFTView.swift */; };
+		DDF0243B28347EF800C4F49D /* HomeViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF0243A28347EF800C4F49D /* HomeViewTests.swift */; };
+		DDF0243D28347F3000C4F49D /* AccountViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF0243C28347F3000C4F49D /* AccountViewTests.swift */; };
+		DDF0243F28347F8B00C4F49D /* MintViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF0243E28347F8B00C4F49D /* MintViewTests.swift */; };
+		DDF02442283480CD00C4F49D /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF02441283480CD00C4F49D /* PrimaryButtonStyle.swift */; };
+		DDF0244428349AAB00C4F49D /* NFTViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF0244328349AAB00C4F49D /* NFTViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		DD35E3E827FBC03300181D20 /* PBXContainerItemProxy */ = {
+		DD3B393728318F3600142C09 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DD35E3CE27FBC03200181D20 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = DD35E3D927FBC03300181D20;
 			remoteInfo = "DigitalMarket (iOS)";
 		};
-		DD35E3F427FBC03300181D20 /* PBXContainerItemProxy */ = {
+		DDF0243128347EBF00C4F49D /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = DD35E3CE27FBC03200181D20 /* Project object */;
 			proxyType = 1;
-			remoteGlobalIDString = DD35E3DF27FBC03300181D20;
-			remoteInfo = "DigitalMarket (macOS)";
+			remoteGlobalIDString = DD35E3D927FBC03300181D20;
+			remoteInfo = "DigitalMarket (iOS)";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -134,14 +133,9 @@
 		DD35E3DA27FBC03300181D20 /* DigitalMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD35E3E027FBC03300181D20 /* DigitalMarket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigitalMarket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD35E3E227FBC03300181D20 /* macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = macOS.entitlements; sourceTree = "<group>"; };
-		DD35E3E727FBC03300181D20 /* Tests iOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests iOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD35E3EB27FBC03300181D20 /* Tests_iOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOS.swift; sourceTree = "<group>"; };
-		DD35E3ED27FBC03300181D20 /* Tests_iOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_iOSLaunchTests.swift; sourceTree = "<group>"; };
-		DD35E3F327FBC03300181D20 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		DD35E3F727FBC03300181D20 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
-		DD35E3F927FBC03300181D20 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		DD35E42A27FBC16700181D20 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		DD3B3927282F3EAF00142C09 /* ObfuscatedField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObfuscatedField.swift; sourceTree = "<group>"; };
+		DD3B393328318F3600142C09 /* UnitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = UnitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DD4C8D7A2821F01500D0AB69 /* MintView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintView.swift; sourceTree = "<group>"; };
 		DD4C8D7D282358ED00D0AB69 /* ImagePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePicker.swift; sourceTree = "<group>"; };
 		DD4C8D802823593A00D0AB69 /* RemoteImageStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RemoteImageStore.swift; sourceTree = "<group>"; };
@@ -150,7 +144,6 @@
 		DD4DB62C282862F5007A2EF0 /* NFTDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTDetails.swift; sourceTree = "<group>"; };
 		DD4DB62F28286351007A2EF0 /* StyledLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StyledLink.swift; sourceTree = "<group>"; };
 		DD4DB63228287A2C007A2EF0 /* InfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRow.swift; sourceTree = "<group>"; };
-		DD4DB6352828C744007A2EF0 /* PrimaryButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButton.swift; sourceTree = "<group>"; };
 		DD6580C827FD110700AAE685 /* NFT.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFT.swift; sourceTree = "<group>"; };
 		DD6580DA27FD116000AAE685 /* Wallet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Wallet.swift; sourceTree = "<group>"; };
 		DD6580E027FD124D00AAE685 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -173,7 +166,13 @@
 		DDA228B3281D91E0000B0278 /* UserStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserStore.swift; sourceTree = "<group>"; };
 		DDEFCCF0282A02B400023791 /* UIImage+Base64.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Base64.swift"; sourceTree = "<group>"; };
 		DDEFCCF4282B430E00023791 /* MintNFTRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintNFTRequest.swift; sourceTree = "<group>"; };
-		DDEFCCF7282F0F8C00023791 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		DDEFCCF7282F0F8C00023791 /* ListNFTView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListNFTView.swift; sourceTree = "<group>"; };
+		DDF0242B28347EBF00C4F49D /* DigitalMarketUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DigitalMarketUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DDF0243A28347EF800C4F49D /* HomeViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewTests.swift; sourceTree = "<group>"; };
+		DDF0243C28347F3000C4F49D /* AccountViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewTests.swift; sourceTree = "<group>"; };
+		DDF0243E28347F8B00C4F49D /* MintViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintViewTests.swift; sourceTree = "<group>"; };
+		DDF02441283480CD00C4F49D /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
+		DDF0244328349AAB00C4F49D /* NFTViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,14 +190,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD35E3E427FBC03300181D20 /* Frameworks */ = {
+		DD3B393028318F3600142C09 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD35E3F027FBC03300181D20 /* Frameworks */ = {
+		DDF0242828347EBF00C4F49D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -231,8 +230,7 @@
 				DD35E42A27FBC16700181D20 /* README.md */,
 				DD35E3D227FBC03200181D20 /* Shared */,
 				DD35E3E127FBC03300181D20 /* macOS */,
-				DD35E3EA27FBC03300181D20 /* Tests iOS */,
-				DD35E3F627FBC03300181D20 /* Tests macOS */,
+				DDF0242C28347EBF00C4F49D /* DigitalMarketUITests */,
 				DD35E3DB27FBC03300181D20 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -246,6 +244,7 @@
 				DD6580DD27FD120200AAE685 /* Views */,
 				DDA228AF281D91C6000B0278 /* Stores */,
 				DD6580DE27FD121F00AAE685 /* Components */,
+				DDF024402834809C00C4F49D /* Modifiers */,
 				DD6580E327FD126F00AAE685 /* Network */,
 				DD6580DF27FD123700AAE685 /* Styles */,
 				DD6580E427FD128900AAE685 /* Utils */,
@@ -260,8 +259,8 @@
 			children = (
 				DD35E3DA27FBC03300181D20 /* DigitalMarket.app */,
 				DD35E3E027FBC03300181D20 /* DigitalMarket.app */,
-				DD35E3E727FBC03300181D20 /* Tests iOS.xctest */,
-				DD35E3F327FBC03300181D20 /* Tests macOS.xctest */,
+				DD3B393328318F3600142C09 /* UnitTests.xctest */,
+				DDF0242B28347EBF00C4F49D /* DigitalMarketUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -272,24 +271,6 @@
 				DD35E3E227FBC03300181D20 /* macOS.entitlements */,
 			);
 			path = macOS;
-			sourceTree = "<group>";
-		};
-		DD35E3EA27FBC03300181D20 /* Tests iOS */ = {
-			isa = PBXGroup;
-			children = (
-				DD35E3EB27FBC03300181D20 /* Tests_iOS.swift */,
-				DD35E3ED27FBC03300181D20 /* Tests_iOSLaunchTests.swift */,
-			);
-			path = "Tests iOS";
-			sourceTree = "<group>";
-		};
-		DD35E3F627FBC03300181D20 /* Tests macOS */ = {
-			isa = PBXGroup;
-			children = (
-				DD35E3F727FBC03300181D20 /* Tests_macOS.swift */,
-				DD35E3F927FBC03300181D20 /* Tests_macOSLaunchTests.swift */,
-			);
-			path = "Tests macOS";
 			sourceTree = "<group>";
 		};
 		DD6580C727FD0F2D00AAE685 /* Models */ = {
@@ -326,7 +307,6 @@
 				DD4DB62C282862F5007A2EF0 /* NFTDetails.swift */,
 				DD4DB62F28286351007A2EF0 /* StyledLink.swift */,
 				DD4DB63228287A2C007A2EF0 /* InfoRow.swift */,
-				DD4DB6352828C744007A2EF0 /* PrimaryButton.swift */,
 				DD3B3927282F3EAF00142C09 /* ObfuscatedField.swift */,
 			);
 			path = Components;
@@ -384,7 +364,7 @@
 			children = (
 				DD2CAAFB281DB32D00C6FAB3 /* ErrorView.swift */,
 				DD789EAD28263E850035306A /* NFTView.swift */,
-				DDEFCCF7282F0F8C00023791 /* ListView.swift */,
+				DDEFCCF7282F0F8C00023791 /* ListNFTView.swift */,
 			);
 			path = SubViews;
 			sourceTree = "<group>";
@@ -407,6 +387,25 @@
 			path = Requests;
 			sourceTree = "<group>";
 		};
+		DDF0242C28347EBF00C4F49D /* DigitalMarketUITests */ = {
+			isa = PBXGroup;
+			children = (
+				DDF0243A28347EF800C4F49D /* HomeViewTests.swift */,
+				DDF0243C28347F3000C4F49D /* AccountViewTests.swift */,
+				DDF0243E28347F8B00C4F49D /* MintViewTests.swift */,
+				DDF0244328349AAB00C4F49D /* NFTViewTests.swift */,
+			);
+			path = DigitalMarketUITests;
+			sourceTree = "<group>";
+		};
+		DDF024402834809C00C4F49D /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				DDF02441283480CD00C4F49D /* PrimaryButtonStyle.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -423,6 +422,8 @@
 			dependencies = (
 			);
 			name = "DigitalMarket (iOS)";
+			packageProductDependencies = (
+			);
 			productName = "DigitalMarket (iOS)";
 			productReference = DD35E3DA27FBC03300181D20 /* DigitalMarket.app */;
 			productType = "com.apple.product-type.application";
@@ -444,40 +445,40 @@
 			productReference = DD35E3E027FBC03300181D20 /* DigitalMarket.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DD35E3E627FBC03300181D20 /* Tests iOS */ = {
+		DD3B393228318F3600142C09 /* UnitTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD35E40927FBC03300181D20 /* Build configuration list for PBXNativeTarget "Tests iOS" */;
+			buildConfigurationList = DD3B393928318F3600142C09 /* Build configuration list for PBXNativeTarget "UnitTests" */;
 			buildPhases = (
-				DD35E3E327FBC03300181D20 /* Sources */,
-				DD35E3E427FBC03300181D20 /* Frameworks */,
-				DD35E3E527FBC03300181D20 /* Resources */,
+				DD3B392F28318F3600142C09 /* Sources */,
+				DD3B393028318F3600142C09 /* Frameworks */,
+				DD3B393128318F3600142C09 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DD35E3E927FBC03300181D20 /* PBXTargetDependency */,
+				DD3B393828318F3600142C09 /* PBXTargetDependency */,
 			);
-			name = "Tests iOS";
-			productName = "Tests iOS";
-			productReference = DD35E3E727FBC03300181D20 /* Tests iOS.xctest */;
-			productType = "com.apple.product-type.bundle.ui-testing";
+			name = UnitTests;
+			productName = UnitTests;
+			productReference = DD3B393328318F3600142C09 /* UnitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		DD35E3F227FBC03300181D20 /* Tests macOS */ = {
+		DDF0242A28347EBF00C4F49D /* DigitalMarketUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DD35E40C27FBC03300181D20 /* Build configuration list for PBXNativeTarget "Tests macOS" */;
+			buildConfigurationList = DDF0243328347EBF00C4F49D /* Build configuration list for PBXNativeTarget "DigitalMarketUITests" */;
 			buildPhases = (
-				DD35E3EF27FBC03300181D20 /* Sources */,
-				DD35E3F027FBC03300181D20 /* Frameworks */,
-				DD35E3F127FBC03300181D20 /* Resources */,
+				DDF0242728347EBF00C4F49D /* Sources */,
+				DDF0242828347EBF00C4F49D /* Frameworks */,
+				DDF0242928347EBF00C4F49D /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				DD35E3F527FBC03300181D20 /* PBXTargetDependency */,
+				DDF0243228347EBF00C4F49D /* PBXTargetDependency */,
 			);
-			name = "Tests macOS";
-			productName = "Tests macOS";
-			productReference = DD35E3F327FBC03300181D20 /* Tests macOS.xctest */;
+			name = DigitalMarketUITests;
+			productName = DigitalMarketUITests;
+			productReference = DDF0242B28347EBF00C4F49D /* DigitalMarketUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -487,7 +488,7 @@
 			isa = PBXProject;
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
-				LastSwiftUpdateCheck = 1310;
+				LastSwiftUpdateCheck = 1330;
 				LastUpgradeCheck = 1330;
 				TargetAttributes = {
 					DD35E3D927FBC03300181D20 = {
@@ -496,13 +497,13 @@
 					DD35E3DF27FBC03300181D20 = {
 						CreatedOnToolsVersion = 13.1;
 					};
-					DD35E3E627FBC03300181D20 = {
-						CreatedOnToolsVersion = 13.1;
+					DD3B393228318F3600142C09 = {
+						CreatedOnToolsVersion = 13.3;
 						TestTargetID = DD35E3D927FBC03300181D20;
 					};
-					DD35E3F227FBC03300181D20 = {
-						CreatedOnToolsVersion = 13.1;
-						TestTargetID = DD35E3DF27FBC03300181D20;
+					DDF0242A28347EBF00C4F49D = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = DD35E3D927FBC03300181D20;
 					};
 				};
 			};
@@ -515,14 +516,16 @@
 				Base,
 			);
 			mainGroup = DD35E3CD27FBC03200181D20;
+			packageReferences = (
+			);
 			productRefGroup = DD35E3DB27FBC03300181D20 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				DD35E3D927FBC03300181D20 /* DigitalMarket (iOS) */,
 				DD35E3DF27FBC03300181D20 /* DigitalMarket (macOS) */,
-				DD35E3E627FBC03300181D20 /* Tests iOS */,
-				DD35E3F227FBC03300181D20 /* Tests macOS */,
+				DD3B393228318F3600142C09 /* UnitTests */,
+				DDF0242A28347EBF00C4F49D /* DigitalMarketUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -558,14 +561,14 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD35E3E527FBC03300181D20 /* Resources */ = {
+		DD3B393128318F3600142C09 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD35E3F127FBC03300181D20 /* Resources */ = {
+		DDF0242928347EBF00C4F49D /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -579,6 +582,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DDF02442283480CD00C4F49D /* PrimaryButtonStyle.swift in Sources */,
 				DD2CAAFC281DB32D00C6FAB3 /* ErrorView.swift in Sources */,
 				DD2CAB03281DCFEB00C6FAB3 /* Fonts.swift in Sources */,
 				DD65814F2813B2B200AAE685 /* NFTCard.swift in Sources */,
@@ -594,13 +598,12 @@
 				DD2CAB2D281F750E00C6FAB3 /* RootView.swift in Sources */,
 				DDA228B1281D91D4000B0278 /* NFTStore.swift in Sources */,
 				DD658152281466CD00AAE685 /* Configuration.swift in Sources */,
-				DD4DB6362828C744007A2EF0 /* PrimaryButton.swift in Sources */,
 				DD4DB63028286351007A2EF0 /* StyledLink.swift in Sources */,
 				DD4C8D8C28243E3900D0AB69 /* Globals.swift in Sources */,
 				DD4DB63328287A2C007A2EF0 /* InfoRow.swift in Sources */,
 				DD35E3FB27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
 				DD4C8D7E282358ED00D0AB69 /* ImagePicker.swift in Sources */,
-				DDEFCCF8282F0F8C00023791 /* ListView.swift in Sources */,
+				DDEFCCF8282F0F8C00023791 /* ListNFTView.swift in Sources */,
 				DD2CAB2A281F568C00C6FAB3 /* Logo.swift in Sources */,
 				DD6580F127FD133600AAE685 /* HttpApiClient.swift in Sources */,
 				DD4C8D8F28243EB200D0AB69 /* SearchBar.swift in Sources */,
@@ -636,13 +639,12 @@
 				DD2CAB2E281F750E00C6FAB3 /* RootView.swift in Sources */,
 				DDA228B2281D91D4000B0278 /* NFTStore.swift in Sources */,
 				DD658153281466CD00AAE685 /* Configuration.swift in Sources */,
-				DD4DB6372828C744007A2EF0 /* PrimaryButton.swift in Sources */,
 				DD4DB63128286351007A2EF0 /* StyledLink.swift in Sources */,
 				DD4C8D8D28243E3900D0AB69 /* Globals.swift in Sources */,
 				DD4DB63428287A2C007A2EF0 /* InfoRow.swift in Sources */,
 				DD35E3FC27FBC03300181D20 /* DigitalMarketApp.swift in Sources */,
 				DD4C8D7F282358ED00D0AB69 /* ImagePicker.swift in Sources */,
-				DDEFCCF9282F0F8C00023791 /* ListView.swift in Sources */,
+				DDEFCCF9282F0F8C00023791 /* ListNFTView.swift in Sources */,
 				DD2CAB2B281F568C00C6FAB3 /* Logo.swift in Sources */,
 				DD6580F227FD133600AAE685 /* HttpApiClient.swift in Sources */,
 				DD4C8D9028243EB200D0AB69 /* SearchBar.swift in Sources */,
@@ -659,36 +661,36 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD35E3E327FBC03300181D20 /* Sources */ = {
+		DD3B392F28318F3600142C09 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD35E3EE27FBC03300181D20 /* Tests_iOSLaunchTests.swift in Sources */,
-				DD35E3EC27FBC03300181D20 /* Tests_iOS.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		DD35E3EF27FBC03300181D20 /* Sources */ = {
+		DDF0242728347EBF00C4F49D /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DD35E3FA27FBC03300181D20 /* Tests_macOSLaunchTests.swift in Sources */,
-				DD35E3F827FBC03300181D20 /* Tests_macOS.swift in Sources */,
+				DDF0243D28347F3000C4F49D /* AccountViewTests.swift in Sources */,
+				DDF0243B28347EF800C4F49D /* HomeViewTests.swift in Sources */,
+				DDF0243F28347F8B00C4F49D /* MintViewTests.swift in Sources */,
+				DDF0244428349AAB00C4F49D /* NFTViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		DD35E3E927FBC03300181D20 /* PBXTargetDependency */ = {
+		DD3B393828318F3600142C09 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = DD35E3D927FBC03300181D20 /* DigitalMarket (iOS) */;
-			targetProxy = DD35E3E827FBC03300181D20 /* PBXContainerItemProxy */;
+			targetProxy = DD3B393728318F3600142C09 /* PBXContainerItemProxy */;
 		};
-		DD35E3F527FBC03300181D20 /* PBXTargetDependency */ = {
+		DDF0243228347EBF00C4F49D /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DD35E3DF27FBC03300181D20 /* DigitalMarket (macOS) */;
-			targetProxy = DD35E3F427FBC03300181D20 /* PBXContainerItemProxy */;
+			target = DD35E3D927FBC03300181D20 /* DigitalMarket (iOS) */;
+			targetProxy = DDF0243128347EBF00C4F49D /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -821,6 +823,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -854,6 +857,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -933,106 +937,281 @@
 			};
 			name = "Release Development";
 		};
-		DD35E40A27FBC03300181D20 /* Debug Development */ = {
+		DD3B393A28318F3600142C09 /* Debug Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = WU2A259UNF;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zoe.Tests-iOS";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "DigitalMarket (iOS)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigitalMarket.app/DigitalMarket";
 			};
 			name = "Debug Development";
 		};
-		DD35E40B27FBC03300181D20 /* Release Development */ = {
+		DD3B393B28318F3600142C09 /* Debug Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = WU2A259UNF;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zoe.Tests-iOS";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "DigitalMarket (iOS)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigitalMarket.app/DigitalMarket";
+			};
+			name = "Debug Production";
+		};
+		DD3B393C28318F3600142C09 /* Release Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = WU2A259UNF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.UnitTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigitalMarket.app/DigitalMarket";
 				VALIDATE_PRODUCT = YES;
 			};
 			name = "Release Development";
 		};
-		DD35E40D27FBC03300181D20 /* Debug Development */ = {
+		DD3B393D28318F3600142C09 /* Release Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WU2A259UNF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zoe.Tests-macOS";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.UnitTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "DigitalMarket (macOS)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/DigitalMarket.app/DigitalMarket";
+				VALIDATE_PRODUCT = YES;
 			};
-			name = "Debug Development";
-		};
-		DD35E40E27FBC03300181D20 /* Release Development */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WU2A259UNF;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zoe.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "DigitalMarket (macOS)";
-			};
-			name = "Release Development";
+			name = "Release Production";
 		};
 		DD6580FD280B552400AAE685 /* Debug Production */ = {
 			isa = XCBuildConfiguration;
@@ -1109,6 +1288,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -1154,56 +1334,6 @@
 				SDKROOT = macosx;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-			};
-			name = "Debug Production";
-		};
-		DD658100280B552400AAE685 /* Debug Production */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WU2A259UNF;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zoe.Tests-iOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = iphoneos;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_TARGET_NAME = "DigitalMarket (iOS)";
-			};
-			name = "Debug Production";
-		};
-		DD658101280B552400AAE685 /* Debug Production */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
-				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = WU2A259UNF;
-				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
-				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zoe.Tests-macOS";
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-				SWIFT_EMIT_LOC_STRINGS = NO;
-				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "DigitalMarket (macOS)";
 			};
 			name = "Debug Production";
 		};
@@ -1275,6 +1405,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
@@ -1324,54 +1455,275 @@
 			};
 			name = "Release Production";
 		};
-		DD658105280B552900AAE685 /* Release Production */ = {
+		DDF0243428347EBF00C4F49D /* Debug Development */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
 				DEVELOPMENT_TEAM = WU2A259UNF;
-				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
-				LD_RUNPATH_SEARCH_PATHS = (
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
 					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
 				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zoe.Tests-iOS";
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.DigitalMarketUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DigitalMarket (iOS)";
+			};
+			name = "Debug Development";
+		};
+		DDF0243528347EBF00C4F49D /* Debug Production */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = WU2A259UNF;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.DigitalMarketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DigitalMarket (iOS)";
+			};
+			name = "Debug Production";
+		};
+		DDF0243628347EBF00C4F49D /* Release Development */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = WU2A259UNF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.DigitalMarketUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_TARGET_NAME = "DigitalMarket (iOS)";
 				VALIDATE_PRODUCT = YES;
 			};
-			name = "Release Production";
+			name = "Release Development";
 		};
-		DD658106280B552900AAE685 /* Release Production */ = {
+		DDF0243728347EBF00C4F49D /* Release Production */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				CODE_SIGN_STYLE = Automatic;
-				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
 				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				DEVELOPMENT_TEAM = WU2A259UNF;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
 				GENERATE_INFOPLIST_FILE = YES;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/../Frameworks",
-					"@loader_path/../Frameworks",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.zoe.Tests-macOS";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.zoe.DigitalMarketUITests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
-				TEST_TARGET_NAME = "DigitalMarket (macOS)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = "DigitalMarket (iOS)";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = "Release Production";
 		};
@@ -1411,24 +1763,24 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release Development";
 		};
-		DD35E40927FBC03300181D20 /* Build configuration list for PBXNativeTarget "Tests iOS" */ = {
+		DD3B393928318F3600142C09 /* Build configuration list for PBXNativeTarget "UnitTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD35E40A27FBC03300181D20 /* Debug Development */,
-				DD658100280B552400AAE685 /* Debug Production */,
-				DD35E40B27FBC03300181D20 /* Release Development */,
-				DD658105280B552900AAE685 /* Release Production */,
+				DD3B393A28318F3600142C09 /* Debug Development */,
+				DD3B393B28318F3600142C09 /* Debug Production */,
+				DD3B393C28318F3600142C09 /* Release Development */,
+				DD3B393D28318F3600142C09 /* Release Production */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release Development";
 		};
-		DD35E40C27FBC03300181D20 /* Build configuration list for PBXNativeTarget "Tests macOS" */ = {
+		DDF0243328347EBF00C4F49D /* Build configuration list for PBXNativeTarget "DigitalMarketUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				DD35E40D27FBC03300181D20 /* Debug Development */,
-				DD658101280B552400AAE685 /* Debug Production */,
-				DD35E40E27FBC03300181D20 /* Release Development */,
-				DD658106280B552900AAE685 /* Release Production */,
+				DDF0243428347EBF00C4F49D /* Debug Development */,
+				DDF0243528347EBF00C4F49D /* Debug Production */,
+				DDF0243628347EBF00C4F49D /* Release Development */,
+				DDF0243728347EBF00C4F49D /* Release Production */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = "Release Development";
