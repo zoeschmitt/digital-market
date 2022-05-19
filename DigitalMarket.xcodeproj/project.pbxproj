@@ -95,7 +95,6 @@
 		DDF0243D28347F3000C4F49D /* AccountViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF0243C28347F3000C4F49D /* AccountViewTests.swift */; };
 		DDF0243F28347F8B00C4F49D /* MintViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF0243E28347F8B00C4F49D /* MintViewTests.swift */; };
 		DDF02442283480CD00C4F49D /* PrimaryButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF02441283480CD00C4F49D /* PrimaryButtonStyle.swift */; };
-		DDF0244428349AAB00C4F49D /* NFTViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DDF0244328349AAB00C4F49D /* NFTViewTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -172,7 +171,6 @@
 		DDF0243C28347F3000C4F49D /* AccountViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountViewTests.swift; sourceTree = "<group>"; };
 		DDF0243E28347F8B00C4F49D /* MintViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MintViewTests.swift; sourceTree = "<group>"; };
 		DDF02441283480CD00C4F49D /* PrimaryButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrimaryButtonStyle.swift; sourceTree = "<group>"; };
-		DDF0244328349AAB00C4F49D /* NFTViewTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFTViewTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -393,7 +391,6 @@
 				DDF0243A28347EF800C4F49D /* HomeViewTests.swift */,
 				DDF0243C28347F3000C4F49D /* AccountViewTests.swift */,
 				DDF0243E28347F8B00C4F49D /* MintViewTests.swift */,
-				DDF0244328349AAB00C4F49D /* NFTViewTests.swift */,
 			);
 			path = DigitalMarketUITests;
 			sourceTree = "<group>";
@@ -675,7 +672,6 @@
 				DDF0243D28347F3000C4F49D /* AccountViewTests.swift in Sources */,
 				DDF0243B28347EF800C4F49D /* HomeViewTests.swift in Sources */,
 				DDF0243F28347F8B00C4F49D /* MintViewTests.swift in Sources */,
-				DDF0244428349AAB00C4F49D /* NFTViewTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
