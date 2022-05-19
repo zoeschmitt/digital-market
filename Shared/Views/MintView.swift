@@ -34,22 +34,17 @@ struct MintView: View {
                             .padding(.bottom, 30)
                         Spacer()
                         HStack {
-                            Button(action: {
+                            Button("Cancel", action: {
                                 image = nil
                                 nameInput = ""
                                 descriptionInput = ""
-                            }) {
-                                HStack {
-                                    Spacer()
-                                    Text("Cancel")
-                                        .font(.opensans(.semibold, size: 16))
-                                    Spacer()
-                                }
-                                .padding(.vertical, 10)
-                                .overlay(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.azureBlue, lineWidth: 2))
-                            }
+                            })
+                            .frame(maxWidth: .infinity)
+                            .font(.opensans(.semibold, size: 16))
+                            .padding(.vertical, 10)
+                            .overlay(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.azureBlue, lineWidth: 2))
                             Spacer()
-                            Button(action: {
+                            Button("Mint!", action: {
                                 if nameInput.isEmpty || descriptionInput.isEmpty {
                                     inputValidationFailed = true
                                     return
@@ -71,18 +66,13 @@ struct MintView: View {
                                     }
                                     loading = false
                                 }
-                            }) {
-                                HStack {
-                                    Spacer()
-                                    Text("Mint!")
-                                        .font(.opensans(.semibold, size: 16))
-                                    Spacer()
-                                }
-                                .foregroundColor(.white)
-                                .padding(.vertical, 10)
-                                .background(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.azureBlue, lineWidth: 2).background(Color.azureBlue))
-                                .clipShape(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
-                            }
+                            })
+                            .frame(maxWidth: .infinity)
+                            .font(.opensans(.semibold, size: 16))
+                            .foregroundColor(.white)
+                            .padding(.vertical, 10)
+                            .background(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous).stroke(Color.azureBlue, lineWidth: 2).background(Color.azureBlue))
+                            .clipShape(RoundedRectangle(cornerRadius: buttonsBorderRadius, style: .continuous))
                         }
                         .padding(.bottom, 40)
                     }
@@ -136,8 +126,11 @@ struct SelectImage: View {
                 .clipShape(RoundedRectangle(cornerRadius: uploadImageBorderRadius, style: .continuous))
                 .overlay(RoundedRectangle(cornerRadius: uploadImageBorderRadius, style: .continuous).stroke(Color.azureBlue, style: StrokeStyle(lineWidth: 2, dash: [10])))
             }
+            .accessibilityIdentifier("selectImage")
+            .accessibilityLabel("Select Image Button")
             Text("Select Image")
                 .font(.opensans(.semibold, size: 22))
+                .accessibilityHidden(true)
         }
     }
 }
